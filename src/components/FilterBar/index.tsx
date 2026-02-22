@@ -11,7 +11,7 @@ interface FilterBarProps {
   onFilterChange: React.Dispatch<React.SetStateAction<FilterState>>;
 }
 
-const RATINGS = [5, 4, 3, 2, 1] as const;
+const RATING_THRESHOLDS = [5, 4, 3] as const;
 
 function set<K extends keyof FilterState>(
   onChange: FilterBarProps['onFilterChange'],
@@ -133,11 +133,11 @@ export function FilterBar({
               }
             >
               <option value="">Any rating</option>
-              {RATINGS.map((r) => {
+              {RATING_THRESHOLDS.map((r) => {
                 const { emoji, label } = getRatingDisplay(r);
                 return (
                   <option key={r} value={r}>
-                    {emoji} {label}
+                    {emoji} {label}{r < 5 ? ' & up' : ''}
                   </option>
                 );
               })}

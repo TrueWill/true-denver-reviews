@@ -11,7 +11,7 @@ export function filterAndSortPlaces(places: Place[], filters: FilterState): Plac
     if (category && p.category !== category) return false;
     if (area && p.area !== area) return false;
     if (cuisine && p.cuisine !== cuisine) return false;
-    if (rating !== null && p.rating !== rating) return false;
+    if (rating !== null && (p.rating === null || p.rating < rating)) return false;
     if (
       searchLower &&
       !p.name.toLowerCase().includes(searchLower) &&

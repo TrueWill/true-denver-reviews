@@ -95,10 +95,16 @@ describe('filterAndSortPlaces', () => {
     expect(result[0].name).toBe('Mesa Verde');
   });
 
-  it('filters by rating', () => {
+  it('filters by minimum rating (at least)', () => {
     const result = filterAndSortPlaces(places, { ...base, rating: 4 });
-    expect(result).toHaveLength(1);
-    expect(result[0].name).toBe('Acme Burgers');
+    expect(result).toHaveLength(2);
+    expect(result.map((p) => p.name)).toEqual(expect.arrayContaining(['Acme Burgers', 'Zenith Coffee']));
+  });
+
+  it('excludes null-rated places when a minimum rating is set', () => {
+    const result = filterAndSortPlaces(places, { ...base, rating: 3 });
+    expect(result.every((p) => p.rating !== null && p.rating >= 3)).toBe(true);
+    expect(result).toHaveLength(3);
   });
 
   it('hides closed places when hideClosedPlaces is true', () => {
