@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:opsz,wght@5..1200,600;5..1200,700&family=Source+Serif+4:ital,opsz,wght@0,6..36,300;0,6..36,400;1,6..36,300&family=DM+Mono:wght@400;500&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f4ede0;
+  --surface: #faf6ee;
+  --surface-deep: #ede5d4;
+  --ink: #1c1c1a;
+  --ink-mid: #5c5448;
+  --ink-light: #9a8e82;
+  --border: #d4c4a8;
+  --border-strong: #b8a080;
+
+  --accent: #c8652a;
+  --accent-dark: #9e4e20;
+  --accent-bg: #f7ede4;
+
+  --sage: #4a6e4e;
+  --sage-bg: #e4ede4;
+
+  --closed-ink: #7a2820;
+  --closed-bg: #f8e8e6;
+
+  --font-display: 'Abril Fatface', Georgia, serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Serif 4', Georgia, serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+
+  --radius-sm: 3px;
+  --radius: 6px;
+  --radius-lg: 12px;
+
+  --shadow-card: 0 2px 8px rgba(28, 28, 26, 0.07), 0 1px 2px rgba(28, 28, 26, 0.05);
+  --shadow-card-hover: 0 8px 28px rgba(28, 28, 26, 0.13), 0 2px 6px rgba(28, 28, 26, 0.07);
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button,
+select,
+input {
+  font-family: inherit;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 3px;
+}

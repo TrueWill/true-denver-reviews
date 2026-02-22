@@ -1,0 +1,59 @@
+.badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  flex-shrink: 0;
+  text-align: center;
+  transition: transform 0.15s ease;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+.emoji {
+  font-size: 15px;
+  line-height: 1;
+  display: block;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  margin-top: 2px;
+  text-transform: uppercase;
+  display: block;
+}
+
+.r5 {
+  color: #c8652a;
+  background: #fdf0e8;
+}
+.r4 {
+  color: #b07320;
+  background: #fdf5e4;
+}
+.r3 {
+  color: #4a6e4e;
+  background: #eaf2ea;
+}
+.r2 {
+  color: #5a6e88;
+  background: #edf0f5;
+}
+.r1 {
+  color: #7a6858;
+  background: #f0ece8;
+}
+.rNull {
+  color: var(--ink-light);
+  background: var(--surface-deep);
+}

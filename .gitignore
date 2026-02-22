@@ -137,3 +137,6 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# DuckDB WASM assets (copied from node_modules via postinstall)
+public/duckdb/
