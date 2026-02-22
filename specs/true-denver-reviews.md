@@ -1,5 +1,7 @@
 # True Denver Reviews - Colorado favorites and ratings
 
+Initial specifications for Claude.
+
 ## Requirements
 
 Create an interactive web app for reviews of local restaurants and places of interest.
