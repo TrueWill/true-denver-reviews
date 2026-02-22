@@ -196,8 +196,8 @@ export function FilterBar({
                 )
               }
             >
-              <option value="asc">A → Z / Low → High</option>
-              <option value="desc">Z → A / High → Low</option>
+              <option value="asc">A → Z / High → Low</option>
+              <option value="desc">Z → A / Low → High</option>
             </select>
           </label>
         </div>

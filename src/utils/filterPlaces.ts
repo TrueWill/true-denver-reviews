@@ -26,10 +26,11 @@ export function filterAndSortPlaces(places: Place[], filters: FilterState): Plac
 
     if (sortField === 'rating') {
       // Nulls sort last regardless of direction
-      if (a.rating === null && b.rating === null) return 0;
+      if (a.rating === null && b.rating === null) return a.name.localeCompare(b.name) * dir;
       if (a.rating === null) return 1;
       if (b.rating === null) return -1;
-      return (a.rating - b.rating) * dir;
+      const ratingDiff = (b.rating - a.rating) * dir;
+      return ratingDiff !== 0 ? ratingDiff : a.name.localeCompare(b.name) * dir;
     }
 
     return a.name.localeCompare(b.name) * dir;

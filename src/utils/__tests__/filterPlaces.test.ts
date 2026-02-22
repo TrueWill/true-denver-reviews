@@ -148,24 +148,35 @@ describe('filterAndSortPlaces', () => {
     expect(result[result.length - 1].name).toBe('Acme Burgers');
   });
 
-  it('sorts by rating ascending (nulls last)', () => {
+  it('sorts by rating ascending as high to low (nulls last)', () => {
     const result = filterAndSortPlaces(places, {
       ...base,
       sortField: 'rating',
       sortDirection: 'asc',
     });
-    expect(result[0].rating).toBe(3);
+    expect(result[0].rating).toBe(5);
     expect(result[result.length - 1].rating).toBeNull();
   });
 
-  it('sorts by rating descending (nulls last)', () => {
+  it('sorts by rating descending as low to high (nulls last)', () => {
     const result = filterAndSortPlaces(places, {
       ...base,
       sortField: 'rating',
       sortDirection: 'desc',
     });
-    expect(result[0].rating).toBe(5);
+    expect(result[0].rating).toBe(3);
     expect(result[result.length - 1].rating).toBeNull();
+  });
+
+  it('uses name as secondary sort when ratings are tied', () => {
+    const tied: Place[] = [
+      { ...places[0], name: 'Zebra Cafe', rating: 4 },
+      { ...places[0], id: 99, name: 'Alpha Diner', rating: 4 },
+    ];
+    const asc = filterAndSortPlaces(tied, { ...base, sortField: 'rating', sortDirection: 'asc' });
+    expect(asc.map((p) => p.name)).toEqual(['Alpha Diner', 'Zebra Cafe']);
+    const desc = filterAndSortPlaces(tied, { ...base, sortField: 'rating', sortDirection: 'desc' });
+    expect(desc.map((p) => p.name)).toEqual(['Zebra Cafe', 'Alpha Diner']);
   });
 
   it('returns empty array when no places match', () => {
