@@ -8,13 +8,13 @@ interface RatingDisplay {
 export function getRatingDisplay(rating: Rating): RatingDisplay {
   switch (rating) {
     case 5:
-      return { emoji: '❤️', label: 'Love it' };
+      return { emoji: '❤️', label: 'Favorite!' };
     case 4:
       return { emoji: '👍👍', label: 'Really good' };
     case 3:
       return { emoji: '👍', label: 'Good' };
     case 2:
-      return { emoji: '🤏', label: 'Meh' };
+      return { emoji: '🤏', label: 'Meh / Just OK' };
     case 1:
       return { emoji: '👎', label: 'Bad' };
     default:

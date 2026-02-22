@@ -2,10 +2,10 @@ import { describe, it, expect } from 'vitest';
 import { getRatingDisplay } from '../rating';
 
 describe('getRatingDisplay', () => {
-  it('returns Love it for 5', () => {
+  it('returns Favorite! for 5', () => {
     const { emoji, label } = getRatingDisplay(5);
     expect(emoji).toBe('❤️');
-    expect(label).toBe('Love it');
+    expect(label).toBe('Favorite!');
   });
 
   it('returns Really good for 4', () => {
@@ -20,10 +20,10 @@ describe('getRatingDisplay', () => {
     expect(label).toBe('Good');
   });
 
-  it('returns Meh for 2', () => {
+  it('returns Meh / Just OK for 2', () => {
     const { emoji, label } = getRatingDisplay(2);
     expect(emoji).toBe('🤏');
-    expect(label).toBe('Meh');
+    expect(label).toBe('Meh / Just OK');
   });
 
   it('returns Bad for 1', () => {
