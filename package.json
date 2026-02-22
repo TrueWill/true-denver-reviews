@@ -16,6 +16,9 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
+  "overrides": {
+    "minimatch": "^10.2.1"
+  },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@testing-library/jest-dom": "^6.6.3",
