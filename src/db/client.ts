@@ -24,8 +24,9 @@ async function initDuckDB(): Promise<duckdb.AsyncDuckDBConnection> {
   };
 
   const bundle = await duckdb.selectBundle(MANUAL_BUNDLES);
+  const abs = (path: string) => new URL(path, location.href).href;
   const workerUrl = URL.createObjectURL(
-    new Blob([`importScripts("${bundle.mainWorker!}");`], {
+    new Blob([`importScripts("${abs(bundle.mainWorker!)}");`], {
       type: 'text/javascript',
     }),
   );
@@ -33,11 +34,11 @@ async function initDuckDB(): Promise<duckdb.AsyncDuckDBConnection> {
   const logger = new duckdb.ConsoleLogger(duckdb.LogLevel.WARNING);
   const db = new duckdb.AsyncDuckDB(logger, worker);
 
-  await db.instantiate(bundle.mainModule, bundle.pthreadWorker);
+  await db.instantiate(abs(bundle.mainModule), bundle.pthreadWorker ? abs(bundle.pthreadWorker) : undefined);
   URL.revokeObjectURL(workerUrl);
 
   await db.open({
-    path: '/data.db',
+    path: abs('/data.db'),
     accessMode: duckdb.DuckDBAccessMode.READ_ONLY,
   });
 
