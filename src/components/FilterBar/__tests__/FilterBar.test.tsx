@@ -94,11 +94,12 @@ describe('FilterBar', () => {
   });
 
   it('calls onFilterChange with reset state when clear is clicked', async () => {
-    const { onChange } = renderBar({ ...defaultFilters, search: 'test', category: 'Bar' });
+    const sortedFilters = { ...defaultFilters, search: 'test', category: 'Bar', sortField: 'rating' as const, sortDirection: 'desc' as const };
+    const { onChange } = renderBar(sortedFilters);
     await userEvent.click(screen.getByRole('button', { name: /clear/i }));
-    expect(onChange).toHaveBeenCalledWith(
-      expect.objectContaining({ search: '', category: null }),
-    );
+    const updater = onChange.mock.calls[onChange.mock.calls.length - 1][0];
+    const result = updater(sortedFilters);
+    expect(result).toMatchObject({ search: '', category: null, sortField: 'rating', sortDirection: 'desc' });
   });
 
   it('populates category options from props', () => {

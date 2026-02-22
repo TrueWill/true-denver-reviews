@@ -31,16 +31,15 @@ export function FilterBar({
   const activeCount = getActiveFilterCount(filters);
 
   const reset = () =>
-    onFilterChange({
+    onFilterChange((prev) => ({
+      ...prev,
       search: '',
       category: null,
       area: null,
       cuisine: null,
       rating: null,
       hideClosedPlaces: false,
-      sortField: 'name',
-      sortDirection: 'asc',
-    });
+    }));
 
   return (
     <aside className={styles.bar} aria-label="Filter and sort places">
