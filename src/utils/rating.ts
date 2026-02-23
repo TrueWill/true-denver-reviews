@@ -14,7 +14,7 @@ export function getRatingDisplay(rating: Rating): RatingDisplay {
     case 3:
       return { emoji: '👍', label: 'Good' };
     case 2:
-      return { emoji: '🤏', label: 'Meh / Just OK' };
+      return { emoji: '🤏', label: 'Meh\u00A0/ Just\u00A0OK' };
     case 1:
       return { emoji: '👎', label: 'Bad' };
     default:

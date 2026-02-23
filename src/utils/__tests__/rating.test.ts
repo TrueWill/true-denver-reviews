@@ -23,7 +23,7 @@ describe('getRatingDisplay', () => {
   it('returns Meh / Just OK for 2', () => {
     const { emoji, label } = getRatingDisplay(2);
     expect(emoji).toBe('🤏');
-    expect(label).toBe('Meh / Just OK');
+    expect(label).toBe('Meh\u00A0/ Just\u00A0OK');
   });
 
   it('returns Bad for 1', () => {

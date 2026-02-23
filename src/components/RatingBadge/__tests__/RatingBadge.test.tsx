@@ -23,7 +23,7 @@ describe('RatingBadge', () => {
   it('shows Meh / Just OK for rating 2', () => {
     render(<RatingBadge rating={2} />);
     expect(
-      screen.getByRole('img', { name: /meh \/ Just OK/i }),
+      screen.getByRole('img', { name: /meh.*just.*ok/i }),
     ).toBeInTheDocument();
   });
 
