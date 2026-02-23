@@ -25,7 +25,8 @@ export function filterAndSortPlaces(places: Place[], filters: FilterState): Plac
     const dir = sortDirection === 'asc' ? 1 : -1;
 
     if (sortField === 'rating') {
-      // Nulls sort last regardless of direction
+      // "asc" = best first (high→low); "desc" = worst first (low→high).
+      // Nulls sort last regardless of direction.
       if (a.rating === null && b.rating === null) return a.name.localeCompare(b.name) * dir;
       if (a.rating === null) return 1;
       if (b.rating === null) return -1;
