@@ -21,7 +21,7 @@ export function filterAndSortPlaces(places: Place[], filters: FilterState): Plac
     return true;
   });
 
-  return filtered.sort((a, b) => {
+  return filtered.slice().sort((a, b) => {
     const dir = sortDirection === 'asc' ? 1 : -1;
 
     if (sortField === 'rating') {
