@@ -40,6 +40,8 @@ export function usePlaces(): UsePlacesResult {
   useEffect(() => {
     if (!conn) return;
 
+    let cancelled = false;
+
     Promise.all([
       fetchAllPlaces(conn),
       fetchCategories(conn),
@@ -47,6 +49,7 @@ export function usePlaces(): UsePlacesResult {
       fetchAreas(conn),
     ])
       .then(([places, cats, cuis, areasData]) => {
+        if (cancelled) return;
         setAllPlaces(places);
         setCategories(cats);
         setCuisines(cuis);
@@ -54,9 +57,14 @@ export function usePlaces(): UsePlacesResult {
         setDataLoading(false);
       })
       .catch((err: unknown) => {
+        if (cancelled) return;
         setDataError(err instanceof Error ? err : new Error(String(err)));
         setDataLoading(false);
       });
+
+    return () => {
+      cancelled = true;
+    };
   }, [conn]);
 
   const places = useMemo(

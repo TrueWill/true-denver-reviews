@@ -1,4 +1,5 @@
 import { usePlaces } from './hooks/usePlaces';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { FilterBar } from './components/FilterBar';
 import { PlaceList } from './components/PlaceList';
 import styles from './App.module.css';
@@ -36,16 +37,18 @@ export default function App() {
         </div>
       </header>
 
-      <main className={styles.main}>
-        <FilterBar
-          categories={categories}
-          cuisines={cuisines}
-          areas={areas}
-          filters={filters}
-          onFilterChange={setFilters}
-        />
-        <PlaceList places={places} loading={loading} error={error} />
-      </main>
+      <ErrorBoundary>
+        <main className={styles.main}>
+          <FilterBar
+            categories={categories}
+            cuisines={cuisines}
+            areas={areas}
+            filters={filters}
+            onFilterChange={setFilters}
+          />
+          <PlaceList places={places} loading={loading} error={error} />
+        </main>
+      </ErrorBoundary>
 
       <footer className={styles.footer}>
         <span>True Denver Reviews</span>

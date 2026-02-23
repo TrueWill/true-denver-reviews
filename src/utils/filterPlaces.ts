@@ -21,11 +21,12 @@ export function filterAndSortPlaces(places: Place[], filters: FilterState): Plac
     return true;
   });
 
-  return filtered.sort((a, b) => {
+  return filtered.slice().sort((a, b) => {
     const dir = sortDirection === 'asc' ? 1 : -1;
 
     if (sortField === 'rating') {
-      // Nulls sort last regardless of direction
+      // "asc" = best first (high→low); "desc" = worst first (low→high).
+      // Nulls sort last regardless of direction.
       if (a.rating === null && b.rating === null) return a.name.localeCompare(b.name) * dir;
       if (a.rating === null) return 1;
       if (b.rating === null) return -1;
@@ -46,14 +47,6 @@ export function getActiveFilterCount(filters: FilterState): number {
   if (filters.rating !== null) count++;
   if (filters.hideClosedPlaces) count++;
   return count;
-}
-
-export function makeFilterUpdater<K extends keyof FilterState>(
-  setFilters: React.Dispatch<React.SetStateAction<FilterState>>,
-  key: K,
-) {
-  return (value: FilterState[K]) =>
-    setFilters((prev) => ({ ...prev, [key]: value }));
 }
 
 export function ratingFromString(value: string): Rating {
