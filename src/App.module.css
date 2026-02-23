@@ -66,6 +66,15 @@
   max-width: 480px;
 }
 
+.disclaimer {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: rgba(244, 237, 224, 0.5);
+  max-width: 480px;
+  margin-top: 12px;
+}
+
 /* ── Main content ─────────────────────────────────────────────────────────── */
 .main {
   flex: 1;

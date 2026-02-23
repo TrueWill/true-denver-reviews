@@ -29,6 +29,10 @@ export default function App() {
           <p className={styles.subtitle}>
             Honest, opinionated takes on Denver's restaurants & local spots
           </p>
+          <p className={styles.disclaimer}>
+            All opinions are personal and for informational purposes only. No
+            guarantees are made regarding accuracy. Visit at your own risk.
+          </p>
         </div>
       </header>
 
