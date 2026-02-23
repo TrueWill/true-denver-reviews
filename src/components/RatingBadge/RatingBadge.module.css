@@ -19,6 +19,7 @@
 .emoji {
   font-size: 15px;
   line-height: 1;
+  margin-bottom: 0.125rem;
   display: block;
 }
 
