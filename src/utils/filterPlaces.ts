@@ -48,14 +48,6 @@ export function getActiveFilterCount(filters: FilterState): number {
   return count;
 }
 
-export function makeFilterUpdater<K extends keyof FilterState>(
-  setFilters: React.Dispatch<React.SetStateAction<FilterState>>,
-  key: K,
-) {
-  return (value: FilterState[K]) =>
-    setFilters((prev) => ({ ...prev, [key]: value }));
-}
-
 export function ratingFromString(value: string): Rating {
   const n = parseInt(value, 10);
   if (n >= 1 && n <= 5) return n as Rating;
