@@ -12,18 +12,7 @@ export function getConnection(): Promise<duckdb.AsyncDuckDBConnection> {
 }
 
 async function initDuckDB(): Promise<duckdb.AsyncDuckDBConnection> {
-  const MANUAL_BUNDLES: duckdb.DuckDBBundles = {
-    mvp: {
-      mainModule: '/duckdb/duckdb-mvp.wasm',
-      mainWorker: '/duckdb/duckdb-browser-mvp.worker.js',
-    },
-    eh: {
-      mainModule: '/duckdb/duckdb-eh.wasm',
-      mainWorker: '/duckdb/duckdb-browser-eh.worker.js',
-    },
-  };
-
-  const bundle = await duckdb.selectBundle(MANUAL_BUNDLES);
+  const bundle = await duckdb.selectBundle(duckdb.getJsDelivrBundles());
   const abs = (path: string) => new URL(path, location.href).href;
   const workerUrl = URL.createObjectURL(
     new Blob([`importScripts("${abs(bundle.mainWorker!)}");`], {

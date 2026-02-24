@@ -9,8 +9,7 @@
     "preview": "vite preview",
     "test": "vitest",
     "lint": "eslint .",
-    "seed": "rm -f public/data.db && duckdb public/data.db < db/seed.sql",
-    "postinstall": "node scripts/copy-duckdb-assets.js"
+    "seed": "rm -f public/data.db && duckdb public/data.db < db/seed.sql"
   },
   "dependencies": {
     "@duckdb/duckdb-wasm": "^1.29.0",
