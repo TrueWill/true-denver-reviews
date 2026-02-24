@@ -4,7 +4,17 @@ Denver (and Colorado in general) favorites and ratings by [TrueWill](https://git
 
 Reviews of local restaurants and places of interest.
 
+Hosted at https://true-denver-reviews.pages.dev/
+
 Originally built with [Claude Code](https://claude.com/product/claude-code).
+
+## Rating system
+
+- ❤️ - Favorite!
+- 👍👍 - Excellent
+- 👍 - Good
+- 🤏 - Meh / Just OK
+- 👎 - Bad
 
 ## Deployment
 
@@ -24,11 +34,3 @@ npm run deploy
 ```
 
 This builds the site and deploys to Cloudflare Pages in one step.
-
-## Rating system
-
-- ❤️ - Favorite!
-- 👍👍 - Excellent
-- 👍 - Good
-- 🤏 - Meh / Just OK
-- 👎 - Bad
