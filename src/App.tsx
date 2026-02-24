@@ -5,8 +5,16 @@ import { PlaceList } from './components/PlaceList';
 import styles from './App.module.css';
 
 export default function App() {
-  const { places, categories, cuisines, areas, filters, setFilters, loading, error } =
-    usePlaces();
+  const {
+    places,
+    categories,
+    cuisines,
+    areas,
+    filters,
+    setFilters,
+    loading,
+    error,
+  } = usePlaces();
 
   return (
     <div className={styles.app}>
@@ -28,7 +36,9 @@ export default function App() {
           <div className={styles.eyebrow}>Denver, Colorado</div>
           <h1 className={styles.title}>True Denver Reviews</h1>
           <p className={styles.subtitle}>
-            Honest, opinionated takes on Denver's restaurants & local spots
+            Denver (and nearby) favorites and ratings by{' '}
+            <a href="https://github.com/TrueWill">TrueWill</a> and&nbsp;
+            <a href="https://github.com/hellomandie">hellomandie</a>.
           </p>
           <p className={styles.disclaimer}>
             All opinions are personal and for informational purposes only. No
