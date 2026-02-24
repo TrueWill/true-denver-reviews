@@ -308,7 +308,7 @@ INSERT INTO places VALUES
   (148, 'Trattoria Stella', 'Dog-friendly patio. Delicious weekend brunch after 10. Reasonable prices for Denver. Can bring coffee from Hooked on Colfax.', 1, 3, NULL, NULL, false, 5),
   (149, 'Fat Sully''s', 'Pizza, pricey, just ok (GF reviewed)', 1, 3, NULL, NULL, false, 2),
   (150, 'Saucy Bombay', 'Very reasonable prices, can taste sauces. SUPER fresh naan.', 1, 7, NULL, NULL, true, 3),
-  (151, 'Mezcal', 'Excellent mezcal margarita, fresh chips', 1, 2, NULL, NULL, false, 3),
+  (151, 'Mezcal', 'Excellent mezcal margarita, fresh chips', 1, 2, NULL, NULL, false, 5),
   (152, 'Zorba''s', 'Greek food, breakfast. Real Irish coffees. Dog-friendly patio. Baked goods. 41 years in business.', 1, 5, NULL, NULL, false, 3),
   (153, 'Enzo''s Pizza', 'GREAT thin crust pizza. Closed Mon/Tue. Recommend take-out.', 1, 3, NULL, NULL, false, 4),
   (154, 'Tommy''s Thai', 'Nice menu, lunch specials, reasonable prices. Best Thai in Denver. Great service.', 1, 8, NULL, NULL, false, 5),
