@@ -17,7 +17,7 @@
   flex-direction: column;
   gap: 10px;
   flex: 1;
-  min-width: 0;
+  min-width: 260px;
 }
 
 .legend {
@@ -159,4 +159,11 @@
   background: var(--closed-bg);
   color: var(--closed-ink);
   border-color: rgba(122, 40, 32, 0.3);
+}
+
+@media (max-width: 600px) {
+  .resetBtn {
+    width: 100%;
+    text-align: center;
+  }
 }
