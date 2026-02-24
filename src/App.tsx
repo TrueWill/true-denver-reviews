@@ -54,6 +54,14 @@ export default function App() {
         <span>True Denver Reviews</span>
         <span aria-hidden="true">·</span>
         <span>Denver, CO</span>
+        <span aria-hidden="true">·</span>
+        <span>
+          Last updated{' '}
+          {new Date(__BUILD_TIME__).toLocaleString(undefined, {
+            dateStyle: 'medium',
+            timeStyle: 'short',
+          })}
+        </span>
       </footer>
     </div>
   );
