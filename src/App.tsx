@@ -1,6 +1,7 @@
 import { usePlaces } from './hooks/usePlaces';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { FilterBar } from './components/FilterBar';
+import { GitHubIcon } from './components/GitHubIcon';
 import { PlaceList } from './components/PlaceList';
 import styles from './App.module.css';
 
@@ -64,6 +65,16 @@ export default function App() {
         <span>True Denver Reviews</span>
         <span aria-hidden="true">·</span>
         <span>Denver, CO</span>
+        <span aria-hidden="true">·</span>
+        <a
+          href="https://github.com/TrueWill/true-denver-reviews"
+          className={styles.footerGithub}
+          aria-label="GitHub repository"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GitHubIcon />
+        </a>
         <span aria-hidden="true">·</span>
         <span>
           Last updated{' '}

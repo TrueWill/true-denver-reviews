@@ -98,6 +98,16 @@
   color: var(--ink-light);
 }
 
+.footerGithub {
+  display: flex;
+  align-items: center;
+  color: var(--ink-light);
+}
+
+.footerGithub:hover {
+  color: var(--ink);
+}
+
 /* ── Responsive ───────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .headerContent {
