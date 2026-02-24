@@ -40,7 +40,10 @@ describe('PlaceCard', () => {
   it('renders Google Maps address link', () => {
     render(<PlaceCard place={place} />);
     const link = screen.getByRole('link', { name: /google maps/i });
-    expect(link).toHaveAttribute('href', expect.stringContaining('google.com/maps'));
+    expect(link).toHaveAttribute(
+      'href',
+      expect.stringContaining('google.com/maps'),
+    );
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });

@@ -23,7 +23,10 @@ async function initDuckDB(): Promise<duckdb.AsyncDuckDBConnection> {
   const logger = new duckdb.ConsoleLogger(duckdb.LogLevel.WARNING);
   const db = new duckdb.AsyncDuckDB(logger, worker);
 
-  await db.instantiate(abs(bundle.mainModule), bundle.pthreadWorker ? abs(bundle.pthreadWorker) : undefined);
+  await db.instantiate(
+    abs(bundle.mainModule),
+    bundle.pthreadWorker ? abs(bundle.pthreadWorker) : undefined,
+  );
   URL.revokeObjectURL(workerUrl);
 
   await db.open({

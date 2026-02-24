@@ -31,11 +31,7 @@ export function PlaceList({ places, loading, error }: PlaceListProps) {
 
   return (
     <section className={styles.section}>
-      <p
-        className={styles.resultCount}
-        aria-live="polite"
-        aria-atomic="true"
-      >
+      <p className={styles.resultCount} aria-live="polite" aria-atomic="true">
         {count === 0
           ? 'No places match your filters'
           : count === 1
@@ -45,9 +41,13 @@ export function PlaceList({ places, loading, error }: PlaceListProps) {
 
       {count === 0 ? (
         <div className={styles.empty}>
-          <p className={styles.emptyIcon} aria-hidden="true">🏔️</p>
+          <p className={styles.emptyIcon} aria-hidden="true">
+            🏔️
+          </p>
           <p className={styles.emptyText}>No places match your filters.</p>
-          <p className={styles.emptyHint}>Try loosening the search or removing a filter.</p>
+          <p className={styles.emptyHint}>
+            Try loosening the search or removing a filter.
+          </p>
         </div>
       ) : (
         <ul className={styles.grid} aria-label="Places">

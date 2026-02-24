@@ -78,7 +78,10 @@ describe('filterAndSortPlaces', () => {
   });
 
   it('filters by category', () => {
-    const result = filterAndSortPlaces(places, { ...base, category: 'Restaurant' });
+    const result = filterAndSortPlaces(places, {
+      ...base,
+      category: 'Restaurant',
+    });
     expect(result).toHaveLength(2);
     expect(result.every((p) => p.category === 'Restaurant')).toBe(true);
   });
@@ -98,7 +101,9 @@ describe('filterAndSortPlaces', () => {
   it('filters by minimum rating (at least)', () => {
     const result = filterAndSortPlaces(places, { ...base, rating: 4 });
     expect(result).toHaveLength(2);
-    expect(result.map((p) => p.name)).toEqual(expect.arrayContaining(['Acme Burgers', 'Zenith Coffee']));
+    expect(result.map((p) => p.name)).toEqual(
+      expect.arrayContaining(['Acme Burgers', 'Zenith Coffee']),
+    );
   });
 
   it('excludes null-rated places when a minimum rating is set', () => {
@@ -108,13 +113,19 @@ describe('filterAndSortPlaces', () => {
   });
 
   it('hides closed places when hideClosedPlaces is true', () => {
-    const result = filterAndSortPlaces(places, { ...base, hideClosedPlaces: true });
+    const result = filterAndSortPlaces(places, {
+      ...base,
+      hideClosedPlaces: true,
+    });
     expect(result).toHaveLength(3);
     expect(result.every((p) => !p.closed)).toBe(true);
   });
 
   it('includes closed places when hideClosedPlaces is false', () => {
-    const result = filterAndSortPlaces(places, { ...base, hideClosedPlaces: false });
+    const result = filterAndSortPlaces(places, {
+      ...base,
+      hideClosedPlaces: false,
+    });
     expect(result.some((p) => p.closed)).toBe(true);
   });
 
@@ -173,14 +184,25 @@ describe('filterAndSortPlaces', () => {
       { ...places[0], name: 'Zebra Cafe', rating: 4 },
       { ...places[0], id: 99, name: 'Alpha Diner', rating: 4 },
     ];
-    const asc = filterAndSortPlaces(tied, { ...base, sortField: 'rating', sortDirection: 'asc' });
+    const asc = filterAndSortPlaces(tied, {
+      ...base,
+      sortField: 'rating',
+      sortDirection: 'asc',
+    });
     expect(asc.map((p) => p.name)).toEqual(['Alpha Diner', 'Zebra Cafe']);
-    const desc = filterAndSortPlaces(tied, { ...base, sortField: 'rating', sortDirection: 'desc' });
+    const desc = filterAndSortPlaces(tied, {
+      ...base,
+      sortField: 'rating',
+      sortDirection: 'desc',
+    });
     expect(desc.map((p) => p.name)).toEqual(['Zebra Cafe', 'Alpha Diner']);
   });
 
   it('returns empty array when no places match', () => {
-    const result = filterAndSortPlaces(places, { ...base, search: 'xyznotfound' });
+    const result = filterAndSortPlaces(places, {
+      ...base,
+      search: 'xyznotfound',
+    });
     expect(result).toHaveLength(0);
   });
 });

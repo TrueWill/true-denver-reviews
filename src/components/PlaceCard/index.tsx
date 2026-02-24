@@ -13,7 +13,10 @@ export function PlaceCard({ place }: PlaceCardProps) {
       <div className={styles.topRow}>
         <div className={styles.titleBlock}>
           {place.closed && (
-            <span className={styles.closedBadge} aria-label="Permanently closed">
+            <span
+              className={styles.closedBadge}
+              aria-label="Permanently closed"
+            >
               Closed
             </span>
           )}
@@ -23,16 +26,24 @@ export function PlaceCard({ place }: PlaceCardProps) {
       </div>
 
       <div className={styles.chips}>
-        <span className={`${styles.chip} ${styles.categoryChip}`}>{place.category}</span>
+        <span className={`${styles.chip} ${styles.categoryChip}`}>
+          {place.category}
+        </span>
         {place.cuisine && (
-          <span className={`${styles.chip} ${styles.cuisineChip}`}>{place.cuisine}</span>
+          <span className={`${styles.chip} ${styles.cuisineChip}`}>
+            {place.cuisine}
+          </span>
         )}
         {place.area && (
-          <span className={`${styles.chip} ${styles.areaChip}`}>{place.area}</span>
+          <span className={`${styles.chip} ${styles.areaChip}`}>
+            {place.area}
+          </span>
         )}
       </div>
 
-      {place.description && <p className={styles.description}>{place.description}</p>}
+      {place.description && (
+        <p className={styles.description}>{place.description}</p>
+      )}
 
       {place.address && (
         <a
@@ -42,7 +53,9 @@ export function PlaceCard({ place }: PlaceCardProps) {
           className={styles.address}
           aria-label={`View ${place.name} on Google Maps: ${place.address}`}
         >
-          <span className={styles.addressIcon} aria-hidden="true">↗</span>
+          <span className={styles.addressIcon} aria-hidden="true">
+            ↗
+          </span>
           {place.address}
         </a>
       )}

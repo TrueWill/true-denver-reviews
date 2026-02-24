@@ -1,5 +1,8 @@
 import type { FilterState } from '../../types';
-import { getActiveFilterCount, ratingFromString } from '../../utils/filterPlaces';
+import {
+  getActiveFilterCount,
+  ratingFromString,
+} from '../../utils/filterPlaces';
 import { getRatingDisplay } from '../../utils/rating';
 import styles from './FilterBar.module.css';
 
@@ -136,7 +139,8 @@ export function FilterBar({
                 const { emoji, label } = getRatingDisplay(r);
                 return (
                   <option key={r} value={r}>
-                    {emoji} {label}{r < 5 ? ' & up' : ''}
+                    {emoji} {label}
+                    {r < 5 ? ' & up' : ''}
                   </option>
                 );
               })}

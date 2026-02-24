@@ -1,7 +1,9 @@
 import type { AsyncDuckDBConnection } from './client';
 import type { Place } from '../types';
 
-export async function fetchAllPlaces(conn: AsyncDuckDBConnection): Promise<Place[]> {
+export async function fetchAllPlaces(
+  conn: AsyncDuckDBConnection,
+): Promise<Place[]> {
   const result = await conn.query(`
     SELECT
       p.id,
@@ -33,17 +35,23 @@ export async function fetchAllPlaces(conn: AsyncDuckDBConnection): Promise<Place
   }));
 }
 
-export async function fetchCategories(conn: AsyncDuckDBConnection): Promise<string[]> {
+export async function fetchCategories(
+  conn: AsyncDuckDBConnection,
+): Promise<string[]> {
   const result = await conn.query('SELECT name FROM categories ORDER BY name');
   return result.toArray().map((row) => String(row.name));
 }
 
-export async function fetchCuisines(conn: AsyncDuckDBConnection): Promise<string[]> {
+export async function fetchCuisines(
+  conn: AsyncDuckDBConnection,
+): Promise<string[]> {
   const result = await conn.query('SELECT name FROM cuisines ORDER BY name');
   return result.toArray().map((row) => String(row.name));
 }
 
-export async function fetchAreas(conn: AsyncDuckDBConnection): Promise<string[]> {
+export async function fetchAreas(
+  conn: AsyncDuckDBConnection,
+): Promise<string[]> {
   const result = await conn.query('SELECT name FROM areas ORDER BY name');
   return result.toArray().map((row) => String(row.name));
 }

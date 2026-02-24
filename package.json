@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "test": "vitest",
     "lint": "eslint .",
+    "format": "prettier --write .",
     "seed": "rm -f public/data.db && duckdb public/data.db < db/seed.sql",
     "deploy": "npm run build && wrangler pages deploy"
   },

@@ -1,6 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useDb } from './useDb';
-import { fetchAllPlaces, fetchCategories, fetchCuisines, fetchAreas } from '../db/queries';
+import {
+  fetchAllPlaces,
+  fetchCategories,
+  fetchCuisines,
+  fetchAreas,
+} from '../db/queries';
 import { filterAndSortPlaces } from '../utils/filterPlaces';
 import type { FilterState, Place } from '../types';
 

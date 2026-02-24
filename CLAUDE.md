@@ -11,14 +11,17 @@ npm run preview    # serve production build locally
 npm test           # run tests in watch mode
 npm test -- --run  # run tests once (CI mode)
 npm run lint       # ESLint
+npm run format     # Prettier (run after saving files)
 ```
 
 Run a single test file:
+
 ```bash
 npm test -- --run src/utils/__tests__/rating.test.ts
 ```
 
 Regenerate the database after editing `db/seed.sql`:
+
 ```bash
 duckdb public/data.db < db/seed.sql
 ```

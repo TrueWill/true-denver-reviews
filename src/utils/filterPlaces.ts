@@ -1,8 +1,19 @@
 import type { FilterState, Place, Rating } from '../types';
 
-export function filterAndSortPlaces(places: Place[], filters: FilterState): Place[] {
-  const { search, category, area, cuisine, rating, hideClosedPlaces, sortField, sortDirection } =
-    filters;
+export function filterAndSortPlaces(
+  places: Place[],
+  filters: FilterState,
+): Place[] {
+  const {
+    search,
+    category,
+    area,
+    cuisine,
+    rating,
+    hideClosedPlaces,
+    sortField,
+    sortDirection,
+  } = filters;
 
   const searchLower = search.toLowerCase();
 
@@ -11,7 +22,8 @@ export function filterAndSortPlaces(places: Place[], filters: FilterState): Plac
     if (category && p.category !== category) return false;
     if (area && p.area !== area) return false;
     if (cuisine && p.cuisine !== cuisine) return false;
-    if (rating !== null && (p.rating === null || p.rating < rating)) return false;
+    if (rating !== null && (p.rating === null || p.rating < rating))
+      return false;
     if (
       searchLower &&
       !p.name.toLowerCase().includes(searchLower) &&
@@ -27,7 +39,8 @@ export function filterAndSortPlaces(places: Place[], filters: FilterState): Plac
     if (sortField === 'rating') {
       // "asc" = best first (high→low); "desc" = worst first (low→high).
       // Nulls sort last regardless of direction.
-      if (a.rating === null && b.rating === null) return a.name.localeCompare(b.name) * dir;
+      if (a.rating === null && b.rating === null)
+        return a.name.localeCompare(b.name) * dir;
       if (a.rating === null) return 1;
       if (b.rating === null) return -1;
       const ratingDiff = (b.rating - a.rating) * dir;

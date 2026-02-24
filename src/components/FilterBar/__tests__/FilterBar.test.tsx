@@ -73,7 +73,10 @@ describe('FilterBar', () => {
 
   it('calls onFilterChange when category changes', async () => {
     const { onChange } = renderBar();
-    await userEvent.selectOptions(screen.getByLabelText(/category/i), 'Restaurant');
+    await userEvent.selectOptions(
+      screen.getByLabelText(/category/i),
+      'Restaurant',
+    );
     expect(onChange).toHaveBeenCalled();
   });
 
@@ -90,16 +93,29 @@ describe('FilterBar', () => {
 
   it('does not show clear button when no filters are active', () => {
     renderBar();
-    expect(screen.queryByRole('button', { name: /clear/i })).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', { name: /clear/i }),
+    ).not.toBeInTheDocument();
   });
 
   it('calls onFilterChange with reset state when clear is clicked', async () => {
-    const sortedFilters = { ...defaultFilters, search: 'test', category: 'Bar', sortField: 'rating' as const, sortDirection: 'desc' as const };
+    const sortedFilters = {
+      ...defaultFilters,
+      search: 'test',
+      category: 'Bar',
+      sortField: 'rating' as const,
+      sortDirection: 'desc' as const,
+    };
     const { onChange } = renderBar(sortedFilters);
     await userEvent.click(screen.getByRole('button', { name: /clear/i }));
     const updater = onChange.mock.calls[onChange.mock.calls.length - 1][0];
     const result = updater(sortedFilters);
-    expect(result).toMatchObject({ search: '', category: null, sortField: 'rating', sortDirection: 'desc' });
+    expect(result).toMatchObject({
+      search: '',
+      category: null,
+      sortField: 'rating',
+      sortDirection: 'desc',
+    });
   });
 
   it('populates category options from props', () => {
@@ -113,6 +129,8 @@ describe('FilterBar', () => {
 
   it('is wrapped in landmark with accessible label', () => {
     renderBar();
-    expect(screen.getByRole('complementary', { name: /filter/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('complementary', { name: /filter/i }),
+    ).toBeInTheDocument();
   });
 });
