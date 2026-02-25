@@ -1,0 +1,207 @@
+id,name,description,category,cuisine,address,area,closed,rating
+1,"Huckleberry Coffee","",Coffee Shop,,,,false,3
+2,"Crema Coffee House","",Coffee Shop,,,,false,
+3,"Safta","",Restaurant,Mediterranean,,,false,5
+4,"Smok","",Restaurant,BBQ,,,false,3
+5,"Snooze","Breakfast",Diner,American,,,false,5
+6,"Patxi Pizza","",Restaurant,Italian,,,false,3
+7,"Improper City","Food trucks, beer",Bar,,,,false,3
+8,"Mister Oso","A little pricey",Restaurant,,,,false,3
+9,"For[a]ged","Good but pricey",Restaurant,,,,true,2
+10,"Milk Market","Fun",Market,,,,false,
+11,"Kachina","By Milk Market",Restaurant,,,LoDo,false,5
+12,"Barcelona Wine Bar","",Bar,,,,false,3
+13,"Habit Donuts","",Bakery,,,,false,3
+14,"Mint Indian","Decent",Restaurant,Indian,,,false,
+15,"Adelitas","",Restaurant,Mexican,,,false,3
+16,"Aloy Modern Thai","",Restaurant,Thai,,,false,3
+17,"Sushi-Rama","",Restaurant,Japanese,,,true,3
+18,"Honey","Drinks, snacks",Cocktail Bar,,,,false,5
+19,"Rye Society","Reubens, breakfast, lunch",Restaurant,American,,,false,3
+20,"Pit Fiend","BBQ, sells out. Formerly Owlbear.",Restaurant,BBQ,,,false,5
+21,"Shake Shack","",Restaurant,American,,,false,3
+22,"Colorado Sake Co","",Bar,Japanese,,,false,4
+23,"Great Divide","",Brewery,,,,false,5
+24,"Sushi Hai","",Restaurant,Japanese,,,false,3
+25,"Osaka Ramen","",Restaurant,Japanese,,,true,5
+26,"Grabowski's Pizzeria","GF, fennel",Restaurant,Italian,,,true,5
+27,"Fish & Beer","Get there early",Restaurant,,,,false,5
+28,"Stowaway Kitchen","Great waffles, fresh fruit",Restaurant,,,,false,3
+29,"Blue Moon Brewery","",Brewery,,,,false,3
+30,"Ophelia's","Reservations recommended. Good venue.",Restaurant,American,,,false,5
+31,"Zaika Indian Express","Grubhub",Restaurant,Indian,,,false,3
+32,"Snarf's","",Restaurant,American,,,false,3
+33,"Denver Biscuit Company","",Diner,American,,,false,4
+34,"Olive & Finch","Sandwiches, salads",Restaurant,,,,false,4
+35,"Dio Mio","",Restaurant,Italian,,,false,4
+36,"Molecule Effect","Coffee, booze, snacks",Coffee Shop,,,,false,3
+37,"Kuma's Corner","Best burgers",Restaurant,American,,,true,5
+38,"Bigsby's Folly","Wine, small plates, great crack bacon",Bar,,,,false,3
+39,"Sexy Pizza","",Restaurant,Italian,,,false,3
+40,"Lustre Pearl","Not the iced Irish coffee though. Drinks.",Bar,,,,false,3
+41,"City o City","Drinks, vegan food, coffee",Restaurant,American,,,false,3
+42,"Agave","",Restaurant,Mexican,,,false,3
+43,"Goldmine Vintage","",Shopping,,,,false,3
+44,"The Wizard's Chest","Big gaming store",Shopping,,,,false,4
+45,"Postino","Wine, cheese, charcuterie. Dog-friendly patio.",Restaurant,,,,false,3
+46,"City Bark LoDo","",Shopping,,,LoDo,false,5
+47,"Linger","Brunch, mortuary. OneTable reservations.",Restaurant,,,LoHi,false,3
+48,"Little Man Ice Cream","Long line",Restaurant,,,LoHi,false,3
+49,"Death & Co","Fancy drinks, food",Cocktail Bar,,,,false,3
+50,"Black Shirt Brewing","Pizza",Brewery,,,,false,4
+51,"Odell","Meh beer",Brewery,,,,false,2
+52,"Stem Ciders","",Brewery,,,,false,3
+53,"Randy Buzz Session Mead","",Brewery,,,Golden,false,3
+54,"Ash'Kara","Greek and Phoenician",Restaurant,Mediterranean,,,false,3
+55,"India Oven","",Restaurant,Indian,,,false,3
+56,"Ratio Beerworks","Domestica is good. Dog-friendly, mist in summer, cheap. Order food from Shake Shack or Barcelona. Good music.",Brewery,,,RiNo,false,3
+57,"Mika Sushi","",Restaurant,Japanese,,,false,3
+58,"Uchi","Sushi, pricey and you'll leave hungry",Restaurant,Japanese,,,false,2
+59,"Brown Palace","Tea and crumpets, delicious dinners, $$$",Restaurant,American,,,false,4
+60,"Slater's 50/50","Good burgers and drinks",Restaurant,American,,,false,3
+61,"Pho 16th Vietnamese Grill","DoorDash. Yummy and inexpensive.",Restaurant,Vietnamese,,,false,3
+62,"Sushi Ronin","Overpriced, small portions",Restaurant,Japanese,,,false,1
+63,"Lekker Coffee","Good chai",Coffee Shop,,,,true,5
+64,"Lazy Dog","Super dog-friendly restaurant",Restaurant,American,,,false,3
+65,"The French Press","Good coffee, brunch",Coffee Shop,,,,false,3
+66,"Cafe Byblos","Greek/Lebanese. DoorDash/Grubhub.",Restaurant,Mediterranean,,,false,3
+67,"Le French","Duck",Restaurant,French,,,false,3
+68,"Modern Market","Grubhub. Soup, sandwiches, salads, grain bowls. Healthy and delicious.",Restaurant,,,,false,3
+69,"Biker Jim's Gourmet Dogs","",Food Truck,American,,,true,3
+70,"Temaki Den","Sushi, pricey. Hand rolls weren't rolled, didn't sit well, not worth it.",Restaurant,Japanese,,,false,1
+71,"Kaffe Landskap","",Coffee Shop,,,,false,3
+72,"What the Pho","Grubhub",Restaurant,Vietnamese,,,false,3
+73,"Il Posto","Try the Cabin in the Woods drink. Excellent cocktails and wine, charcuterie. $. Tuesday is less busy.",Restaurant,Italian,,,false,3
+74,"Grind","Great fried chicken",Restaurant,American,,Cherry Creek,true,3
+75,"Tap & Handle","",Bar,,,Fort Collins,false,3
+76,"Locust Cider","",Brewery,,,Fort Collins,false,3
+77,"Red Square Euro Bistro","Russian food and vodka. Try the Jewel vodka, the honey dessert, and the borscht.",Restaurant,Eastern European,,,false,5
+78,"Mutiny Comics Coffee","",Coffee Shop,,,,false,3
+79,"The Block Distilling Co","",Bar,,,,false,3
+80,"Spice Room","Indian. Nice lunch specials, complimentary papadums.",Restaurant,Indian,,,false,4
+81,"Port Side","Coffee, drinks, brunch, snacks (outside). Nice, inexpensive.",Coffee Shop,,,,false,5
+82,"Disguises","Costume store, great service",Shopping,,,Lakewood,false,5
+83,"Number Thirty-eight","Drinks, food, live music, dog-friendly. Reservations.",Bar,,,,false,3
+84,"Larimer Lounge","Strong drinks",Venue,,,,false,3
+85,"Himchuli","",Restaurant,Indian,,,false,3
+86,"Crown of India","",Restaurant,Indian,,,false,4
+87,"The Walnut Room","Best Reubens, drinks with fresh ingredients, dog patio",Bar,,,,false,3
+88,"Earls On Top","Seafood, brunch",Restaurant,,,,false,3
+89,"Millers & Rossi","Fresh ingredient cocktails",Cocktail Bar,,,,false,3
+90,"Marczyk Fine Foods","Grocery",Market,,,,false,4
+91,"FashioNation","Boots, goth/punk, authentic",Shopping,,,,false,3
+92,"Yahya's Mediterranean Grill","Turkish coffee",Restaurant,Mediterranean,,,false,5
+93,"Ted's Montana Grill","Good bison at reasonable prices but slow service and a bit country",Restaurant,American,,LoDo,false,2
+94,"Herman's Hideaway","Nice small music venue",Venue,,,,false,3
+95,"Adrift","Tiki bar. Reservations suggested, sit indoors, stick to frozen drinks.",Bar,,,,false,2
+96,"Ali Baba Grill","Turkish coffee, lunch specials, good gyros. Yahya's is better overall.",Restaurant,Mediterranean,,,false,3
+97,"Citron Bistro","Greek. Great service, reasonable prices, not pretentious, good food, gluten-free options.",Restaurant,Mediterranean,,,false,3
+98,"Meadowlark","Speakeasy",Cocktail Bar,,,,false,3
+99,"Blue Agave","Good margaritas",Bar,Mexican,,,false,3
+100,"Clocktower Cabaret","",Venue,,,,false,5
+101,"Mono Mono","Korean fried chicken",Restaurant,Korean,,,false,2
+102,"Lea Jane's Hot Chicken","Bring wet wipes",Restaurant,American,,,false,3
+103,"Dochi","",Restaurant,Japanese,,,false,3
+104,"OMF","Sours",Brewery,,,,false,3
+105,"So RADish","",Restaurant,,,,false,3
+106,"Rare Finds","Nice antiques, imported furniture, reasonably priced",Shopping,,,,false,3
+107,"Motomaki","",Restaurant,Japanese,,,false,3
+108,"Wild Corgi Pub","Good food, super friendly",Bar,,,,false,5
+109,"Tupelo Honey","Good southern brunch. Chicken and waffles.",Restaurant,American,,,false,3
+110,"Office Furniture EZ","Great refurbished office supply",Shopping,,,,false,3
+111,"Cherry Cricket","Burgers",Restaurant,American,,,false,5
+112,"Thai Monkey Club","Good prices",Restaurant,Thai,,,false,3
+113,"Arvada Army Navy Surplus","",Shopping,,,Arvada,false,3
+114,"Rheinlander Bakery","",Bakery,,,,false,3
+115,"Indian Springs","Hot springs. Decent but not great for shared pool. Not very hot nor many minerals or amenities.",Hot Springs,,,Idaho Springs,false,2
+116,"Mile High Flea Market","Cash only mostly. Bargains, mostly resale.",Market,,,Commerce City,false,2
+117,"Butcher Block Cafe","Old school diner. Friendly, fast, reasonable prices, decent food. Maybe try for breakfast.",Diner,American,,,false,3
+118,"Bellota at the Source","Tacos at reasonable prices, good service, EPIC churros",Restaurant,Mexican,,RiNo,false,3
+119,"Deviation Distilling","Tasty whiskey, talented bartenders",Bar,,,,false,3
+120,"Sir","Good cocktails. Try the espresso martini.",Cocktail Bar,,,,false,3
+121,"Russian Books","",Shopping,,,,false,5
+122,"Il Porcellino","Deli with meat, soup, sandwiches. Busy, small, may take some time.",Market,,,,false,3
+123,"Denver Cat Company","Cat cafe with adoption. Varies based on cat population.",Coffee Shop,,,,false,3
+124,"Masha and the Bear","",Restaurant,Eastern European,,,false,4
+125,"Nola Jane","Hurricanes, good Cajun food, ghost",Bar,Cajun,,,false,3
+126,"Oskar Blues","Don't get the pretzels",Brewery,,,,false,2
+127,"Corridor 44","Fancy",Cocktail Bar,,,,false,3
+128,"Colorado Cherry Co","Pie, drinks",Restaurant,,,,false,2
+129,"Christkindlmarket","",Event,,,,false,3
+130,"The Bronze Empire","Chinese hot pots cooked at your table. Try the fried ice cream dessert.",Restaurant,Chinese,,,false,4
+131,"Revolte Goods","Alternative",Shopping,,,,false,5
+132,"The Crypt","Fun goth/metal bar",Bar,,,,false,3
+133,"School House","Good weekend brunch, drinks, dog-friendly patio",Restaurant,,,Arvada,false,3
+134,"Bacon Social House","Breakfast, brunch, drinks, dog-friendly patio. Bloody Marys.",Restaurant,American,,Baker,false,3
+135,"The Odditorium","",Bar,,,,false,3
+136,"Cafe Miriam","Coffee, pastries, brunch. Good chai, great pastries. Outdoor patio (dog-friendly). Closed Mondays.",Coffee Shop,,,,false,4
+137,"Javier's Diner","Excellent Mexican, super friendly, reasonable",Diner,Mexican,,,false,4
+138,"Locavore","Cool food hall and grocery",Market,,,,false,3
+139,"Fox Run Cafe","Breakfast, good coffee, alcoholic drinks. Friendly, small dog-friendly patio. Reasonable prices. Get there by 11 for breakfast burrito.",Coffee Shop,,,,true,3
+140,"Ace Hardware on E 12th","",Shopping,,,,false,3
+141,"Hooked on Colfax","Coffee",Coffee Shop,,,Capitol Hill,false,5
+142,"Annie's Cafe and Bar","Breakfast, dog-friendly patio",Restaurant,,,,true,3
+143,"Sprouts","Grocery. Nice deli (deli closes before store).",Market,,,,false,3
+144,"Lula Rose General Store","Coffee, breakfast (good burritos), plants, good dirty chai",Market,,,,false,2
+145,"Good Times","Shakes, custard, burgers. Paw Bender for dogs. Drive-through.",Restaurant,American,,,false,3
+146,"Chocolate Lab","Delicious chocolate drinks, but bartender is unfriendly",Bar,,,,false,1
+147,"The Learned Lemur","Oddities",Shopping,,,,false,5
+148,"Trattoria Stella","Dog-friendly patio. Delicious weekend brunch after 10. Reasonable prices for Denver. Can bring coffee from Hooked on Colfax.",Restaurant,Italian,,,false,5
+149,"Fat Sully's","Pizza, pricey, just ok (GF reviewed)",Restaurant,Italian,,,false,2
+150,"Saucy Bombay","Very reasonable prices, can taste sauces. SUPER fresh naan.",Restaurant,Indian,,,true,3
+151,"Mezcal","Excellent mezcal margarita, fresh chips",Restaurant,Mexican,,,false,5
+152,"Zorba's","Greek food, breakfast. Real Irish coffees. Dog-friendly patio. Baked goods. 41 years in business.",Restaurant,Mediterranean,,,false,3
+153,"Enzo's Pizza","GREAT thin crust pizza. Closed Mon/Tue. Recommend take-out.",Restaurant,Italian,,,false,4
+154,"Tommy's Thai","Nice menu, lunch specials, reasonable prices. Best Thai in Denver. Great service.",Restaurant,Thai,,,false,5
+155,"Sweet Cooie's Ice Cream","",Restaurant,,,,false,3
+156,"Smith & Canon","Ice cream, coffee, affogatos",Coffee Shop,,,,false,5
+157,"Rustic Barcelona","Antiques",Shopping,,,,false,2
+158,"Blue Pan Pizza","Pizza",Restaurant,Italian,,,false,5
+159,"7 Leguas","Wide selection. Margaritas not epic.",Restaurant,Mexican,,,false,3
+160,"Q House","Odd hours, a little pricey, good service, tasty food, good cocktails",Restaurant,Asian,,,false,3
+161,"Bastien's","Sugar steaks, sugar burgers. Good drinks and appetizers. Pricey but worth it. Reservations recommended.",Restaurant,American,,,false,4
+162,"Under the Umbrella","Coffee",Coffee Shop,,,,false,4
+163,"Goosetown Tavern","Sandwiches, beer, mixed drinks. Sometimes live music. Limited food selection.",Bar,,,,false,3
+164,"The Watering Bowl","Off-leash dog area, bar, indoor miniature golf",Bar,,,,false,3
+165,"Sienna Wine Bar","Champagne flights, great cheese plates",Bar,,,,false,3
+166,"Pho & Bar","Grubhub",Restaurant,Vietnamese,,,false,3
+167,"Cafe de France","Only tried on Grubhub but good for brunch",Restaurant,French,,,false,4
+168,"GB Fish & Chips","Really nice and fun, kinda punk",Restaurant,,,Capitol Hill,false,3
+169,"H&E Used Furniture","FAR better deals than similar stores, without sacrificing quality. Clean and friendly. Say hi to Sammy the dog.",Shopping,,,,false,4
+170,"Taste of India","Russian market in same parking lot",Restaurant,Indian,,,false,4
+171,"Molotov Kitschen","GREAT Ukrainian food and drinks. Expensive but worth it. Try the elk. Save room for dessert. Reservations recommended.",Restaurant,Eastern European,,,false,5
+172,"Nuggs Ice Cream","",Restaurant,,,,false,3
+173,"North Italia","Reservation recommended",Restaurant,Italian,,,false,4
+174,"Mizuna","$$$$",Restaurant,,,,false,4
+175,"Cerebral Brewing","",Brewery,,,,false,3
+176,"Heaven Ice Cream","",Restaurant,,,LoDo,false,4
+177,"Foolish Craig's","",Restaurant,,,Boulder,false,3
+178,"Champagne Tiger","Formerly Tom's Starlight. Food, brunch, cocktails, retro atmosphere.",Restaurant,,,,false,4
+179,"Radical Sasquatch","Food truck, dumplings",Food Truck,Asian,,,false,3
+180,"Menya Ramen","Delivery, but pretty poor",Restaurant,Japanese,,,false,1
+181,"Go Fish Sushi","",Restaurant,Japanese,,,false,3
+182,"Cohesion Brewing","Good darks. Dog-friendly patio. Friendly.",Brewery,,,,false,3
+183,"Smashburger","",Restaurant,American,,,false,3
+184,"Yianni's Gyros Place","Reasonable, friendly, good. Crispy fries don't get soggy.",Restaurant,Mediterranean,,,false,3
+185,"Chubby Cattle","Good but $$$ and too much food. No reservations.",Restaurant,Asian,,,false,2
+186,"Crab & Shell Cajun Seafood","Crab boil",Restaurant,Cajun,,,false,3
+187,"Jets Pizza","Pricey and not great",Restaurant,Italian,,,false,1
+188,"Hacienda","",Restaurant,Mexican,,,false,3
+189,"Daughter Thai","",Restaurant,Thai,,,false,4
+190,"Jelly","Breakfast, donut bites. Popular, online waiting list. Pancakes, specials, gluten-free options.",Restaurant,American,,,false,4
+191,"Enstrom","Coffee, tea, chocolate, affogato",Coffee Shop,,,,false,3
+192,"Gattara Pizza","",Restaurant,Italian,,,false,4
+193,"The Abbey Tavern","Irish weekend brunch. Dark and cool. Try Irish breakfast.",Bar,,,,false,5
+194,"Mizuumi Ramen & Sushi","",Restaurant,Japanese,,,false,3
+195,"Maria Empanada","",Restaurant,Mexican,,,false,3
+196,"Garnish","Indian fusion",Restaurant,Indian,,,false,3
+197,"Nana's Dim Sum","Try the boba",Restaurant,Chinese,,,false,4
+198,"Park Hill Art Festival","",Event,,,Park Hill,false,3
+199,"Bon Ami","",Restaurant,French,,,false,3
+200,"Bamboo Sushi","$$$",Restaurant,Japanese,,,false,3
+201,"Briar Patch","Food, microbrew beer, drinks. Dog porch. Try French toast or Reuben.",Restaurant,American,,,false,4
+202,"Yard House","Wide variety, good, by Paramount. Reasonable.",Restaurant,,,LoDo,false,3
+203,"Corner Office","Decent. Good drinks, nice decor.",Bar,,,,false,3
+204,"Japon","Sushi, ramen",Restaurant,Japanese,,Capitol Hill,false,4
+205,"Sukiya Ramen","Only tried DoorDash but some of the best udon I have had",Restaurant,Japanese,,,false,5
+206,"YP Hello Asian Grill","Delivery. Consistent, huge portions.",Restaurant,Asian,,,false,5
