@@ -20,11 +20,16 @@ Run a single test file:
 npm test -- --run src/utils/__tests__/rating.test.ts
 ```
 
-Regenerate the database after editing `db/seed.sql`:
+Edit reviews by opening `db/places.csv` in any spreadsheet app (Excel, Numbers,
+Google Sheets). Use text names for category/cuisine/area — see the other CSVs for
+valid values. Then regenerate the database:
 
 ```bash
-duckdb public/data.db < db/seed.sql
+npm run seed
 ```
+
+Lookup tables (`db/categories.csv`, `db/cuisines.csv`, `db/areas.csv`) rarely need
+editing but follow the same pattern. The build script is `db/build.sql`.
 
 ## Architecture
 

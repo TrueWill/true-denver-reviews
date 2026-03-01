@@ -140,3 +140,6 @@ vite.config.ts.timestamp-*
 
 # DuckDB WASM assets (copied from node_modules via postinstall)
 public/duckdb/
+
+# macOS
+.DS_Store

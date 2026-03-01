@@ -10,7 +10,7 @@
     "test": "vitest",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "seed": "rm -f public/data.db && duckdb public/data.db < db/seed.sql",
+    "seed": "rm -f public/data.db && duckdb public/data.db < db/build.sql",
     "deploy": "npm run build && wrangler pages deploy"
   },
   "dependencies": {
