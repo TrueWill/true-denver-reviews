@@ -16,6 +16,18 @@ Originally built with [Claude Code](https://claude.com/product/claude-code).
 - 🤏 - Meh / Just OK
 - 👎 - Bad
 
+## Editing content
+
+Open `db/places.csv` in any spreadsheet app (Excel, Numbers, Google Sheets) to add or edit reviews. Use text names for category/cuisine/area — see `db/categories.csv`, `db/cuisines.csv`, and `db/areas.csv` for valid values.
+
+After saving changes, regenerate the database:
+
+```bash
+npm run seed
+```
+
+Then commit both `db/places.csv` and `public/data.db`.
+
 ## Deployment
 
 Hosted on [Cloudflare Pages](https://pages.cloudflare.com/). `wrangler` is included as a dev dependency, so no global install is needed — use `npx wrangler` for direct CLI commands.
