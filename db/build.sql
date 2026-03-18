@@ -49,4 +49,9 @@ SELECT 'WARNING: unrecognized category for: ' || p.name AS warning
 FROM read_csv('db/places.csv', header = true) p
 WHERE p.category NOT IN (SELECT name FROM categories);
 
-SELECT count(*) AS imported_places FROM places;
+SELECT
+  CASE WHEN count(*) = 0
+    THEN error('No places imported — check that all category names in places.csv match categories.csv')
+    ELSE count(*)
+  END AS imported_places
+FROM places;
