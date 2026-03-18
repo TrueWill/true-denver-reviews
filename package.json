@@ -10,11 +10,11 @@
     "test": "vitest",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "seed": "rm -f public/data.db && duckdb -bail public/data.db < db/build.sql",
+    "seed": "bash db/seed.sh",
     "deploy": "npm run build && wrangler pages deploy"
   },
   "dependencies": {
-    "@duckdb/duckdb-wasm": "^1.32.0",
+    "@duckdb/duckdb-wasm": "^1.31.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
