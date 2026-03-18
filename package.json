@@ -14,7 +14,7 @@
     "deploy": "npm run build && wrangler pages deploy"
   },
   "dependencies": {
-    "@duckdb/duckdb-wasm": "^1.29.0",
+    "@duckdb/duckdb-wasm": "^1.32.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
