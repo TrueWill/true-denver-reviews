@@ -89,7 +89,7 @@ id,name,description,category,cuisine,address,area,closed,rating
 88,Earls On Top,"Seafood, brunch",Restaurant,,,,FALSE,3
 89,Millers & Rossi,Fresh ingredient cocktails,Cocktail Bar,,,,FALSE,3
 90,Marczyk Fine Foods,Grocery,Market,,,,FALSE,4
-91,FashioNation,"Boots, goth/punk, authentic",Shopping,,,,FALSE,3
+91,FashioNation,"Boots, goth/punk, authentic",Shopping,,"1745 S Broadway, Denver, CO 80210",,FALSE,3
 92,Yahya's Mediterranean Grill,Turkish coffee. Good portions; you will have leftovers.,Restaurant,Mediterranean,,,FALSE,5
 93,Ted's Montana Grill,Good bison at reasonable prices but slow service and a bit country,Restaurant,American,,LoDo,FALSE,2
 94,Herman's Hideaway,Nice small music venue,Venue,,,,FALSE,3
@@ -110,7 +110,7 @@ id,name,description,category,cuisine,address,area,closed,rating
 109,Tupelo Honey,Good southern brunch. Chicken and waffles.,Restaurant,American,,,FALSE,3
 110,Office Furniture EZ,Great refurbished office supply,Shopping,,,,FALSE,3
 111,Cherry Cricket,Burgers however you like. Friendly. Good outdoor seating options that are dog-friendly.,Restaurant,American,,Cherry Creek,FALSE,5
-112,Thai Monkey Club,Good prices,Restaurant,Thai,,,FALSE,3
+112,Thai Monkey Club,Good prices,Restaurant,Thai,"102 S Broadway, Denver, CO 80209",Baker,FALSE,3
 113,Arvada Army Navy Surplus,,Shopping,,,Arvada,FALSE,3
 114,Rheinlander Bakery,,Bakery,,,,FALSE,3
 115,Indian Springs,Hot springs. Decent but not great for shared pool. Not very hot nor many minerals or amenities.,Hot Springs,,,Idaho Springs,FALSE,2
@@ -124,7 +124,7 @@ id,name,description,category,cuisine,address,area,closed,rating
 123,Denver Cat Company,Cat cafe with adoption. Varies based on cat population.,Coffee Shop,,,,FALSE,3
 124,Masha and the Bear,,Restaurant,Eastern European,,,FALSE,4
 125,Nola Jane,"Hurricanes, good Cajun food, ghost",Bar,Cajun,,,FALSE,3
-126,Oskar Blues,Don't get the pretzels,Brewery,,,,FALSE,2
+126,Oskar Blues,Don't get the pretzels,Brewery,,"1624 Market St, Denver, CO 80202",LoDo,FALSE,2
 127,Corridor 44,Fancy,Cocktail Bar,,,,FALSE,3
 128,Colorado Cherry Co,"Pie, drinks",Restaurant,,,,FALSE,2
 129,Christkindlmarket,,Event,,,,FALSE,3
@@ -146,7 +146,7 @@ id,name,description,category,cuisine,address,area,closed,rating
 145,Good Times,"Shakes, custard, burgers. Paw Bender for dogs. Drive-through.",Restaurant,American,,,FALSE,3
 146,Chocolate Lab,"Delicious chocolate drinks, but bartender is unfriendly",Bar,,,,FALSE,1
 147,The Learned Lemur,Oddities. Taxidermy. Tea witch sometimes. Tattoo shop upstairs.,Shopping,,,,FALSE,5
-148,Trattoria Stella,Dog-friendly patio. Delicious weekend brunch after 10. Reasonable prices for Denver. Can bring coffee from Hooked on Colfax.,Restaurant,Italian,,Capitol Hill,FALSE,5
+148,Trattoria Stella,Dog-friendly patio. Delicious weekend brunch after 10. Reasonable prices for Denver. Can bring coffee from Hooked on Colfax.,Restaurant,Italian,"3201 E Colfax Ave, Denver, CO 80206",Capitol Hill,FALSE,5
 149,Fat Sully's,"Pizza, pricey, just ok (GF reviewed)",Restaurant,Italian,,,FALSE,2
 150,Saucy Bombay,"Very reasonable prices, can taste sauces. SUPER fresh naan.",Restaurant,Indian,,,TRUE,3
 151,Mezcal,"Excellent mezcal margaritas, fresh chips. Great value.",Restaurant,Mexican,,,FALSE,5
@@ -161,7 +161,7 @@ id,name,description,category,cuisine,address,area,closed,rating
 160,Q House,"Odd hours, a little pricey, good service, tasty food, good cocktails",Restaurant,Asian,,,FALSE,3
 161,Bastien's,"Sugar steaks, sugar burgers. Good drinks and appetizers. Pricey but worth it. Reservations recommended.",Restaurant,American,,,FALSE,4
 162,Under the Umbrella,Coffee,Coffee Shop,,,,FALSE,4
-163,Goosetown Tavern,"Sandwiches, beer, mixed drinks. Sometimes live music. Limited food selection.",Bar,,,,FALSE,3
+163,Goosetown Tavern,"Sandwiches, beer, mixed drinks. Sometimes live music. Limited food selection.",Bar,,"3242 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,3
 164,The Watering Bowl,"Off-leash dog area, bar, indoor miniature golf",Bar,,,,FALSE,3
 165,Sienna Wine Bar,"Champagne flights, great cheese plates",Bar,,,,FALSE,3
 166,Pho & Bar,Grubhub,Restaurant,Vietnamese,,,FALSE,3

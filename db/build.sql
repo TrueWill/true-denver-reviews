@@ -11,6 +11,8 @@
 --   area      is optional (leave blank if unknown)
 --   rating    is optional (leave blank if unrated); must be 1–5 when set
 
+SET storage_compatibility_version = 'v1.3.2';
+
 DROP TABLE IF EXISTS places;
 DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS cuisines;
@@ -49,4 +51,9 @@ SELECT 'WARNING: unrecognized category for: ' || p.name AS warning
 FROM read_csv('db/places.csv', header = true) p
 WHERE p.category NOT IN (SELECT name FROM categories);
 
-SELECT count(*) AS imported_places FROM places;
+SELECT
+  CASE WHEN count(*) = 0
+    THEN error('No places imported — check that all category names in places.csv match categories.csv')
+    ELSE count(*)
+  END AS imported_places
+FROM places;
