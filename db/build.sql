@@ -11,6 +11,8 @@
 --   area      is optional (leave blank if unknown)
 --   rating    is optional (leave blank if unrated); must be 1–5 when set
 
+SET storage_compatibility_version = 'v1.3.2';
+
 DROP TABLE IF EXISTS places;
 DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS cuisines;
