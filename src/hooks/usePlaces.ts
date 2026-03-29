@@ -58,7 +58,7 @@ export function usePlaces(): UsePlacesResult {
         setAllPlaces(places);
         setCategories(cats);
         setCuisines(cuis);
-        setAreas(areasData);
+        setAreas(areasData.filter((a) => places.some((p) => p.area === a)));
         setDataLoading(false);
       })
       .catch((err: unknown) => {
