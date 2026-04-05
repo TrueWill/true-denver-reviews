@@ -28,6 +28,23 @@ npm run seed
 
 Then commit both `db/places.csv` and `public/data.db`.
 
+### Looking up addresses
+
+A Deno script can populate missing `address` fields via the Google Places API. It skips closed places, events, food trucks, and rows that already have addresses.
+
+```bash
+GOOGLE_PLACES_API_KEY=your-key deno run --allow-net --allow-read --allow-write --allow-env db/lookup-addresses.ts
+```
+
+This writes results to `db/addresses.json`. Review the output, then merge into the CSV and rebuild:
+
+```bash
+bash db/merge-addresses.sh
+npm run seed
+```
+
+Places with ambiguous results (multiple locations, name mismatches) are skipped automatically.
+
 ## Deployment
 
 Hosted on [Cloudflare Pages](https://pages.cloudflare.com/). `wrangler` is included as a dev dependency, so no global install is needed — use `npx wrangler` for direct CLI commands.
