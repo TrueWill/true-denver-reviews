@@ -36,10 +36,10 @@ A Deno script can populate missing `address` fields via the Google Places API. I
 GOOGLE_PLACES_API_KEY=your-key deno run --allow-net --allow-read --allow-write --allow-env db/lookup-addresses.ts
 ```
 
-This writes results to `db/addresses.json`. Review the output, then merge into the CSV:
+This writes results to `db/addresses.json`. Review the output, then merge into the CSV and rebuild:
 
 ```bash
-duckdb -c "COPY (SELECT p.id, p.name, p.description, p.category, p.cuisine, COALESCE(a.address, p.address) AS address, p.area, p.closed, p.rating FROM read_csv('db/places.csv', header=true, all_varchar=true) p LEFT JOIN (SELECT r.id, r.address FROM (SELECT unnest(results) AS r FROM read_json_auto('db/addresses.json')) WHERE r.status = 'found') a ON p.id::INTEGER = a.id ORDER BY p.id::INTEGER) TO 'db/places.csv' (HEADER, DELIMITER ',');"
+bash db/merge-addresses.sh
 npm run seed
 ```
 
