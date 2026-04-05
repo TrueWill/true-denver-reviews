@@ -4,7 +4,7 @@ Denver (and Colorado in general) favorites and ratings by [TrueWill](https://git
 
 Reviews of local restaurants and places of interest.
 
-Hosted at https://true-denver-reviews.pages.dev/
+Hosted at https://truedenverreviews.com/
 
 Originally built with [Claude Code](https://claude.com/product/claude-code).
 
