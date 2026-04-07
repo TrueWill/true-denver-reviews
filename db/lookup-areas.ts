@@ -84,12 +84,30 @@ for (const place of withAddress) {
   const components: Array<{ long_name: string; short_name: string; types: string[] }> =
     data.results[0].address_components;
 
+  // Exclude purely geographic/administrative types that would never be area names
+  const excludedTypes = new Set([
+    "country", "administrative_area_level_1", "administrative_area_level_2",
+    "postal_code", "postal_code_suffix", "street_number", "route",
+    "premise", "subpremise",
+  ]);
+
   let found: string | null = null;
-  for (const type of ["neighborhood", "sublocality_level_1", "sublocality", "locality"]) {
-    const comp = components.find((c) => c.types.includes(type));
-    if (comp) {
-      found = matchArea(comp.long_name) ?? matchArea(comp.short_name);
-      if (found) break;
+
+  // Pass 1: scan every component regardless of type (catches point_of_interest etc.)
+  for (const comp of components) {
+    if (comp.types.every((t) => excludedTypes.has(t))) continue;
+    found = matchArea(comp.long_name) ?? matchArea(comp.short_name);
+    if (found) break;
+  }
+
+  // Pass 2: type-priority fallback (locality catches non-Denver cities missed earlier)
+  if (!found) {
+    for (const type of ["neighborhood", "sublocality_level_1", "sublocality", "locality"]) {
+      const comp = components.find((c) => c.types.includes(type));
+      if (comp) {
+        found = matchArea(comp.long_name) ?? matchArea(comp.short_name);
+        if (found) break;
+      }
     }
   }
 
@@ -98,8 +116,8 @@ for (const place of withAddress) {
     results.push({ id, area: found, name: place.name, status: "found" });
   } else {
     const candidates = components
-      .filter((c) => ["neighborhood", "sublocality_level_1", "sublocality"].some((t) => c.types.includes(t)))
-      .map((c) => c.long_name);
+      .filter((c) => c.types.every((t) => !excludedTypes.has(t)))
+      .map((c) => `${c.long_name} [${c.types.join(",")}]`);
     console.log(`  id=${id} "${place.name}" → not found (candidates: ${candidates.join(", ") || "none"})`);
     results.push({ id, area: "", name: place.name, status: "not_found" });
   }
