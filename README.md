@@ -68,6 +68,8 @@ bash db/merge-areas.sh
 npm run seed
 ```
 
+**Manual overrides** — if the API assigns a wrong area, edit `db/areas-lookup.json` directly before running `merge-areas.sh`: set `"status"` to `"found"` and correct the `"area"` value. Do not re-run `lookup-areas.ts` after making manual corrections, as it will overwrite them. Only re-run the lookup if place addresses have changed.
+
 ## Deployment
 
 Hosted on [Cloudflare Pages](https://pages.cloudflare.com/). `wrangler` is included as a dev dependency, so no global install is needed — use `npx wrangler` for direct CLI commands.
