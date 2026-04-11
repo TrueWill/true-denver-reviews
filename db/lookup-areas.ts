@@ -24,10 +24,38 @@ const synonyms: Record<string, string> = {
 };
 
 const areasText = await Deno.readTextFile("db/areas.csv");
-const areasRows = parse(areasText, { skipFirstRow: true, columns: ["id", "name"] }) as Array<{ id: string; name: string }>;
-const areaMap = new Map<string, string>(areasRows.map((r) => [r.name.toLowerCase(), r.name]));
+const rawRows = (parse(areasText) as string[][]).slice(1);
 
-function matchArea(candidate: string): string | null {
+type AreaRow = { id: string; name: string; swLat: number; swLng: number; neLat: number; neLng: number };
+
+const areaMap = new Map<string, string>(rawRows.map((r) => [r[1].toLowerCase(), r[1]]));
+
+const areasWithBounds: AreaRow[] = rawRows
+  .filter((r) => r[2] && r[3] && r[4] && r[5])
+  .map((r) => ({
+    id: r[0],
+    name: r[1],
+    swLat: Number(r[2]),
+    swLng: Number(r[3]),
+    neLat: Number(r[4]),
+    neLng: Number(r[5]),
+  }));
+
+function matchByCoords(lat: number, lng: number): string | null {
+  const matches = areasWithBounds.filter(
+    (a) => lat >= a.swLat && lat <= a.neLat && lng >= a.swLng && lng <= a.neLng
+  );
+  if (!matches.length) return null;
+  // Prefer the smallest bounding box (most specific match)
+  matches.sort((a, b) => {
+    const sizeA = (a.neLat - a.swLat) * (a.neLng - a.swLng);
+    const sizeB = (b.neLat - b.swLat) * (b.neLng - b.swLng);
+    return sizeA - sizeB;
+  });
+  return matches[0].name;
+}
+
+function matchByName(candidate: string): string | null {
   const lower = candidate.toLowerCase();
   if (areaMap.has(lower)) return areaMap.get(lower)!;
   if (synonyms[lower] && areaMap.has(synonyms[lower].toLowerCase())) return synonyms[lower];
@@ -48,10 +76,16 @@ const places = parse(placesText, {
 }) as Array<Record<string, string>>;
 
 const withAddress = places.filter((p) => p.address.trim() !== "");
-console.log(`Found ${withAddress.length} places with addresses.`);
+console.log(`Found ${withAddress.length} places with addresses. Areas with bounds: ${areasWithBounds.length}`);
 
 type Result = { id: number; area: string; name: string; status: "found" | "not_found" };
 const results: Result[] = [];
+
+const excludedTypes = new Set([
+  "country", "administrative_area_level_1", "administrative_area_level_2",
+  "postal_code", "postal_code_suffix", "street_number", "route",
+  "premise", "subpremise",
+]);
 
 for (const place of withAddress) {
   const id = Number(place.id);
@@ -61,7 +95,7 @@ for (const place of withAddress) {
   const city = cityMatch?.[1]?.trim() ?? "";
 
   if (city && city.toLowerCase() !== "denver") {
-    const area = matchArea(city);
+    const area = matchByName(city);
     if (area) {
       console.log(`  id=${id} "${place.name}" → ${area} (city match)`);
       results.push({ id, area, name: place.name, status: "found" });
@@ -81,44 +115,42 @@ for (const place of withAddress) {
     continue;
   }
 
+  const { lat, lng } = data.results[0].geometry.location;
   const components: Array<{ long_name: string; short_name: string; types: string[] }> =
     data.results[0].address_components;
 
-  // Exclude purely geographic/administrative types that would never be area names
-  const excludedTypes = new Set([
-    "country", "administrative_area_level_1", "administrative_area_level_2",
-    "postal_code", "postal_code_suffix", "street_number", "route",
-    "premise", "subpremise",
-  ]);
+  // Primary: coordinate-based lookup against bounding boxes
+  let found = matchByCoords(lat, lng);
+  const method = found ? "coords" : null;
 
-  let found: string | null = null;
-
-  // Pass 1: scan every component regardless of type (catches point_of_interest etc.)
-  for (const comp of components) {
-    if (comp.types.every((t) => excludedTypes.has(t))) continue;
-    found = matchArea(comp.long_name) ?? matchArea(comp.short_name);
-    if (found) break;
+  // Fallback: scan all non-administrative components by name
+  if (!found) {
+    for (const comp of components) {
+      if (comp.types.every((t) => excludedTypes.has(t))) continue;
+      found = matchByName(comp.long_name) ?? matchByName(comp.short_name);
+      if (found) break;
+    }
   }
 
-  // Pass 2: type-priority fallback (locality catches non-Denver cities missed earlier)
+  // Last resort: type-priority name match
   if (!found) {
     for (const type of ["neighborhood", "sublocality_level_1", "sublocality", "locality"]) {
       const comp = components.find((c) => c.types.includes(type));
       if (comp) {
-        found = matchArea(comp.long_name) ?? matchArea(comp.short_name);
+        found = matchByName(comp.long_name) ?? matchByName(comp.short_name);
         if (found) break;
       }
     }
   }
 
   if (found) {
-    console.log(`  id=${id} "${place.name}" → ${found}`);
+    console.log(`  id=${id} "${place.name}" → ${found} (${method ?? "name"})`);
     results.push({ id, area: found, name: place.name, status: "found" });
   } else {
     const candidates = components
       .filter((c) => c.types.every((t) => !excludedTypes.has(t)))
       .map((c) => `${c.long_name} [${c.types.join(",")}]`);
-    console.log(`  id=${id} "${place.name}" → not found (candidates: ${candidates.join(", ") || "none"})`);
+    console.log(`  id=${id} "${place.name}" → not found at (${lat},${lng}) | candidates: ${candidates.join(", ") || "none"}`);
     results.push({ id, area: "", name: place.name, status: "not_found" });
   }
 }
