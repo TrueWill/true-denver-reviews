@@ -18,7 +18,7 @@ Originally built with [Claude Code](https://claude.com/product/claude-code).
 
 ## Editing content
 
-Open `db/places.csv` in any spreadsheet app (Excel, Numbers, Google Sheets) to add or edit reviews. Use text names for category/cuisine/area — see `db/categories.csv`, `db/cuisines.csv`, and `db/areas.csv` for valid values.
+Open `db/places.csv` in any spreadsheet app (Excel, Numbers, Google Sheets) to add or edit reviews. Use text names for category/cuisine/area — see `db/categories.csv`, `db/cuisines.csv`, and `db/areas.csv` for valid values. REMEMBER to add IDs - otherwise you will see duplicates.
 
 After saving changes, regenerate the database:
 
