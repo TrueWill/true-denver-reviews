@@ -30,10 +30,10 @@ Then commit both `db/places.csv` and `public/data.db`.
 
 ### Looking up addresses
 
-A Deno script can populate missing `address` fields via the Google Places API. It skips closed places, events, food trucks, and rows that already have addresses.
+A Deno script can populate missing `address` fields via the Google Places API. It skips closed places, events, food trucks, and rows that already have addresses. Requires `GOOGLE_PLACES_API_KEY` in the environment.
 
 ```bash
-GOOGLE_PLACES_API_KEY=your-key deno run --allow-net --allow-read --allow-write --allow-env db/lookup-addresses.ts
+deno run --allow-net --allow-read --allow-write --allow-env db/lookup-addresses.ts
 ```
 
 This writes results to `db/addresses.json`. Review the output, then merge into the CSV and rebuild:
@@ -44,6 +44,29 @@ npm run seed
 ```
 
 Places with ambiguous results (multiple locations, name mismatches) are skipped automatically.
+
+### Looking up areas
+
+Two Deno scripts populate the `area` column for places that have an address. Both require `GOOGLE_PLACES_API_KEY` in the environment.
+
+**One-time setup** — fetches bounding-box coordinates for each Denver neighborhood and stores them in `db/areas.csv`. Safe to re-run; skips rows that already have bounds.
+
+```bash
+deno run --allow-net --allow-read --allow-write --allow-env db/fetch-area-bounds.ts
+```
+
+**Lookup** — geocodes each place address and matches it to an area using the bounding boxes. Non-Denver cities (Lakewood, Boulder, etc.) are matched directly from the address string without an API call.
+
+```bash
+deno run --allow-net --allow-read --allow-write --allow-env db/lookup-areas.ts
+```
+
+This writes results to `db/areas-lookup.json`. Review the output — any unmatched rows are listed at the end — then merge and rebuild:
+
+```bash
+bash db/merge-areas.sh
+npm run seed
+```
 
 ## Deployment
 
