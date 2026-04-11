@@ -141,8 +141,9 @@ vite.config.ts.timestamp-*
 # DuckDB WASM assets (copied from node_modules via postinstall)
 public/duckdb/
 
-# Address lookup intermediate output
+# Lookup intermediate output
 db/addresses.json
+db/areas-lookup.json
 
 # Deno
 deno.lock
