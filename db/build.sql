@@ -19,21 +19,21 @@ DROP TABLE IF EXISTS cuisines;
 DROP TABLE IF EXISTS areas;
 
 CREATE TABLE categories AS
-  SELECT id::INTEGER AS id, name::VARCHAR AS name
-  FROM read_csv('db/categories.csv', header = true);
+  SELECT row_number() OVER (ORDER BY src.name)::INTEGER AS id, src.name::VARCHAR AS name
+  FROM read_csv('db/categories.csv', header = true) src;
 
 CREATE TABLE cuisines AS
-  SELECT id::INTEGER AS id, name::VARCHAR AS name
-  FROM read_csv('db/cuisines.csv', header = true);
+  SELECT row_number() OVER (ORDER BY src.name)::INTEGER AS id, src.name::VARCHAR AS name
+  FROM read_csv('db/cuisines.csv', header = true) src;
 
 CREATE TABLE areas AS
-  SELECT id::INTEGER AS id, name::VARCHAR AS name
-  FROM read_csv('db/areas.csv', header = true);
+  SELECT row_number() OVER (ORDER BY src.name)::INTEGER AS id, src.name::VARCHAR AS name
+  FROM read_csv('db/areas.csv', header = true) src;
 
 CREATE TABLE places AS
   SELECT
-    p.id::INTEGER                        AS id,
-    p.name::VARCHAR                      AS name,
+    row_number() OVER (ORDER BY p.name)::INTEGER     AS id,
+    p.name::VARCHAR                                  AS name,
     COALESCE(p.description, '')::VARCHAR AS description,
     c.id::INTEGER                        AS category_id,
     cu.id::INTEGER                       AS cuisine_id,
