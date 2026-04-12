@@ -73,6 +73,9 @@ for (const row of toFetch) {
   );
 }
 
+const csvField = (s: string) =>
+  /[,'"]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+
 const header =
   'name,bounds_sw_lat,bounds_sw_lng,bounds_ne_lat,bounds_ne_lng,neighborhood';
 const csv =
@@ -80,7 +83,7 @@ const csv =
     header,
     ...rows.map(
       (r) =>
-        `${r.name},${r.bounds_sw_lat},${r.bounds_sw_lng},${r.bounds_ne_lat},${r.bounds_ne_lng},${r.neighborhood}`,
+        `${csvField(r.name)},${r.bounds_sw_lat},${r.bounds_sw_lng},${r.bounds_ne_lat},${r.bounds_ne_lng},${r.neighborhood}`,
     ),
   ].join('\n') + '\n';
 
