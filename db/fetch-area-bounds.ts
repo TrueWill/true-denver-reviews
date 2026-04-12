@@ -38,7 +38,9 @@ const rows: AreaRow[] = dataRows.map((r) => ({
   neighborhood: r[5] ?? '',
 }));
 
-const toFetch = rows.filter((r) => r.neighborhood === 'TRUE' && !r.bounds_sw_lat);
+const toFetch = rows.filter(
+  (r) => r.neighborhood === 'TRUE' && !r.bounds_sw_lat,
+);
 console.log(`Fetching bounds for ${toFetch.length} Denver neighborhoods...`);
 
 for (const row of toFetch) {
@@ -71,7 +73,8 @@ for (const row of toFetch) {
   );
 }
 
-const header = 'name,bounds_sw_lat,bounds_sw_lng,bounds_ne_lat,bounds_ne_lng,neighborhood';
+const header =
+  'name,bounds_sw_lat,bounds_sw_lng,bounds_ne_lat,bounds_ne_lng,neighborhood';
 const csv =
   [
     header,
