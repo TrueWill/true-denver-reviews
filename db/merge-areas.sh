@@ -4,7 +4,7 @@ if [ ! -f db/areas-lookup.json ]; then
   echo "db/areas-lookup.json not found. Run the lookup script first." >&2
   exit 1
 fi
-found=$(duckdb -noheader -c "SELECT count(*) FROM (SELECT unnest(results) AS r FROM read_json_auto('db/areas-lookup.json')) WHERE r.status = 'found';")
+found=$(duckdb -csv -noheader -c "SELECT count(*) FROM (SELECT unnest(results) AS r FROM read_json_auto('db/areas-lookup.json')) WHERE r.status = 'found';")
 if [ "$found" -eq 0 ]; then
   echo "No areas to merge."
   exit 0
