@@ -4,16 +4,16 @@
 // Usage:
 //   deno run --allow-net --allow-read --allow-env --allow-write db/fetch-area-bounds.ts
 
-import { parse } from "jsr:@std/csv";
+import { parse } from 'jsr:@std/csv';
 
-const GOOGLE_API_KEY = Deno.env.get("GOOGLE_PLACES_API_KEY") ?? "";
+const GOOGLE_API_KEY = Deno.env.get('GOOGLE_PLACES_API_KEY') ?? '';
 
 if (!GOOGLE_API_KEY) {
-  console.error("GOOGLE_PLACES_API_KEY environment variable not set");
+  console.error('GOOGLE_PLACES_API_KEY environment variable not set');
   Deno.exit(1);
 }
 
-const areasText = await Deno.readTextFile("db/areas.csv");
+const areasText = await Deno.readTextFile('db/areas.csv');
 // parse() without skipFirstRow returns string[][] including the header row
 const allRows = parse(areasText) as string[][];
 const dataRows = allRows.slice(1);
@@ -28,10 +28,10 @@ type AreaRow = {
 
 const rows: AreaRow[] = dataRows.map((r) => ({
   name: r[0],
-  bounds_sw_lat: r[1] ?? "",
-  bounds_sw_lng: r[2] ?? "",
-  bounds_ne_lat: r[3] ?? "",
-  bounds_ne_lng: r[4] ?? "",
+  bounds_sw_lat: r[1] ?? '',
+  bounds_sw_lng: r[2] ?? '',
+  bounds_ne_lat: r[3] ?? '',
+  bounds_ne_lng: r[4] ?? '',
 }));
 
 const toFetch = rows.filter((r) => !r.bounds_sw_lat);
@@ -45,7 +45,7 @@ for (const row of toFetch) {
   const resp = await fetch(url);
   const data = await resp.json();
 
-  if (data.status !== "OK" || !data.results?.length) {
+  if (data.status !== 'OK' || !data.results?.length) {
     console.log(`  "${row.name}" → no result (${data.status})`);
     continue;
   }
@@ -62,14 +62,21 @@ for (const row of toFetch) {
   row.bounds_sw_lng = String(bounds.southwest.lng);
   row.bounds_ne_lat = String(bounds.northeast.lat);
   row.bounds_ne_lng = String(bounds.northeast.lng);
-  console.log(`  "${row.name}" → SW(${row.bounds_sw_lat},${row.bounds_sw_lng}) NE(${row.bounds_ne_lat},${row.bounds_ne_lng})`);
+  console.log(
+    `  "${row.name}" → SW(${row.bounds_sw_lat},${row.bounds_sw_lng}) NE(${row.bounds_ne_lat},${row.bounds_ne_lng})`,
+  );
 }
 
-const header = "name,bounds_sw_lat,bounds_sw_lng,bounds_ne_lat,bounds_ne_lng";
-const csv = [header, ...rows.map((r) =>
-  `${r.name},${r.bounds_sw_lat},${r.bounds_sw_lng},${r.bounds_ne_lat},${r.bounds_ne_lng}`
-)].join("\n") + "\n";
+const header = 'name,bounds_sw_lat,bounds_sw_lng,bounds_ne_lat,bounds_ne_lng';
+const csv =
+  [
+    header,
+    ...rows.map(
+      (r) =>
+        `${r.name},${r.bounds_sw_lat},${r.bounds_sw_lng},${r.bounds_ne_lat},${r.bounds_ne_lng}`,
+    ),
+  ].join('\n') + '\n';
 
-await Deno.writeTextFile("db/areas.csv", csv);
-console.log("\nUpdated db/areas.csv with bounding box data.");
-console.log("Review the output above for any areas with missing bounds.");
+await Deno.writeTextFile('db/areas.csv', csv);
+console.log('\nUpdated db/areas.csv with bounding box data.');
+console.log('Review the output above for any areas with missing bounds.');
