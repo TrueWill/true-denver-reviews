@@ -1,4 +1,6 @@
 // One-time script to populate bounding-box columns in db/areas.csv.
+// Only fetches bounds for rows where neighborhood=TRUE; surrounding
+// cities are matched by city-name parsing in lookup-areas.ts and don't need bounds.
 // Safe to re-run — skips rows that already have bounds.
 //
 // Usage:
@@ -24,6 +26,7 @@ type AreaRow = {
   bounds_sw_lng: string;
   bounds_ne_lat: string;
   bounds_ne_lng: string;
+  neighborhood: string;
 };
 
 const rows: AreaRow[] = dataRows.map((r) => ({
@@ -32,9 +35,10 @@ const rows: AreaRow[] = dataRows.map((r) => ({
   bounds_sw_lng: r[2] ?? '',
   bounds_ne_lat: r[3] ?? '',
   bounds_ne_lng: r[4] ?? '',
+  neighborhood: r[5] ?? '',
 }));
 
-const toFetch = rows.filter((r) => !r.bounds_sw_lat);
+const toFetch = rows.filter((r) => r.neighborhood === 'TRUE' && !r.bounds_sw_lat);
 console.log(`Fetching bounds for ${toFetch.length} Denver neighborhoods...`);
 
 for (const row of toFetch) {
@@ -67,13 +71,13 @@ for (const row of toFetch) {
   );
 }
 
-const header = 'name,bounds_sw_lat,bounds_sw_lng,bounds_ne_lat,bounds_ne_lng';
+const header = 'name,bounds_sw_lat,bounds_sw_lng,bounds_ne_lat,bounds_ne_lng,neighborhood';
 const csv =
   [
     header,
     ...rows.map(
       (r) =>
-        `${r.name},${r.bounds_sw_lat},${r.bounds_sw_lng},${r.bounds_ne_lat},${r.bounds_ne_lng}`,
+        `${r.name},${r.bounds_sw_lat},${r.bounds_sw_lng},${r.bounds_ne_lat},${r.bounds_ne_lng},${r.neighborhood}`,
     ),
   ].join('\n') + '\n';
 
