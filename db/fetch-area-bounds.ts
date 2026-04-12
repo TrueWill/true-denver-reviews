@@ -1,6 +1,4 @@
 // One-time script to populate bounding-box columns in db/areas.csv.
-// Only fetches bounds for Denver neighborhoods (IDs 1–50); surrounding
-// cities are matched by city-name parsing in lookup-areas.ts and don't need bounds.
 // Safe to re-run — skips rows that already have bounds.
 //
 // Usage:
@@ -15,15 +13,12 @@ if (!GOOGLE_API_KEY) {
   Deno.exit(1);
 }
 
-const DENVER_MAX_ID = 50;
-
 const areasText = await Deno.readTextFile("db/areas.csv");
 // parse() without skipFirstRow returns string[][] including the header row
 const allRows = parse(areasText) as string[][];
 const dataRows = allRows.slice(1);
 
 type AreaRow = {
-  id: string;
   name: string;
   bounds_sw_lat: string;
   bounds_sw_lng: string;
@@ -32,15 +27,14 @@ type AreaRow = {
 };
 
 const rows: AreaRow[] = dataRows.map((r) => ({
-  id: r[0],
-  name: r[1],
-  bounds_sw_lat: r[2] ?? "",
-  bounds_sw_lng: r[3] ?? "",
-  bounds_ne_lat: r[4] ?? "",
-  bounds_ne_lng: r[5] ?? "",
+  name: r[0],
+  bounds_sw_lat: r[1] ?? "",
+  bounds_sw_lng: r[2] ?? "",
+  bounds_ne_lat: r[3] ?? "",
+  bounds_ne_lng: r[4] ?? "",
 }));
 
-const toFetch = rows.filter((r) => Number(r.id) <= DENVER_MAX_ID && !r.bounds_sw_lat);
+const toFetch = rows.filter((r) => !r.bounds_sw_lat);
 console.log(`Fetching bounds for ${toFetch.length} Denver neighborhoods...`);
 
 for (const row of toFetch) {
@@ -71,9 +65,9 @@ for (const row of toFetch) {
   console.log(`  "${row.name}" → SW(${row.bounds_sw_lat},${row.bounds_sw_lng}) NE(${row.bounds_ne_lat},${row.bounds_ne_lng})`);
 }
 
-const header = "id,name,bounds_sw_lat,bounds_sw_lng,bounds_ne_lat,bounds_ne_lng";
+const header = "name,bounds_sw_lat,bounds_sw_lng,bounds_ne_lat,bounds_ne_lng";
 const csv = [header, ...rows.map((r) =>
-  `${r.id},${r.name},${r.bounds_sw_lat},${r.bounds_sw_lng},${r.bounds_ne_lat},${r.bounds_ne_lng}`
+  `${r.name},${r.bounds_sw_lat},${r.bounds_sw_lng},${r.bounds_ne_lat},${r.bounds_ne_lng}`
 )].join("\n") + "\n";
 
 await Deno.writeTextFile("db/areas.csv", csv);

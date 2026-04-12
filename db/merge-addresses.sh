@@ -7,15 +7,15 @@ fi
 found=$(duckdb -noheader -c "SELECT count(*) FROM (SELECT unnest(results) AS r FROM read_json_auto('db/addresses.json')) WHERE r.status = 'found';")
 echo "Merging $found addresses into db/places.csv..."
 duckdb -c "COPY (
-  SELECT p.id, p.name, p.description, p.category, p.cuisine,
+  SELECT p.name, p.description, p.category, p.cuisine,
          COALESCE(a.address, p.address) AS address,
          p.area, p.closed, p.rating
   FROM read_csv('db/places.csv', header=true, all_varchar=true) p
   LEFT JOIN (
-    SELECT r.id, r.address
+    SELECT r.name, r.address
     FROM (SELECT unnest(results) AS r FROM read_json_auto('db/addresses.json'))
     WHERE r.status = 'found'
-  ) a ON p.id::INTEGER = a.id
-  ORDER BY p.id::INTEGER
+  ) a ON p.name = a.name
+  ORDER BY p.name
 ) TO 'db/places.csv' (HEADER, DELIMITER ',');"
 echo "Done. Run 'npm run seed' to rebuild the database."

@@ -1,7 +1,6 @@
 import { parse } from "jsr:@std/csv@1";
 
 interface Place {
-  id: number;
   name: string;
   category: string;
   cuisine: string;
@@ -15,7 +14,6 @@ interface GooglePlace {
 }
 
 interface LookupResult {
-  id: number;
   name: string;
   status: "found" | "skipped";
   address?: string;
@@ -52,7 +50,6 @@ async function parseCsv(path: string): Promise<Place[]> {
     .filter((r) => !SKIP_CATEGORIES.has(r.category))
     .filter((r) => !r.address?.trim())
     .map((r) => ({
-      id: Number(r.id),
       name: r.name,
       category: r.category ?? "",
       cuisine: r.cuisine ?? "",
@@ -198,13 +195,13 @@ async function processPlace(
   const query = buildQuery(place);
   const results = await searchPlace(query, apiKey);
   if (results.length === 0) {
-    return { id: place.id, name: place.name, status: "skipped", reason: "no_results", query_used: query };
+    return { name: place.name, status: "skipped", reason: "no_results", query_used: query };
   }
   const validated = results.map((r) => validateResult(place, r));
   const passing = validated.filter((v) => v.valid);
   if (passing.length >= 2 && passing[0].address !== passing[1].address) {
     return {
-      id: place.id, name: place.name, status: "skipped",
+      name: place.name, status: "skipped",
       reason: "multiple_locations", google_name: passing[0].googleName,
       query_used: query,
     };
@@ -212,14 +209,14 @@ async function processPlace(
   if (passing.length === 0) {
     const first = validated[0];
     return {
-      id: place.id, name: place.name, status: "skipped",
+      name: place.name, status: "skipped",
       reason: first.reason, google_name: first.googleName,
       distance_km: roundOpt(first.distanceKm), query_used: query,
     };
   }
   const best = passing[0];
   return {
-    id: place.id, name: place.name, status: "found",
+    name: place.name, status: "found",
     address: best.address, google_name: best.googleName,
     distance_km: roundOpt(best.distanceKm), query_used: query,
   };

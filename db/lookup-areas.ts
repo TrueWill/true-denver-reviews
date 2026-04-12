@@ -26,19 +26,18 @@ const synonyms: Record<string, string> = {
 const areasText = await Deno.readTextFile("db/areas.csv");
 const rawRows = (parse(areasText) as string[][]).slice(1);
 
-type AreaRow = { id: string; name: string; swLat: number; swLng: number; neLat: number; neLng: number };
+type AreaRow = { name: string; swLat: number; swLng: number; neLat: number; neLng: number };
 
-const areaMap = new Map<string, string>(rawRows.map((r) => [r[1].toLowerCase(), r[1]]));
+const areaMap = new Map<string, string>(rawRows.map((r) => [r[0].toLowerCase(), r[0]]));
 
 const areasWithBounds: AreaRow[] = rawRows
-  .filter((r) => r[2] && r[3] && r[4] && r[5])
+  .filter((r) => r[1] && r[2] && r[3] && r[4])
   .map((r) => ({
-    id: r[0],
-    name: r[1],
-    swLat: Number(r[2]),
-    swLng: Number(r[3]),
-    neLat: Number(r[4]),
-    neLng: Number(r[5]),
+    name: r[0],
+    swLat: Number(r[1]),
+    swLng: Number(r[2]),
+    neLat: Number(r[3]),
+    neLng: Number(r[4]),
   }));
 
 function matchByCoords(lat: number, lng: number): string | null {
@@ -72,13 +71,13 @@ function matchByName(candidate: string): string | null {
 const placesText = await Deno.readTextFile("db/places.csv");
 const places = parse(placesText, {
   skipFirstRow: true,
-  columns: ["id", "name", "description", "category", "cuisine", "address", "area", "closed", "rating"],
+  columns: ["name", "description", "category", "cuisine", "address", "area", "closed", "rating"],
 }) as Array<Record<string, string>>;
 
 const withAddress = places.filter((p) => p.address.trim() !== "");
 console.log(`Found ${withAddress.length} places with addresses. Areas with bounds: ${areasWithBounds.length}`);
 
-type Result = { id: number; area: string; name: string; status: "found" | "not_found" };
+type Result = { name: string; area: string; status: "found" | "not_found" };
 const results: Result[] = [];
 
 const excludedTypes = new Set([
@@ -88,7 +87,6 @@ const excludedTypes = new Set([
 ]);
 
 for (const place of withAddress) {
-  const id = Number(place.id);
   const address = place.address.trim();
 
   const cityMatch = address.match(/,\s*([^,]+),\s*CO\s+\d{5}/);
@@ -97,8 +95,8 @@ for (const place of withAddress) {
   if (city && city.toLowerCase() !== "denver") {
     const area = matchByName(city);
     if (area) {
-      console.log(`  id=${id} "${place.name}" → ${area} (city match)`);
-      results.push({ id, area, name: place.name, status: "found" });
+      console.log(`  "${place.name}" → ${area} (city match)`);
+      results.push({ name: place.name, area, status: "found" });
       continue;
     }
   }
@@ -110,8 +108,8 @@ for (const place of withAddress) {
   const data = await resp.json();
 
   if (data.status !== "OK" || !data.results?.length) {
-    console.log(`  id=${id} "${place.name}" → not found (API: ${data.status})`);
-    results.push({ id, area: "", name: place.name, status: "not_found" });
+    console.log(`  "${place.name}" → not found (API: ${data.status})`);
+    results.push({ name: place.name, area: "", status: "not_found" });
     continue;
   }
 
@@ -144,14 +142,14 @@ for (const place of withAddress) {
   }
 
   if (found) {
-    console.log(`  id=${id} "${place.name}" → ${found} (${method ?? "name"})`);
-    results.push({ id, area: found, name: place.name, status: "found" });
+    console.log(`  "${place.name}" → ${found} (${method ?? "name"})`);
+    results.push({ name: place.name, area: found, status: "found" });
   } else {
     const candidates = components
       .filter((c) => c.types.every((t) => !excludedTypes.has(t)))
       .map((c) => `${c.long_name} [${c.types.join(",")}]`);
-    console.log(`  id=${id} "${place.name}" → not found at (${lat},${lng}) | candidates: ${candidates.join(", ") || "none"}`);
-    results.push({ id, area: "", name: place.name, status: "not_found" });
+    console.log(`  "${place.name}" → not found at (${lat},${lng}) | candidates: ${candidates.join(", ") || "none"}`);
+    results.push({ name: place.name, area: "", status: "not_found" });
   }
 }
 
@@ -164,8 +162,8 @@ console.log(`\nResults: ${foundCount} found, ${notFound.length} not found.`);
 if (notFound.length) {
   console.log("\nNot found (review manually in db/areas-lookup.json or db/places.csv):");
   for (const r of notFound) {
-    const place = withAddress.find((p) => Number(p.id) === r.id);
-    console.log(`  id=${r.id} "${r.name}" | address: ${place?.address}`);
+    const place = withAddress.find((p) => p.name === r.name);
+    console.log(`  "${r.name}" | address: ${place?.address}`);
   }
 }
 

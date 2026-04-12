@@ -1,209 +1,209 @@
-id,name,description,category,cuisine,address,area,closed,rating
-1,Huckleberry Coffee,Locally-roasted coffee.,Coffee Shop,,,Congress Park,FALSE,3
-2,Crema Coffee House,,Coffee Shop,,,RiNo,FALSE,3
-3,Safta,Israeli cuisine. Incredible Sunday buffet - pace yourself. Reservations recommended.,Restaurant,Mediterranean,"3330 Brighton Blvd #201, Denver, CO 80216",RiNo,FALSE,5
-4,Smok,Delicious.,Restaurant,BBQ,"3330 Brighton Blvd #202, Denver, CO 80216",RiNo,FALSE,3
-5,Snooze,Fantastic breakfasts; great service. Usually a line Multiple locations.,Diner,American,,,FALSE,5
-6,Patxi Pizza,,Restaurant,Italian,,,TRUE,3
-7,Improper City,"Food trucks, beer. Dog-friendly.",Bar,,"3201 Walnut St #107, Denver, CO 80205",Curtis Park,FALSE,3
-8,Mister Oso,A little pricey.,Restaurant,Mexican,,,FALSE,3
-9,For[a]ged,Good but pricey,Restaurant,,,,TRUE,2
-10,Milk Market,Fun,Market,,"1800 Wazee St Suite 100, Denver, CO 80202",LoDo,FALSE,3
-11,Kachina,By Milk Market. Great margaritas. The queso is just OK; everything else is really good.,Restaurant,Mexican,"1890 Wazee St, Denver, CO 80202",LoDo,FALSE,5
-12,Barcelona Wine Bar,,Bar,,"2900 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
-13,Habit Donuts,,Bakery,,,,FALSE,3
-14,Mint Indian,Decent,Restaurant,Indian,"1531 Stout St Suite 130, Denver, CO 80202",Five Points,FALSE,2
-15,Adelitas,,Restaurant,Mexican,"1294 S Broadway, Denver, CO 80210",Platt Park,FALSE,3
-16,Aloy Modern Thai,,Restaurant,Thai,"2134 Larimer St, Denver, CO 80205",Ballpark,FALSE,3
-17,Sushi-Rama,I miss their conveyor-belt sushi.,Restaurant,Japanese,,,TRUE,3
-18,Honey,"Excellent drinks, good snack plates. Their shrubs are always great. Non-alcoholic options. Chill vibe.",Cocktail Bar,,"2636 Walnut St #104, Denver, CO 80205",Curtis Park,FALSE,5
-19,Rye Society,"Reubens, breakfast, lunch",Restaurant,American,"3090 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
-20,Pit Fiend,"BBQ, sells out. Formerly Owlbear.",Restaurant,BBQ,"2826 Larimer St, Denver, CO 80205",Curtis Park,FALSE,5
-21,Shake Shack,Much better than typical fast food.,Restaurant,American,,,FALSE,4
-22,Colorado Sake Co,Tasty sake; dim sum on weekends. Frequently have shows in the back.,Bar,Japanese,"3559 Larimer St, Denver, CO 80205",RiNo,FALSE,4
-23,Great Divide,One of many good breweries in Denver. Gluten-free options. Not a fan of their IPA though.,Brewery,,,,FALSE,3
-24,Sushi Hai,,Restaurant,Japanese,"3600 W 32nd Ave Ste D, Denver, CO 80211",,FALSE,3
-25,Osaka Ramen,I miss them…,Restaurant,Japanese,,,TRUE,5
-26,Grabowski's Pizzeria,We were so sad when they closed.,Restaurant,Italian,,,TRUE,5
-27,Fish & Beer,"Get there early, or get reservations. Everything is good. Try the peel-and-eat shrimp. Pricey but worth it.",Restaurant,American,"3510 Larimer St, Denver, CO 80205",Curtis Park,FALSE,5
-28,Stowaway Kitchen,"Great waffles, fresh fruit",Restaurant,,"2528 Walnut St #104, Denver, CO 80205",Curtis Park,FALSE,3
-29,Blue Moon Brewery,Dog-friendly patio; fire pits in winter. Tasty beer. Good burgers.,Brewery,American,"3750 Chestnut Pl, Denver, CO 80216",Elyria-Swansea,FALSE,3
-30,Ophelia's,Reservations recommended. Great themed brunches. Good venue for live music.,Restaurant,American,"1215 20th St, Denver, CO 80202",LoDo,FALSE,5
-31,Zaika Indian Express,Mainly tried through Grubhub.,Restaurant,Indian,"575 Lincoln St B, Denver, CO 80203",Speer,FALSE,3
-32,Snarf's,Local sandwich shop. Much better than Subway.,Restaurant,American,,,FALSE,3
-33,Denver Biscuit Company,Friendly and consistently good. Delicious cocktails.,Diner,American,"3237 E. Colfax Ave, Denver, CO",Congress Park,FALSE,5
-34,Olive & Finch,"Sandwiches, salads",Restaurant,American,,,FALSE,4
-35,Dio Mio,Excellent pasta and wine. Small outdoor patio.,Restaurant,Italian,"3264 Larimer St, Denver, CO 80205",Curtis Park,FALSE,4
-36,Molecule Effect,"Coffee, booze, snacks",Coffee Shop,,"2215 S Broadway, Denver, CO 80210",,FALSE,3
-37,Kuma's Corner,Best burgers; sadly closed.,Restaurant,American,,RiNo,TRUE,5
-38,Bigsby's Folly,"Wine, small plates, great crack bacon",Bar,,"3563 Wazee St, Denver, CO 80216",RiNo,FALSE,3
-39,Sexy Pizza,Good thin-crust pizza. Delivers.,Restaurant,Italian,,,FALSE,3
-40,Lustre Pearl,Good drinks. Not the iced Irish coffee though.,Bar,,"1315 26th St, Denver, CO 80205",Curtis Park,FALSE,3
-41,City o City,"Drinks, delicious vegan food, coffee",Restaurant,American,"206 E 13th Ave, Denver, CO 80203",Capitol Hill,FALSE,3
-42,Agave,,Restaurant,Mexican,,,FALSE,3
-43,Goldmine Vintage,,Shopping,,"227 Broadway #102, Denver, CO 80203",Baker,FALSE,3
-44,The Wizard's Chest,"Big gaming, costume, and magic store. If it’s for gamers, they probably have it.",Shopping,,"451 Broadway, Denver, CO 80203",Baker,FALSE,4
-45,Postino,"Wine, cheese, charcuterie. Dog-friendly patio.",Restaurant,,,,FALSE,3
-46,City Bark LoDo (RiNo),Great place to board your dog. They take time to know your pet.,Shopping,,"3150 Brighton Blvd, Denver, CO 80216",Curtis Park,FALSE,5
-47,Linger,"Brunch, mortuary. OneTable reservations.",Restaurant,,"2030 W 30th Ave, Denver, CO 80211",LoHi,FALSE,3
-48,Little Man Ice Cream,Long line but worth it.,Restaurant,,,LoHi,FALSE,3
-49,Death & Co,"Fancy drinks, food",Cocktail Bar,,"1280 25th St, Denver, CO 80205",Five Points / Welton,FALSE,3
-50,Black Shirt Brewing,Pizza,Brewery,,"3719 Walnut St, Denver, CO 80205",Cole,FALSE,4
-51,Odell,Meh beer,Brewery,,,,FALSE,2
-52,Stem Ciders,,Brewery,,"3040 Blake St #101, Denver, CO 80205",Curtis Park,FALSE,3
-53,Randy Buzz Session Mead,,Brewery,,"15810 W 6th Ave, Golden, CO 80401",Golden,FALSE,3
-54,Ash'Kara,Greek and Phoenician,Restaurant,Mediterranean,"2005 W 33rd Ave, Denver, CO 80211",LoHi,FALSE,3
-55,India Oven,,Restaurant,Indian,"2890 S Colorado Blvd, Denver, CO 80222",University Hills,FALSE,3
-56,Ratio Beerworks,"Domestica is good. Dog-friendly, mist in summer, cheap. Order food from Shake Shack or Barcelona. Good music.",Brewery,,"2920 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
-57,Mika Sushi,,Restaurant,Japanese,"2730 S Colorado Blvd #118, Denver, CO 80222",University Hills,FALSE,3
-58,Uchi,"Sushi, pricey and you'll leave hungry",Restaurant,Japanese,"2500 Lawrence St, Denver, CO 80205",Five Points / Welton,FALSE,2
-59,Brown Palace,"Tea and crumpets, delicious dinners, $$$. An experience.",Restaurant,American,"321 17th St, Denver, CO 80202",Five Points,FALSE,4
-60,Slater's 50/50,Good burgers and drinks. Avoid the chicken.,Restaurant,American,,,FALSE,3
-61,Pho 16th Vietnamese Grill,DoorDash. Yummy and inexpensive.,Restaurant,Vietnamese,"535 16th St Mall Ste, Denver, CO 80202",Five Points,FALSE,3
-62,Sushi Ronin,"Overpriced, small portions",Restaurant,Japanese,"2930 Umatilla St Suite 300, Denver, CO 80211",LoHi,FALSE,1
-63,Lekker Coffee,Why do the good places close?,Coffee Shop,,,RiNo,TRUE,5
-64,Lazy Dog,Super dog-friendly restaurant,Restaurant,American,,,FALSE,3
-65,The French Press,"Good coffee, delicious brunch.",Coffee Shop,American,"3504 E 12th Ave, Denver, CO 80206",Congress Park,FALSE,4
-66,Cafe Byblos,Greek/Lebanese. DoorDash/Grubhub.,Restaurant,Mediterranean,"400 N Corona St, Denver, CO 80218",Alamo Placita,FALSE,3
-67,Le French,Duck,Restaurant,French,,,FALSE,3
-68,Modern Market,"Grubhub. Soup, sandwiches, salads, grain bowls. Healthy and delicious.",Restaurant,,,,FALSE,3
-69,Biker Jim's Gourmet Dogs,,Food Truck,American,,,TRUE,3
-70,Temaki Den,"Sushi, pricey. Hand rolls weren't rolled, didn't sit well, not worth it.",Restaurant,Japanese,"3350 Brighton Blvd, Denver, CO 80216",RiNo,FALSE,1
-71,Kaffe Landskap,,Coffee Shop,,,,FALSE,3
-72,What the Pho,Grubhub,Restaurant,Vietnamese,"1600 Champa St #110, Denver, CO 80202",LoDo,FALSE,3
-73,Il Posto,"Try the Cabin in the Woods drink. Excellent cocktails and wine, charcuterie. $. Tuesday is less busy.",Restaurant,Italian,"2601 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
-74,Grind,Great fried chicken,Restaurant,American,,Cherry Creek,TRUE,3
-75,Tap & Handle,,Bar,,,Fort Collins,FALSE,3
-76,Locust Cider,,Brewery,,,Fort Collins,FALSE,3
-77,Red Square Euro Bistro,"Russian food and vodka. Try the Jewel or Beluga vodka, the honey dessert, and the borscht.",Restaurant,Eastern European,"1512 Larimer St #38r, Denver, CO 80202",LoDo,FALSE,5
-78,Mutiny Comics Coffee,,Coffee Shop,,"3483 S Broadway, Englewood, CO 80113",Englewood,FALSE,3
-79,The Block Distilling Co,,Bar,,"2990 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
-80,Spice Room,"Indian. Nice lunch specials, complimentary papadums.",Restaurant,Indian,,,FALSE,4
-81,Port Side,"Coffee, drinks, brunch, snacks (outside). Nice, inexpensive, friendly. Dogs can be on patio.",Coffee Shop,,"2500 Larimer St #103, Denver, CO 80205",Five Points / Welton,FALSE,5
-82,Disguises,"Costume store, great service and selection.",Shopping,,"10500 W Colfax Ave, Lakewood, CO 80215",Lakewood,FALSE,5
-83,Number Thirty-eight,"Drinks, food, live music, dog-friendly. Reservations.",Bar,,,,FALSE,3
-84,Larimer Lounge,Strong drinks,Venue,,"2721 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
-85,Himchuli,,Restaurant,Indian,,,FALSE,3
-86,Crown of India,,Restaurant,Indian,"3109 Federal Blvd, Denver, CO 80211",,FALSE,4
-87,The Walnut Room,"Best Reubens, drinks with fresh ingredients, dog patio",Bar,,"3131 Walnut St, Denver, CO 80205",Curtis Park,FALSE,3
-88,Earls On Top,"Seafood, brunch",Restaurant,,"1600 Glenarm Pl #140, Denver, CO 80202",,FALSE,3
-89,Millers & Rossi,Fresh ingredient cocktails,Cocktail Bar,,"3542 Walnut St, Denver, CO 80205",RiNo,FALSE,3
-90,Marczyk Fine Foods,Grocery,Market,,,,FALSE,4
-91,FashioNation,"Boots, goth/punk, authentic",Shopping,,"1745 S Broadway, Denver, CO 80210",,FALSE,3
-92,Yahya's Mediterranean Grill,Turkish coffee. Good portions; you will have leftovers.,Restaurant,Mediterranean,"2207 E Colfax Ave, Denver, CO 80206",,FALSE,5
-93,Ted's Montana Grill,Good bison at reasonable prices but slow service and a bit country,Restaurant,American,,LoDo,FALSE,2
-94,Herman's Hideaway,Nice small music venue,Venue,,"1578 S Broadway, Denver, CO 80210",Platt Park,FALSE,3
-95,Adrift,"Tiki bar. Reservations suggested, sit indoors, stick to frozen drinks.",Bar,,"218 S Broadway, Denver, CO 80209",Speer,FALSE,2
-96,Ali Baba Grill,"Turkish coffee, lunch specials, good gyros. Yahya's is better overall.",Restaurant,Mediterranean,,,FALSE,3
-97,Citron Bistro,"Greek. Great service, reasonable prices, not pretentious, good food, gluten-free options.",Restaurant,Mediterranean,"3535 S Yosemite St, Denver, CO 80237",,FALSE,3
-98,Meadowlark,Speakeasy,Cocktail Bar,,"2701 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
-99,Blue Agave,Good margaritas,Bar,Mexican,"1201 16th St Mall # 104, Denver, CO 80202",LoDo,FALSE,3
-100,Clocktower Cabaret,Fabulous venue.,Venue,,"1601 Arapahoe St, Denver, CO 80202",LoDo,FALSE,5
-101,Mono Mono,Korean fried chicken,Restaurant,Korean,,,FALSE,2
-102,Lea Jane's Hot Chicken,Bring wet wipes,Restaurant,American,"3200 N Pecos St, Denver, CO 80211",LoHi,FALSE,3
-103,Dochi,,Restaurant,Japanese,,,FALSE,3
-104,OMF,Sours,Brewery,,,,FALSE,3
-105,So RADish,,Restaurant,,,,FALSE,3
-106,Rare Finds,"Nice antiques, imported furniture, reasonably priced",Shopping,,"6500 E 44th Ave Unit A, Denver, CO 80216",Park Hill,FALSE,3
-107,Motomaki,,Restaurant,Japanese,"14650 W Colfax Ave, Lakewood, CO 80401",Lakewood,FALSE,3
-108,Wild Corgi Pub,"Good food, super friendly.",Bar,,"1223 E 13th Ave, Denver, CO 80218",Cheesman Park,FALSE,4
-109,Tupelo Honey,Good southern brunch. Chicken and waffles.,Restaurant,American,"1650 Wewatta St #104, Denver, CO 80202",Union Station,FALSE,3
-110,Office Furniture EZ,Great refurbished office supply,Shopping,,"3860 N Revere St Suite A, Denver, CO 80239",Central Park,FALSE,3
-111,Cherry Cricket,Burgers however you like. Friendly. Good outdoor seating options that are dog-friendly.,Restaurant,American,,Cherry Creek,FALSE,5
-112,Thai Monkey Club,Good prices,Restaurant,Thai,"102 S Broadway, Denver, CO 80209",Speer,FALSE,3
-113,Arvada Army Navy Surplus,,Shopping,,"5701 Olde Wadsworth Blvd, Arvada, CO 80002",Arvada,FALSE,3
-114,Rheinlander Bakery,,Bakery,,"5721 Olde Wadsworth Blvd, Arvada, CO 80002",Arvada,FALSE,3
-115,Indian Springs,Hot springs. Decent but not great for shared pool. Not very hot nor many minerals or amenities.,Hot Springs,,"302 Soda Creek Rd, Idaho Springs, CO 80452",Idaho Springs,FALSE,2
-116,Mile High Flea Market,"Cash only mostly. Bargains, mostly resale.",Market,,"7007 E 88th Ave, Henderson, CO 80640",Commerce City,FALSE,2
-117,Butcher Block Cafe,"Old school diner. Friendly, fast, reasonable prices, decent food. Maybe try for breakfast.",Diner,American,,,FALSE,3
-118,Bellota at the Source,"Tacos at reasonable prices, good service, EPIC churros",Restaurant,Mexican,,RiNo,FALSE,3
-119,Deviation Distilling,"Tasty whiskey, talented bartenders",Bar,,"1821 Blake St #130, Denver, CO 80202",LoDo,FALSE,3
-120,Sir,Good cocktails. Try the espresso martini.,Cocktail Bar,,"1822 Blake St, Denver, CO 80202",LoDo,FALSE,3
-121,Russian Books,As it says.,Shopping,,"970 S Monaco St Pkwy, Denver, CO 80224",Virginia Village,FALSE,4
-122,Il Porcellino,"Deli with meat, soup, sandwiches. Busy, small, may take some time.",Market,,,,FALSE,3
-123,Denver Cat Company,Cat cafe with adoption. Varies based on cat population.,Coffee Shop,,"3929 Tennyson St, Denver, CO 80212",Berkeley,FALSE,3
-124,Masha and the Bear,,Restaurant,Eastern European,"12101 E Iliff Ave, Aurora, CO 80014",Aurora,FALSE,4
-125,Nola Jane,"Hurricanes, good Cajun food, ghost",Bar,Cajun,"1435 Market St, Denver, CO 80202",LoDo,FALSE,3
-126,Oskar Blues,Don't get the pretzels,Brewery,,"1624 Market St, Denver, CO 80202",LoDo,FALSE,2
-127,Corridor 44,Fancy,Cocktail Bar,,"1433 Larimer St, Denver, CO 80202",LoDo,FALSE,3
-128,Colorado Cherry Co,"Pie, drinks",Restaurant,,,,FALSE,2
-129,Christkindlmarket,,Event,,,,FALSE,3
-130,The Bronze Empire,Chinese hot pots cooked at your table. Try the fried ice cream dessert.,Restaurant,Chinese,"1591 S Colorado Blvd, Denver, CO 80222",,FALSE,4
-131,Revolte Goods,Alternative store. Very friendly.,Shopping,,"1225 E 17th Ave, Denver, CO 80218",,FALSE,5
-132,The Crypt,Fun goth/metal bar,Bar,,"1618 E 17th Ave, Denver, CO 80218",,FALSE,3
-133,School House,"Good weekend brunch, drinks, dog-friendly patio",Restaurant,,,Arvada,FALSE,3
-134,Bacon Social House,"Breakfast, brunch, drinks, dog-friendly patio. Bloody Marys.",Restaurant,American,"2434 W 44th Ave, Denver, CO 80211",Sunnyside,FALSE,3
-135,The Odditorium,,Bar,,,,FALSE,3
-136,Cafe Miriam,"Coffee, pastries, brunch. Good chai, great pastries. Outdoor patio (dog-friendly). Closed Mondays.",Coffee Shop,,"2217 E 21st Ave, Denver, CO 80205",,FALSE,4
-137,Javier's Diner,"Excellent Mexican, super friendly, reasonable",Diner,Mexican,"3801 Tennyson St, Denver, CO 80212",Berkeley,FALSE,4
-138,Locavore,Cool food hall and grocery,Market,,,,FALSE,3
-139,Fox Run Cafe,"Breakfast, good coffee, alcoholic drinks. Friendly, small dog-friendly patio. Reasonable prices. Get there by 11 for breakfast burrito.",Coffee Shop,,,,TRUE,3
-140,Ace Hardware on E 12th,,Shopping,,"2640 E 12th Ave, Denver, CO 80206",Congress Park,FALSE,3
-141,Hooked on Colfax,Coffee. Dog-friendly. Good muffins. Great wi-fi. Art for sale.,Coffee Shop,,"3213 E Colfax Ave, Denver, CO 80206",City Park,FALSE,5
-142,Annie's Cafe and Bar,"Breakfast, dog-friendly patio",Restaurant,,,,TRUE,3
-143,Sprouts,Grocery. Nice deli (deli closes before store).,Market,,,,FALSE,3
-144,Lula Rose General Store,"Coffee, breakfast (good burritos), plants, good dirty chai",Market,,"3434 E Colfax Ave, Denver, CO 80206",City Park,FALSE,2
-145,Good Times,"Shakes, custard, burgers. Paw Bender for dogs. Drive-through.",Restaurant,American,,,FALSE,3
-146,Chocolate Lab,"Delicious chocolate drinks, but bartender is unfriendly",Bar,,"5575 E 3rd Ave # C, Denver, CO 80220",,FALSE,1
-147,The Learned Lemur,Oddities. Taxidermy. Tea witch sometimes. Tattoo shop upstairs.,Shopping,,"2220 E Colfax Ave, Denver, CO 80206",Cheesman Park,FALSE,5
-148,Trattoria Stella,Dog-friendly patio. Delicious weekend brunch after 10. Reasonable prices for Denver. Can bring coffee from Hooked on Colfax.,Restaurant,Italian,"3201 E Colfax Ave, Denver, CO 80206",City Park,FALSE,5
-149,Fat Sully's,"Pizza, pricey, just ok (GF reviewed)",Restaurant,Italian,,,FALSE,2
-150,Saucy Bombay,"Very reasonable prices, can taste sauces. SUPER fresh naan.",Restaurant,Indian,,,TRUE,3
-151,Mezcal,"Excellent mezcal margaritas, fresh chips. Great value.",Restaurant,Mexican,"3230 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,5
-152,Zorba's,"Greek food, breakfast. Real Irish coffees. Dog-friendly patio. Baked goods. 41 years in business.",Restaurant,Mediterranean,"2626 E 12th Ave, Denver, CO 80206",Congress Park,FALSE,3
-153,Enzo's Pizza,GREAT thin crust pizza. Closed Mon/Tue. Recommend take-out.,Restaurant,Italian,"3424 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,4
-154,Tommy's Thai,"Nice menu, lunch specials, reasonable prices. Best Thai in Denver. Great service.",Restaurant,Thai,"3410 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,5
-155,Sweet Cooie's Ice Cream,,Restaurant,,"3506 12th Ave, Denver, CO 80206",Congress Park,FALSE,3
-156,Smith & Canon,"Ice cream, coffee, affogatos",Coffee Shop,,,,FALSE,5
-157,Rustic Barcelona,Antiques,Shopping,,"4130 E Colfax Ave, Denver, CO 80220",,FALSE,2
-158,Blue Pan Pizza,Detroit-style pizza. Come hungry. Be prepared to wait during busy times.,Restaurant,Italian,,Capitol Hill,FALSE,5
-159,7 Leguas,Wide selection. Margaritas not epic.,Restaurant,Mexican,"4550 E Colfax Ave, Denver, CO 80220",,FALSE,3
-160,Q House,"Odd hours, a little pricey, good service, tasty food, good cocktails",Restaurant,Asian,"3421 E Colfax Ave, Denver, CO 80206",City Park,FALSE,3
-161,Bastien's,"Sugar steaks, sugar burgers. Good drinks and appetizers. Pricey but worth it. Reservations recommended.",Restaurant,American,"3503 E Colfax Ave, Denver, CO 80206",City Park,FALSE,4
-162,Under the Umbrella,Coffee,Coffee Shop,,,,FALSE,4
-163,Goosetown Tavern,"Sandwiches, beer, mixed drinks. Sometimes live music. Limited food selection.",Bar,,"3242 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,3
-164,The Watering Bowl,"Off-leash dog area, bar, indoor miniature golf",Bar,,,,FALSE,3
-165,Sienna Wine Bar,"Champagne flights, great cheese plates",Bar,,"3434 E 12th Ave, Denver, CO 80206",Congress Park,FALSE,3
-166,Pho & Bar,Grubhub,Restaurant,Vietnamese,"1600 E 17th Ave, Denver, CO 80218",,FALSE,3
-167,Cafe de France,Only tried on Grubhub but good for brunch,Restaurant,French,"2730 S Colorado Blvd, Denver, CO 80222",University Hills,FALSE,4
-168,GB Fish & Chips,"Really nice and fun, kinda punk",Restaurant,,,Capitol Hill,FALSE,3
-169,H&E Used Furniture,"FAR better deals than similar stores, without sacrificing quality. Clean and friendly. Say hi to Sammy the dog.",Shopping,,"6690 E Warren Ave, Denver, CO 80222",,FALSE,4
-170,Taste of India,Russian market in same parking lot,Restaurant,Indian,"901 S Oneida St #1707, Denver, CO 80224",Virginia Village,FALSE,4
-171,Molotov Kitschen,"GREAT Ukrainian food and drinks. Expensive but worth it. Try the elk, or the rabbit if they have it. Save room for dessert. Reservations recommended.",Restaurant,Eastern European,"3333 E Colfax Ave, Denver, CO 80206",City Park,FALSE,5
-172,Nuggs Ice Cream,,Restaurant,,"5135 E Colfax Ave, Denver, CO 80220",South Park Hill,FALSE,3
-173,North Italia,Reservation recommended,Restaurant,Italian,"190 Clayton Ln, Denver, CO 80206",Cherry Creek,FALSE,4
-174,Mizuna,$$$$,Restaurant,,"225 E 7th Ave, Denver, CO 80203",Capitol Hill,FALSE,4
-175,Cerebral Brewing,,Brewery,,"1477 Monroe St, Denver, CO 80206",Congress Park,FALSE,3
-176,Heaven Ice Cream,,Restaurant,,,LoDo,FALSE,4
-177,Foolish Craig's,,Restaurant,,"1611 Pearl St, Boulder, CO 80302",Boulder,FALSE,3
-178,Champagne Tiger,"Formerly Tom's Starlight. Food, brunch, cocktails, retro atmosphere.",Restaurant,,"601 E Colfax Ave, Denver, CO 80203",North Capitol Hill,FALSE,4
-179,Radical Sasquatch,"Food truck, dumplings",Food Truck,Asian,,,FALSE,3
-180,Menya Ramen,"Delivery, but pretty poor",Restaurant,Japanese,"1590 Little Raven St UNIT 170, Denver, CO 80202",LoDo,FALSE,1
-181,Go Fish Sushi,,Restaurant,Japanese,"1 Broadway b108, Denver, CO 80203",Baker,FALSE,3
-182,Cohesion Brewing,Good darks. Dog-friendly patio. Friendly.,Brewery,,"3851 Steele St Unit 1388, Denver, CO 80205",,FALSE,3
-183,Smashburger,,Restaurant,American,,,FALSE,3
-184,Yianni's Gyros Place,"Reasonable, friendly, good. Crispy fries don't get soggy.",Restaurant,Mediterranean,"10450 W Colfax Ave, Lakewood, CO 80215",Lakewood,FALSE,3
-185,Chubby Cattle,Good but $$$ and too much food. No reservations.,Restaurant,Asian,"2 N Broadway, Denver, CO 80203",Curtis Park,FALSE,2
-186,Crab & Shell Cajun Seafood,Crab boil,Restaurant,Cajun,"2819 E Colfax Ave, Denver, CO 80206",City Park,FALSE,3
-187,Jets Pizza,Pricey and not great,Restaurant,Italian,"2306 S Colorado Blvd, Denver, CO 80222",University Hills,FALSE,1
-188,Hacienda,,Restaurant,Mexican,"10500 Bierstadt Way, Centennial, CO 80112",Centennial,FALSE,3
-189,Daughter Thai,,Restaurant,Thai,"1700 Platte St Suite 140, Denver, CO 80202",LoHi,FALSE,4
-190,Jelly,"Breakfast, donut bites. Popular, online waiting list. Pancakes, specials, gluten-free options.",Restaurant,American,,,FALSE,4
-191,Enstrom,"Coffee, tea, chocolate, affogato",Coffee Shop,,,,FALSE,3
-192,Gattara Pizza,,Restaurant,Italian,"1776 N Grant St, Denver, CO 80203",North Capitol Hill,FALSE,4
-193,The Abbey Tavern,Irish weekend brunch. Dark and cool. Try the Irish breakfast.,Bar,,"5151 E Colfax Ave, Denver, CO 80220",South Park Hill,FALSE,4
-194,Mizuumi Ramen & Sushi,,Restaurant,Japanese,"4225 W Colfax Ave, Denver, CO 80204",West Colfax,FALSE,3
-195,Maria Empanada,,Restaurant,Mexican,,,FALSE,3
-196,Garnish,Indian fusion,Restaurant,Indian,"6585 Greenwood Plaza Blvd, Greenwood Village, CO 80111",,FALSE,3
-197,Nana's Dim Sum,Try the boba,Restaurant,Chinese,"3316 Tejon St #102, Denver, CO 80211",LoHi,FALSE,4
-198,Park Hill Art Festival,,Event,,,Park Hill,FALSE,3
-199,Bon Ami,,Restaurant,French,"295 S Pennsylvania St, Denver, CO 80209",Speer,FALSE,3
-200,Bamboo Sushi,$$$,Restaurant,Japanese,"2715 17th St, Denver, CO 80211",LoHi,FALSE,3
-201,Briar Patch,"Food, drinks. Dog-friendly patio. Excellent breakfasts.",Restaurant,American,"1222 Madison St, Denver, CO 80206",Congress Park,FALSE,5
-202,Yard House,"Wide variety, good, by Paramount. Reasonable.",Restaurant,,"1555 Court Pl, Denver, CO 80202",LoDo,FALSE,3
-203,Corner Office,"Decent. Good drinks, nice decor.",Bar,,"1401 Curtis Street, Denver, CO 80202",LoDo,FALSE,3
-204,Japon,"Sushi, ramen",Restaurant,Japanese,"3550 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,4
-205,Sukiya Ramen,Only tried DoorDash but some of the best udon I have had,Restaurant,Japanese,,,FALSE,5
-206,YP Hello Asian Grill,"Consistent, huge portions. We have only tried DoorDash but our favorite for Chinese.",Restaurant,Asian,"7355 Ralston Rd, Arvada, CO 80002",Arvada,FALSE,5
-207,Cirrus Social Club,"Upscale, chill environment. Tasty snacks and non-alcoholic drinks. Special events. Reservations recommended.",Cannabis Lounge,,"3200 E Colfax Ave, Denver, CO 80206",,FALSE,5
-208,Lark & Rue,Find at pop-ups or https://larkandrue.com/ - THE best soap. Great candles too. Witchy.,Shopping,,"6547 N Academy Blvd #53, Colorado Springs CO 80918",Colorado Springs,FALSE,5
+name,description,category,cuisine,address,area,closed,rating
+Huckleberry Coffee,Locally-roasted coffee.,Coffee Shop,,,Congress Park,FALSE,3
+Crema Coffee House,,Coffee Shop,,,RiNo,FALSE,3
+Safta,Israeli cuisine. Incredible Sunday buffet - pace yourself. Reservations recommended.,Restaurant,Mediterranean,"3330 Brighton Blvd #201, Denver, CO 80216",RiNo,FALSE,5
+Smok,Delicious.,Restaurant,BBQ,"3330 Brighton Blvd #202, Denver, CO 80216",RiNo,FALSE,3
+Snooze,Fantastic breakfasts; great service. Usually a line Multiple locations.,Diner,American,,,FALSE,5
+Patxi Pizza,,Restaurant,Italian,,,TRUE,3
+Improper City,"Food trucks, beer. Dog-friendly.",Bar,,"3201 Walnut St #107, Denver, CO 80205",Curtis Park,FALSE,3
+Mister Oso,A little pricey.,Restaurant,Mexican,,,FALSE,3
+For[a]ged,Good but pricey,Restaurant,,,,TRUE,2
+Milk Market,Fun,Market,,"1800 Wazee St Suite 100, Denver, CO 80202",LoDo,FALSE,3
+Kachina,By Milk Market. Great margaritas. The queso is just OK; everything else is really good.,Restaurant,Mexican,"1890 Wazee St, Denver, CO 80202",LoDo,FALSE,5
+Barcelona Wine Bar,,Bar,,"2900 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
+Habit Donuts,,Bakery,,,,FALSE,3
+Mint Indian,Decent,Restaurant,Indian,"1531 Stout St Suite 130, Denver, CO 80202",Five Points,FALSE,2
+Adelitas,,Restaurant,Mexican,"1294 S Broadway, Denver, CO 80210",Platt Park,FALSE,3
+Aloy Modern Thai,,Restaurant,Thai,"2134 Larimer St, Denver, CO 80205",Ballpark,FALSE,3
+Sushi-Rama,I miss their conveyor-belt sushi.,Restaurant,Japanese,,,TRUE,3
+Honey,"Excellent drinks, good snack plates. Their shrubs are always great. Non-alcoholic options. Chill vibe.",Cocktail Bar,,"2636 Walnut St #104, Denver, CO 80205",Curtis Park,FALSE,5
+Rye Society,"Reubens, breakfast, lunch",Restaurant,American,"3090 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
+Pit Fiend,"BBQ, sells out. Formerly Owlbear.",Restaurant,BBQ,"2826 Larimer St, Denver, CO 80205",Curtis Park,FALSE,5
+Shake Shack,Much better than typical fast food.,Restaurant,American,,,FALSE,4
+Colorado Sake Co,Tasty sake; dim sum on weekends. Frequently have shows in the back.,Bar,Japanese,"3559 Larimer St, Denver, CO 80205",RiNo,FALSE,4
+Great Divide,One of many good breweries in Denver. Gluten-free options. Not a fan of their IPA though.,Brewery,,,,FALSE,3
+Sushi Hai,,Restaurant,Japanese,"3600 W 32nd Ave Ste D, Denver, CO 80211",,FALSE,3
+Osaka Ramen,I miss them…,Restaurant,Japanese,,,TRUE,5
+Grabowski's Pizzeria,We were so sad when they closed.,Restaurant,Italian,,,TRUE,5
+Fish & Beer,"Get there early, or get reservations. Everything is good. Try the peel-and-eat shrimp. Pricey but worth it.",Restaurant,American,"3510 Larimer St, Denver, CO 80205",Curtis Park,FALSE,5
+Stowaway Kitchen,"Great waffles, fresh fruit",Restaurant,,"2528 Walnut St #104, Denver, CO 80205",Curtis Park,FALSE,3
+Blue Moon Brewery,Dog-friendly patio; fire pits in winter. Tasty beer. Good burgers.,Brewery,American,"3750 Chestnut Pl, Denver, CO 80216",Elyria-Swansea,FALSE,3
+Ophelia's,Reservations recommended. Great themed brunches. Good venue for live music.,Restaurant,American,"1215 20th St, Denver, CO 80202",LoDo,FALSE,5
+Zaika Indian Express,Mainly tried through Grubhub.,Restaurant,Indian,"575 Lincoln St B, Denver, CO 80203",Speer,FALSE,3
+Snarf's,Local sandwich shop. Much better than Subway.,Restaurant,American,,,FALSE,3
+Denver Biscuit Company,Friendly and consistently good. Delicious cocktails.,Diner,American,"3237 E. Colfax Ave, Denver, CO",Congress Park,FALSE,5
+Olive & Finch,"Sandwiches, salads",Restaurant,American,,,FALSE,4
+Dio Mio,Excellent pasta and wine. Small outdoor patio.,Restaurant,Italian,"3264 Larimer St, Denver, CO 80205",Curtis Park,FALSE,4
+Molecule Effect,"Coffee, booze, snacks",Coffee Shop,,"2215 S Broadway, Denver, CO 80210",,FALSE,3
+Kuma's Corner,Best burgers; sadly closed.,Restaurant,American,,RiNo,TRUE,5
+Bigsby's Folly,"Wine, small plates, great crack bacon",Bar,,"3563 Wazee St, Denver, CO 80216",RiNo,FALSE,3
+Sexy Pizza,Good thin-crust pizza. Delivers.,Restaurant,Italian,,,FALSE,3
+Lustre Pearl,Good drinks. Not the iced Irish coffee though.,Bar,,"1315 26th St, Denver, CO 80205",Curtis Park,FALSE,3
+City o City,"Drinks, delicious vegan food, coffee",Restaurant,American,"206 E 13th Ave, Denver, CO 80203",Capitol Hill,FALSE,3
+Agave,,Restaurant,Mexican,,,FALSE,3
+Goldmine Vintage,,Shopping,,"227 Broadway #102, Denver, CO 80203",Baker,FALSE,3
+The Wizard's Chest,"Big gaming, costume, and magic store. If it’s for gamers, they probably have it.",Shopping,,"451 Broadway, Denver, CO 80203",Baker,FALSE,4
+Postino,"Wine, cheese, charcuterie. Dog-friendly patio.",Restaurant,,,,FALSE,3
+City Bark LoDo (RiNo),Great place to board your dog. They take time to know your pet.,Shopping,,"3150 Brighton Blvd, Denver, CO 80216",Curtis Park,FALSE,5
+Linger,"Brunch, mortuary. OneTable reservations.",Restaurant,,"2030 W 30th Ave, Denver, CO 80211",LoHi,FALSE,3
+Little Man Ice Cream,Long line but worth it.,Restaurant,,,LoHi,FALSE,3
+Death & Co,"Fancy drinks, food",Cocktail Bar,,"1280 25th St, Denver, CO 80205",Five Points / Welton,FALSE,3
+Black Shirt Brewing,Pizza,Brewery,,"3719 Walnut St, Denver, CO 80205",Cole,FALSE,4
+Odell,Meh beer,Brewery,,,,FALSE,2
+Stem Ciders,,Brewery,,"3040 Blake St #101, Denver, CO 80205",Curtis Park,FALSE,3
+Randy Buzz Session Mead,,Brewery,,"15810 W 6th Ave, Golden, CO 80401",Golden,FALSE,3
+Ash'Kara,Greek and Phoenician,Restaurant,Mediterranean,"2005 W 33rd Ave, Denver, CO 80211",LoHi,FALSE,3
+India Oven,,Restaurant,Indian,"2890 S Colorado Blvd, Denver, CO 80222",University Hills,FALSE,3
+Ratio Beerworks,"Domestica is good. Dog-friendly, mist in summer, cheap. Order food from Shake Shack or Barcelona. Good music.",Brewery,,"2920 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
+Mika Sushi,,Restaurant,Japanese,"2730 S Colorado Blvd #118, Denver, CO 80222",University Hills,FALSE,3
+Uchi,"Sushi, pricey and you'll leave hungry",Restaurant,Japanese,"2500 Lawrence St, Denver, CO 80205",Five Points / Welton,FALSE,2
+Brown Palace,"Tea and crumpets, delicious dinners, $$$. An experience.",Restaurant,American,"321 17th St, Denver, CO 80202",Five Points,FALSE,4
+Slater's 50/50,Good burgers and drinks. Avoid the chicken.,Restaurant,American,,,FALSE,3
+Pho 16th Vietnamese Grill,DoorDash. Yummy and inexpensive.,Restaurant,Vietnamese,"535 16th St Mall Ste, Denver, CO 80202",Five Points,FALSE,3
+Sushi Ronin,"Overpriced, small portions",Restaurant,Japanese,"2930 Umatilla St Suite 300, Denver, CO 80211",LoHi,FALSE,1
+Lekker Coffee,Why do the good places close?,Coffee Shop,,,RiNo,TRUE,5
+Lazy Dog,Super dog-friendly restaurant,Restaurant,American,,,FALSE,3
+The French Press,"Good coffee, delicious brunch.",Coffee Shop,American,"3504 E 12th Ave, Denver, CO 80206",Congress Park,FALSE,4
+Cafe Byblos,Greek/Lebanese. DoorDash/Grubhub.,Restaurant,Mediterranean,"400 N Corona St, Denver, CO 80218",Alamo Placita,FALSE,3
+Le French,Duck,Restaurant,French,,,FALSE,3
+Modern Market,"Grubhub. Soup, sandwiches, salads, grain bowls. Healthy and delicious.",Restaurant,,,,FALSE,3
+Biker Jim's Gourmet Dogs,,Food Truck,American,,,TRUE,3
+Temaki Den,"Sushi, pricey. Hand rolls weren't rolled, didn't sit well, not worth it.",Restaurant,Japanese,"3350 Brighton Blvd, Denver, CO 80216",RiNo,FALSE,1
+Kaffe Landskap,,Coffee Shop,,,,FALSE,3
+What the Pho,Grubhub,Restaurant,Vietnamese,"1600 Champa St #110, Denver, CO 80202",LoDo,FALSE,3
+Il Posto,"Try the Cabin in the Woods drink. Excellent cocktails and wine, charcuterie. $. Tuesday is less busy.",Restaurant,Italian,"2601 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
+Grind,Great fried chicken,Restaurant,American,,Cherry Creek,TRUE,3
+Tap & Handle,,Bar,,,Fort Collins,FALSE,3
+Locust Cider,,Brewery,,,Fort Collins,FALSE,3
+Red Square Euro Bistro,"Russian food and vodka. Try the Jewel or Beluga vodka, the honey dessert, and the borscht.",Restaurant,Eastern European,"1512 Larimer St #38r, Denver, CO 80202",LoDo,FALSE,5
+Mutiny Comics Coffee,,Coffee Shop,,"3483 S Broadway, Englewood, CO 80113",Englewood,FALSE,3
+The Block Distilling Co,,Bar,,"2990 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
+Spice Room,"Indian. Nice lunch specials, complimentary papadums.",Restaurant,Indian,,,FALSE,4
+Port Side,"Coffee, drinks, brunch, snacks (outside). Nice, inexpensive, friendly. Dogs can be on patio.",Coffee Shop,,"2500 Larimer St #103, Denver, CO 80205",Five Points / Welton,FALSE,5
+Disguises,"Costume store, great service and selection.",Shopping,,"10500 W Colfax Ave, Lakewood, CO 80215",Lakewood,FALSE,5
+Number Thirty-eight,"Drinks, food, live music, dog-friendly. Reservations.",Bar,,,,FALSE,3
+Larimer Lounge,Strong drinks,Venue,,"2721 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
+Himchuli,,Restaurant,Indian,,,FALSE,3
+Crown of India,,Restaurant,Indian,"3109 Federal Blvd, Denver, CO 80211",,FALSE,4
+The Walnut Room,"Best Reubens, drinks with fresh ingredients, dog patio",Bar,,"3131 Walnut St, Denver, CO 80205",Curtis Park,FALSE,3
+Earls On Top,"Seafood, brunch",Restaurant,,"1600 Glenarm Pl #140, Denver, CO 80202",,FALSE,3
+Millers & Rossi,Fresh ingredient cocktails,Cocktail Bar,,"3542 Walnut St, Denver, CO 80205",RiNo,FALSE,3
+Marczyk Fine Foods,Grocery,Market,,,,FALSE,4
+FashioNation,"Boots, goth/punk, authentic",Shopping,,"1745 S Broadway, Denver, CO 80210",,FALSE,3
+Yahya's Mediterranean Grill,Turkish coffee. Good portions; you will have leftovers.,Restaurant,Mediterranean,"2207 E Colfax Ave, Denver, CO 80206",,FALSE,5
+Ted's Montana Grill,Good bison at reasonable prices but slow service and a bit country,Restaurant,American,,LoDo,FALSE,2
+Herman's Hideaway,Nice small music venue,Venue,,"1578 S Broadway, Denver, CO 80210",Platt Park,FALSE,3
+Adrift,"Tiki bar. Reservations suggested, sit indoors, stick to frozen drinks.",Bar,,"218 S Broadway, Denver, CO 80209",Speer,FALSE,2
+Ali Baba Grill,"Turkish coffee, lunch specials, good gyros. Yahya's is better overall.",Restaurant,Mediterranean,,,FALSE,3
+Citron Bistro,"Greek. Great service, reasonable prices, not pretentious, good food, gluten-free options.",Restaurant,Mediterranean,"3535 S Yosemite St, Denver, CO 80237",,FALSE,3
+Meadowlark,Speakeasy,Cocktail Bar,,"2701 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
+Blue Agave,Good margaritas,Bar,Mexican,"1201 16th St Mall # 104, Denver, CO 80202",LoDo,FALSE,3
+Clocktower Cabaret,Fabulous venue.,Venue,,"1601 Arapahoe St, Denver, CO 80202",LoDo,FALSE,5
+Mono Mono,Korean fried chicken,Restaurant,Korean,,,FALSE,2
+Lea Jane's Hot Chicken,Bring wet wipes,Restaurant,American,"3200 N Pecos St, Denver, CO 80211",LoHi,FALSE,3
+Dochi,,Restaurant,Japanese,,,FALSE,3
+OMF,Sours,Brewery,,,,FALSE,3
+So RADish,,Restaurant,,,,FALSE,3
+Rare Finds,"Nice antiques, imported furniture, reasonably priced",Shopping,,"6500 E 44th Ave Unit A, Denver, CO 80216",Park Hill,FALSE,3
+Motomaki,,Restaurant,Japanese,"14650 W Colfax Ave, Lakewood, CO 80401",Lakewood,FALSE,3
+Wild Corgi Pub,"Good food, super friendly.",Bar,,"1223 E 13th Ave, Denver, CO 80218",Cheesman Park,FALSE,4
+Tupelo Honey,Good southern brunch. Chicken and waffles.,Restaurant,American,"1650 Wewatta St #104, Denver, CO 80202",Union Station,FALSE,3
+Office Furniture EZ,Great refurbished office supply,Shopping,,"3860 N Revere St Suite A, Denver, CO 80239",Central Park,FALSE,3
+Cherry Cricket,Burgers however you like. Friendly. Good outdoor seating options that are dog-friendly.,Restaurant,American,,Cherry Creek,FALSE,5
+Thai Monkey Club,Good prices,Restaurant,Thai,"102 S Broadway, Denver, CO 80209",Speer,FALSE,3
+Arvada Army Navy Surplus,,Shopping,,"5701 Olde Wadsworth Blvd, Arvada, CO 80002",Arvada,FALSE,3
+Rheinlander Bakery,,Bakery,,"5721 Olde Wadsworth Blvd, Arvada, CO 80002",Arvada,FALSE,3
+Indian Springs,Hot springs. Decent but not great for shared pool. Not very hot nor many minerals or amenities.,Hot Springs,,"302 Soda Creek Rd, Idaho Springs, CO 80452",Idaho Springs,FALSE,2
+Mile High Flea Market,"Cash only mostly. Bargains, mostly resale.",Market,,"7007 E 88th Ave, Henderson, CO 80640",Commerce City,FALSE,2
+Butcher Block Cafe,"Old school diner. Friendly, fast, reasonable prices, decent food. Maybe try for breakfast.",Diner,American,,,FALSE,3
+Bellota at the Source,"Tacos at reasonable prices, good service, EPIC churros",Restaurant,Mexican,,RiNo,FALSE,3
+Deviation Distilling,"Tasty whiskey, talented bartenders",Bar,,"1821 Blake St #130, Denver, CO 80202",LoDo,FALSE,3
+Sir,Good cocktails. Try the espresso martini.,Cocktail Bar,,"1822 Blake St, Denver, CO 80202",LoDo,FALSE,3
+Russian Books,As it says.,Shopping,,"970 S Monaco St Pkwy, Denver, CO 80224",Virginia Village,FALSE,4
+Il Porcellino,"Deli with meat, soup, sandwiches. Busy, small, may take some time.",Market,,,,FALSE,3
+Denver Cat Company,Cat cafe with adoption. Varies based on cat population.,Coffee Shop,,"3929 Tennyson St, Denver, CO 80212",Berkeley,FALSE,3
+Masha and the Bear,,Restaurant,Eastern European,"12101 E Iliff Ave, Aurora, CO 80014",Aurora,FALSE,4
+Nola Jane,"Hurricanes, good Cajun food, ghost",Bar,Cajun,"1435 Market St, Denver, CO 80202",LoDo,FALSE,3
+Oskar Blues,Don't get the pretzels,Brewery,,"1624 Market St, Denver, CO 80202",LoDo,FALSE,2
+Corridor 44,Fancy,Cocktail Bar,,"1433 Larimer St, Denver, CO 80202",LoDo,FALSE,3
+Colorado Cherry Co,"Pie, drinks",Restaurant,,,,FALSE,2
+Christkindlmarket,,Event,,,,FALSE,3
+The Bronze Empire,Chinese hot pots cooked at your table. Try the fried ice cream dessert.,Restaurant,Chinese,"1591 S Colorado Blvd, Denver, CO 80222",,FALSE,4
+Revolte Goods,Alternative store. Very friendly.,Shopping,,"1225 E 17th Ave, Denver, CO 80218",,FALSE,5
+The Crypt,Fun goth/metal bar,Bar,,"1618 E 17th Ave, Denver, CO 80218",,FALSE,3
+School House,"Good weekend brunch, drinks, dog-friendly patio",Restaurant,,,Arvada,FALSE,3
+Bacon Social House,"Breakfast, brunch, drinks, dog-friendly patio. Bloody Marys.",Restaurant,American,"2434 W 44th Ave, Denver, CO 80211",Sunnyside,FALSE,3
+The Odditorium,,Bar,,,,FALSE,3
+Cafe Miriam,"Coffee, pastries, brunch. Good chai, great pastries. Outdoor patio (dog-friendly). Closed Mondays.",Coffee Shop,,"2217 E 21st Ave, Denver, CO 80205",,FALSE,4
+Javier's Diner,"Excellent Mexican, super friendly, reasonable",Diner,Mexican,"3801 Tennyson St, Denver, CO 80212",Berkeley,FALSE,4
+Locavore,Cool food hall and grocery,Market,,,,FALSE,3
+Fox Run Cafe,"Breakfast, good coffee, alcoholic drinks. Friendly, small dog-friendly patio. Reasonable prices. Get there by 11 for breakfast burrito.",Coffee Shop,,,,TRUE,3
+Ace Hardware on E 12th,,Shopping,,"2640 E 12th Ave, Denver, CO 80206",Congress Park,FALSE,3
+Hooked on Colfax,Coffee. Dog-friendly. Good muffins. Great wi-fi. Art for sale.,Coffee Shop,,"3213 E Colfax Ave, Denver, CO 80206",City Park,FALSE,5
+Annie's Cafe and Bar,"Breakfast, dog-friendly patio",Restaurant,,,,TRUE,3
+Sprouts,Grocery. Nice deli (deli closes before store).,Market,,,,FALSE,3
+Lula Rose General Store,"Coffee, breakfast (good burritos), plants, good dirty chai",Market,,"3434 E Colfax Ave, Denver, CO 80206",City Park,FALSE,2
+Good Times,"Shakes, custard, burgers. Paw Bender for dogs. Drive-through.",Restaurant,American,,,FALSE,3
+Chocolate Lab,"Delicious chocolate drinks, but bartender is unfriendly",Bar,,"5575 E 3rd Ave # C, Denver, CO 80220",,FALSE,1
+The Learned Lemur,Oddities. Taxidermy. Tea witch sometimes. Tattoo shop upstairs.,Shopping,,"2220 E Colfax Ave, Denver, CO 80206",Cheesman Park,FALSE,5
+Trattoria Stella,Dog-friendly patio. Delicious weekend brunch after 10. Reasonable prices for Denver. Can bring coffee from Hooked on Colfax.,Restaurant,Italian,"3201 E Colfax Ave, Denver, CO 80206",City Park,FALSE,5
+Fat Sully's,"Pizza, pricey, just ok (GF reviewed)",Restaurant,Italian,,,FALSE,2
+Saucy Bombay,"Very reasonable prices, can taste sauces. SUPER fresh naan.",Restaurant,Indian,,,TRUE,3
+Mezcal,"Excellent mezcal margaritas, fresh chips. Great value.",Restaurant,Mexican,"3230 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,5
+Zorba's,"Greek food, breakfast. Real Irish coffees. Dog-friendly patio. Baked goods. 41 years in business.",Restaurant,Mediterranean,"2626 E 12th Ave, Denver, CO 80206",Congress Park,FALSE,3
+Enzo's Pizza,GREAT thin crust pizza. Closed Mon/Tue. Recommend take-out.,Restaurant,Italian,"3424 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,4
+Tommy's Thai,"Nice menu, lunch specials, reasonable prices. Best Thai in Denver. Great service.",Restaurant,Thai,"3410 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,5
+Sweet Cooie's Ice Cream,,Restaurant,,"3506 12th Ave, Denver, CO 80206",Congress Park,FALSE,3
+Smith & Canon,"Ice cream, coffee, affogatos",Coffee Shop,,,,FALSE,5
+Rustic Barcelona,Antiques,Shopping,,"4130 E Colfax Ave, Denver, CO 80220",,FALSE,2
+Blue Pan Pizza,Detroit-style pizza. Come hungry. Be prepared to wait during busy times.,Restaurant,Italian,,Capitol Hill,FALSE,5
+7 Leguas,Wide selection. Margaritas not epic.,Restaurant,Mexican,"4550 E Colfax Ave, Denver, CO 80220",,FALSE,3
+Q House,"Odd hours, a little pricey, good service, tasty food, good cocktails",Restaurant,Asian,"3421 E Colfax Ave, Denver, CO 80206",City Park,FALSE,3
+Bastien's,"Sugar steaks, sugar burgers. Good drinks and appetizers. Pricey but worth it. Reservations recommended.",Restaurant,American,"3503 E Colfax Ave, Denver, CO 80206",City Park,FALSE,4
+Under the Umbrella,Coffee,Coffee Shop,,,,FALSE,4
+Goosetown Tavern,"Sandwiches, beer, mixed drinks. Sometimes live music. Limited food selection.",Bar,,"3242 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,3
+The Watering Bowl,"Off-leash dog area, bar, indoor miniature golf",Bar,,,,FALSE,3
+Sienna Wine Bar,"Champagne flights, great cheese plates",Bar,,"3434 E 12th Ave, Denver, CO 80206",Congress Park,FALSE,3
+Pho & Bar,Grubhub,Restaurant,Vietnamese,"1600 E 17th Ave, Denver, CO 80218",,FALSE,3
+Cafe de France,Only tried on Grubhub but good for brunch,Restaurant,French,"2730 S Colorado Blvd, Denver, CO 80222",University Hills,FALSE,4
+GB Fish & Chips,"Really nice and fun, kinda punk",Restaurant,,,Capitol Hill,FALSE,3
+H&E Used Furniture,"FAR better deals than similar stores, without sacrificing quality. Clean and friendly. Say hi to Sammy the dog.",Shopping,,"6690 E Warren Ave, Denver, CO 80222",,FALSE,4
+Taste of India,Russian market in same parking lot,Restaurant,Indian,"901 S Oneida St #1707, Denver, CO 80224",Virginia Village,FALSE,4
+Molotov Kitschen,"GREAT Ukrainian food and drinks. Expensive but worth it. Try the elk, or the rabbit if they have it. Save room for dessert. Reservations recommended.",Restaurant,Eastern European,"3333 E Colfax Ave, Denver, CO 80206",City Park,FALSE,5
+Nuggs Ice Cream,,Restaurant,,"5135 E Colfax Ave, Denver, CO 80220",South Park Hill,FALSE,3
+North Italia,Reservation recommended,Restaurant,Italian,"190 Clayton Ln, Denver, CO 80206",Cherry Creek,FALSE,4
+Mizuna,$$$$,Restaurant,,"225 E 7th Ave, Denver, CO 80203",Capitol Hill,FALSE,4
+Cerebral Brewing,,Brewery,,"1477 Monroe St, Denver, CO 80206",Congress Park,FALSE,3
+Heaven Ice Cream,,Restaurant,,,LoDo,FALSE,4
+Foolish Craig's,,Restaurant,,"1611 Pearl St, Boulder, CO 80302",Boulder,FALSE,3
+Champagne Tiger,"Formerly Tom's Starlight. Food, brunch, cocktails, retro atmosphere.",Restaurant,,"601 E Colfax Ave, Denver, CO 80203",North Capitol Hill,FALSE,4
+Radical Sasquatch,"Food truck, dumplings",Food Truck,Asian,,,FALSE,3
+Menya Ramen,"Delivery, but pretty poor",Restaurant,Japanese,"1590 Little Raven St UNIT 170, Denver, CO 80202",LoDo,FALSE,1
+Go Fish Sushi,,Restaurant,Japanese,"1 Broadway b108, Denver, CO 80203",Baker,FALSE,3
+Cohesion Brewing,Good darks. Dog-friendly patio. Friendly.,Brewery,,"3851 Steele St Unit 1388, Denver, CO 80205",,FALSE,3
+Smashburger,,Restaurant,American,,,FALSE,3
+Yianni's Gyros Place,"Reasonable, friendly, good. Crispy fries don't get soggy.",Restaurant,Mediterranean,"10450 W Colfax Ave, Lakewood, CO 80215",Lakewood,FALSE,3
+Chubby Cattle,Good but $$$ and too much food. No reservations.,Restaurant,Asian,"2 N Broadway, Denver, CO 80203",Curtis Park,FALSE,2
+Crab & Shell Cajun Seafood,Crab boil,Restaurant,Cajun,"2819 E Colfax Ave, Denver, CO 80206",City Park,FALSE,3
+Jets Pizza,Pricey and not great,Restaurant,Italian,"2306 S Colorado Blvd, Denver, CO 80222",University Hills,FALSE,1
+Hacienda,,Restaurant,Mexican,"10500 Bierstadt Way, Centennial, CO 80112",Centennial,FALSE,3
+Daughter Thai,,Restaurant,Thai,"1700 Platte St Suite 140, Denver, CO 80202",LoHi,FALSE,4
+Jelly,"Breakfast, donut bites. Popular, online waiting list. Pancakes, specials, gluten-free options.",Restaurant,American,,,FALSE,4
+Enstrom,"Coffee, tea, chocolate, affogato",Coffee Shop,,,,FALSE,3
+Gattara Pizza,,Restaurant,Italian,"1776 N Grant St, Denver, CO 80203",North Capitol Hill,FALSE,4
+The Abbey Tavern,Irish weekend brunch. Dark and cool. Try the Irish breakfast.,Bar,,"5151 E Colfax Ave, Denver, CO 80220",South Park Hill,FALSE,4
+Mizuumi Ramen & Sushi,,Restaurant,Japanese,"4225 W Colfax Ave, Denver, CO 80204",West Colfax,FALSE,3
+Maria Empanada,,Restaurant,Mexican,,,FALSE,3
+Garnish,Indian fusion,Restaurant,Indian,"6585 Greenwood Plaza Blvd, Greenwood Village, CO 80111",,FALSE,3
+Nana's Dim Sum,Try the boba,Restaurant,Chinese,"3316 Tejon St #102, Denver, CO 80211",LoHi,FALSE,4
+Park Hill Art Festival,,Event,,,Park Hill,FALSE,3
+Bon Ami,,Restaurant,French,"295 S Pennsylvania St, Denver, CO 80209",Speer,FALSE,3
+Bamboo Sushi,$$$,Restaurant,Japanese,"2715 17th St, Denver, CO 80211",LoHi,FALSE,3
+Briar Patch,"Food, drinks. Dog-friendly patio. Excellent breakfasts.",Restaurant,American,"1222 Madison St, Denver, CO 80206",Congress Park,FALSE,5
+Yard House,"Wide variety, good, by Paramount. Reasonable.",Restaurant,,"1555 Court Pl, Denver, CO 80202",LoDo,FALSE,3
+Corner Office,"Decent. Good drinks, nice decor.",Bar,,"1401 Curtis Street, Denver, CO 80202",LoDo,FALSE,3
+Japon,"Sushi, ramen",Restaurant,Japanese,"3550 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,4
+Sukiya Ramen,Only tried DoorDash but some of the best udon I have had,Restaurant,Japanese,,,FALSE,5
+YP Hello Asian Grill,"Consistent, huge portions. We have only tried DoorDash but our favorite for Chinese.",Restaurant,Asian,"7355 Ralston Rd, Arvada, CO 80002",Arvada,FALSE,5
+Cirrus Social Club,"Upscale, chill environment. Tasty snacks and non-alcoholic drinks. Special events. Reservations recommended.",Cannabis Lounge,,"3200 E Colfax Ave, Denver, CO 80206",,FALSE,5
+Lark & Rue,Find at pop-ups or https://larkandrue.com/ - THE best soap. Great candles too. Witchy.,Shopping,,"6547 N Academy Blvd #53, Colorado Springs CO 80918",Colorado Springs,FALSE,5
