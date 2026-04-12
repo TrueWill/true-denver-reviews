@@ -31,6 +31,10 @@ npm run seed
 Lookup tables (`db/categories.csv`, `db/cuisines.csv`, `db/areas.csv`) rarely need
 editing but follow the same pattern. The build script is `db/build.sql`.
 
+## Git
+
+Run `npm run format` on any changed source files before committing.
+
 ## Architecture
 
 This is a **read-only SPA** — all data lives in a pre-built DuckDB binary (`public/data.db`) committed to the repo. There is no backend and no write path.
