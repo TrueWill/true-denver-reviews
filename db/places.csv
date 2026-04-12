@@ -31,7 +31,7 @@ Blue Moon Brewery,Dog-friendly patio; fire pits in winter. Tasty beer. Good burg
 Ophelia's,Reservations recommended. Great themed brunches. Good venue for live music.,Restaurant,American,"1215 20th St, Denver, CO 80202",LoDo,FALSE,5
 Zaika Indian Express,Mainly tried through Grubhub.,Restaurant,Indian,"575 Lincoln St B, Denver, CO 80203",Speer,FALSE,3
 Snarf's,Local sandwich shop. Much better than Subway.,Restaurant,American,,,FALSE,3
-Denver Biscuit Company,Friendly and consistently good. Delicious cocktails.,Diner,American,"3237 E. Colfax Ave, Denver, CO",Congress Park,FALSE,5
+Denver Biscuit Company,Friendly and consistently good. Delicious cocktails.,Diner,American,"3237 E. Colfax Ave, Denver, CO",City Park,FALSE,5
 Olive & Finch,"Sandwiches, salads",Restaurant,American,,,FALSE,4
 Dio Mio,Excellent pasta and wine. Small outdoor patio.,Restaurant,Italian,"3264 Larimer St, Denver, CO 80205",Curtis Park,FALSE,4
 Molecule Effect,"Coffee, booze, snacks",Coffee Shop,,"2215 S Broadway, Denver, CO 80210",,FALSE,3
@@ -99,7 +99,7 @@ Citron Bistro,"Greek. Great service, reasonable prices, not pretentious, good fo
 Meadowlark,Speakeasy,Cocktail Bar,,"2701 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
 Blue Agave,Good margaritas,Bar,Mexican,"1201 16th St Mall # 104, Denver, CO 80202",LoDo,FALSE,3
 Clocktower Cabaret,Fabulous venue.,Venue,,"1601 Arapahoe St, Denver, CO 80202",LoDo,FALSE,5
-Mono Mono,Korean fried chicken,Restaurant,Korean,"2420 17th St, Denver, CO 80202",,FALSE,2
+Mono Mono,Korean fried chicken,Restaurant,Korean,"2420 17th St, Denver, CO 80202",LoHi,FALSE,2
 Lea Jane's Hot Chicken,Bring wet wipes,Restaurant,American,"3200 N Pecos St, Denver, CO 80211",LoHi,FALSE,3
 Dochi,,Restaurant,Japanese,,,FALSE,3
 OMF,Sours,Brewery,,,,FALSE,3
@@ -136,7 +136,7 @@ Bacon Social House,"Breakfast, brunch, drinks, dog-friendly patio. Bloody Marys.
 The Odditorium,,Bar,,,,FALSE,3
 Cafe Miriam,"Coffee, pastries, brunch. Good chai, great pastries. Outdoor patio (dog-friendly). Closed Mondays.",Coffee Shop,,"2217 E 21st Ave, Denver, CO 80205",,FALSE,4
 Javier's Diner,"Excellent Mexican, super friendly, reasonable",Diner,Mexican,"3801 Tennyson St, Denver, CO 80212",Berkeley,FALSE,4
-Locavore,Cool food hall and grocery,Market,,"2630 W 38th Ave Unit B, Denver, CO 80211",,FALSE,3
+Locavore,Cool food hall and grocery,Market,,"2630 W 38th Ave Unit B, Denver, CO 80211",Highland,FALSE,3
 Fox Run Cafe,"Breakfast, good coffee, alcoholic drinks. Friendly, small dog-friendly patio. Reasonable prices. Get there by 11 for breakfast burrito.",Coffee Shop,,,,TRUE,3
 Ace Hardware on E 12th,,Shopping,,"2640 E 12th Ave, Denver, CO 80206",Congress Park,FALSE,3
 Hooked on Colfax,Coffee. Dog-friendly. Good muffins. Great wi-fi. Art for sale.,Coffee Shop,,"3213 E Colfax Ave, Denver, CO 80206",City Park,FALSE,5
@@ -205,5 +205,5 @@ Corner Office,"Decent. Good drinks, nice decor.",Bar,,"1401 Curtis Street, Denve
 Japon,"Sushi, ramen",Restaurant,Japanese,"3550 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,4
 Sukiya Ramen,Only tried DoorDash but some of the best udon I have had,Restaurant,Japanese,,,FALSE,5
 YP Hello Asian Grill,"Consistent, huge portions. We have only tried DoorDash but our favorite for Chinese.",Restaurant,Asian,"7355 Ralston Rd, Arvada, CO 80002",Arvada,FALSE,5
-Cirrus Social Club,"Upscale, chill environment. Tasty snacks and non-alcoholic drinks. Special events. Reservations recommended.",Cannabis Lounge,,"3200 E Colfax Ave, Denver, CO 80206",,FALSE,5
+Cirrus Social Club,"Upscale, chill environment. Tasty snacks and non-alcoholic drinks. Special events. Reservations recommended.",Cannabis Lounge,,"3200 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,5
 Lark & Rue,Find at pop-ups or https://larkandrue.com/ - THE best soap. Great candles too. Witchy.,Shopping,,"6547 N Academy Blvd #53, Colorado Springs CO 80918",Colorado Springs,FALSE,5
