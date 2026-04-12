@@ -99,7 +99,7 @@ Citron Bistro,"Greek. Great service, reasonable prices, not pretentious, good fo
 Meadowlark,Speakeasy,Cocktail Bar,,"2701 Larimer St, Denver, CO 80205",Curtis Park,FALSE,3
 Blue Agave,Good margaritas,Bar,Mexican,"1201 16th St Mall # 104, Denver, CO 80202",LoDo,FALSE,3
 Clocktower Cabaret,Fabulous venue.,Venue,,"1601 Arapahoe St, Denver, CO 80202",LoDo,FALSE,5
-Mono Mono,Korean fried chicken,Restaurant,Korean,"2420 17th St, Denver, CO 80202",LoHi,FALSE,2
+Mono Mono,Korean fried chicken,Restaurant,Korean,,LoHi,TRUE,2
 Lea Jane's Hot Chicken,Bring wet wipes,Restaurant,American,"3200 N Pecos St, Denver, CO 80211",LoHi,FALSE,3
 Dochi,,Restaurant,Japanese,,,FALSE,3
 OMF,Sours,Brewery,,,,FALSE,3
