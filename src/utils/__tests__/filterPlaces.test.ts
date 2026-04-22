@@ -198,6 +198,55 @@ describe('filterAndSortPlaces', () => {
     expect(desc.map((p) => p.name)).toEqual(['Zebra Cafe', 'Alpha Diner']);
   });
 
+  it('ignores articles in name tie-breaker when ratings are tied', () => {
+    const tied: Place[] = [
+      { ...places[0], id: 10, name: 'The Watering Hole', rating: 4 },
+      { ...places[0], id: 11, name: 'Tupelo Honey', rating: 4 },
+    ];
+    const result = filterAndSortPlaces(tied, {
+      ...base,
+      sortField: 'rating',
+      sortDirection: 'asc',
+    });
+    expect(result.map((p) => p.name)).toEqual([
+      'Tupelo Honey',
+      'The Watering Hole',
+    ]);
+  });
+
+  it('ignores leading articles when sorting by name', () => {
+    const articled: Place[] = [
+      { ...places[0], id: 10, name: 'The Learned Lemur' },
+      { ...places[0], id: 11, name: 'Sukiya Ramen' },
+      { ...places[0], id: 12, name: 'A Good Spot' },
+      { ...places[0], id: 13, name: 'An Old Place' },
+    ];
+    const result = filterAndSortPlaces(articled, {
+      ...base,
+      sortField: 'name',
+      sortDirection: 'asc',
+    });
+    expect(result.map((p) => p.name)).toEqual([
+      'A Good Spot',
+      'The Learned Lemur',
+      'An Old Place',
+      'Sukiya Ramen',
+    ]);
+  });
+
+  it('article matching is case-insensitive', () => {
+    const articled: Place[] = [
+      { ...places[0], id: 10, name: 'THE Zinc Bar' },
+      { ...places[0], id: 11, name: 'Ace Cafe' },
+    ];
+    const result = filterAndSortPlaces(articled, {
+      ...base,
+      sortField: 'name',
+      sortDirection: 'asc',
+    });
+    expect(result.map((p) => p.name)).toEqual(['Ace Cafe', 'THE Zinc Bar']);
+  });
+
   it('returns empty array when no places match', () => {
     const result = filterAndSortPlaces(places, {
       ...base,
