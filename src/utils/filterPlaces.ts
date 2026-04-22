@@ -46,11 +46,13 @@ export function filterAndSortPlaces(
       // "asc" = best first (high→low); "desc" = worst first (low→high).
       // Nulls sort last regardless of direction.
       if (a.rating === null && b.rating === null)
-        return a.name.localeCompare(b.name) * dir;
+        return sortKey(a.name).localeCompare(sortKey(b.name)) * dir;
       if (a.rating === null) return 1;
       if (b.rating === null) return -1;
       const ratingDiff = (b.rating - a.rating) * dir;
-      return ratingDiff !== 0 ? ratingDiff : a.name.localeCompare(b.name) * dir;
+      return ratingDiff !== 0
+        ? ratingDiff
+        : sortKey(a.name).localeCompare(sortKey(b.name)) * dir;
     }
 
     return sortKey(a.name).localeCompare(sortKey(b.name)) * dir;

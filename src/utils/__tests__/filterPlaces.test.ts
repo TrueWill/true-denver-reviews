@@ -198,6 +198,22 @@ describe('filterAndSortPlaces', () => {
     expect(desc.map((p) => p.name)).toEqual(['Zebra Cafe', 'Alpha Diner']);
   });
 
+  it('ignores articles in name tie-breaker when ratings are tied', () => {
+    const tied: Place[] = [
+      { ...places[0], id: 10, name: 'The Watering Hole', rating: 4 },
+      { ...places[0], id: 11, name: 'Tupelo Honey', rating: 4 },
+    ];
+    const result = filterAndSortPlaces(tied, {
+      ...base,
+      sortField: 'rating',
+      sortDirection: 'asc',
+    });
+    expect(result.map((p) => p.name)).toEqual([
+      'Tupelo Honey',
+      'The Watering Hole',
+    ]);
+  });
+
   it('ignores leading articles when sorting by name', () => {
     const articled: Place[] = [
       { ...places[0], id: 10, name: 'The Learned Lemur' },
