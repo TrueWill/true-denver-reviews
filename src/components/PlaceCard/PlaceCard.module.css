@@ -40,13 +40,19 @@
 
 /* Closed state */
 .closed {
-  background: #fdfaf8;
-  border-color: #e0d4c8;
+  background: #ddd7ce;
+  border-color: #bfb5a8;
+  box-shadow: none;
 }
 
 .closed:hover {
   transform: none;
-  box-shadow: var(--shadow-card);
+  box-shadow: none;
+  border-color: #bfb5a8;
+}
+
+.closed::before {
+  display: none;
 }
 
 .topRow {
@@ -90,6 +96,18 @@
 
 .closed .name {
   color: var(--ink-mid);
+}
+
+.closed .chip {
+  opacity: 0.65;
+}
+
+.closed .description {
+  opacity: 0.75;
+}
+
+.closed .address {
+  opacity: 0.75;
 }
 
 .chips {
