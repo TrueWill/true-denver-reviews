@@ -1,4 +1,4 @@
-import { parse } from 'jsr:@std/csv';
+import { parse } from 'jsr:@std/csv@1';
 
 const GOOGLE_API_KEY = Deno.env.get('GOOGLE_PLACES_API_KEY') ?? '';
 
