@@ -138,9 +138,6 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-# DuckDB WASM assets (copied from node_modules via postinstall)
-public/duckdb/
-
 # Lookup intermediate output
 db/addresses.json
 db/areas-lookup.json

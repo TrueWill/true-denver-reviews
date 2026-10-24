@@ -59,7 +59,6 @@ export function FilterBar({
               placeholder="Name or description…"
               value={filters.search}
               onChange={(e) => set(onFilterChange, 'search', e.target.value)}
-              aria-label="Search by name or description"
             />
           </label>
 

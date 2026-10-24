@@ -19,7 +19,6 @@ export async function fetchAllPlaces(
     JOIN categories c  ON c.id = p.category_id
     LEFT JOIN cuisines cu ON cu.id = p.cuisine_id
     LEFT JOIN areas a     ON a.id  = p.area_id
-    ORDER BY p.name
   `);
 
   return result.toArray().map((row) => ({

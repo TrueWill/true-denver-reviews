@@ -20,19 +20,26 @@ async function initDuckDB(): Promise<duckdb.AsyncDuckDBConnection> {
     }),
   );
   const worker = new Worker(workerUrl);
-  const logger = new duckdb.ConsoleLogger(duckdb.LogLevel.WARNING);
-  const db = new duckdb.AsyncDuckDB(logger, worker);
 
-  await db.instantiate(
-    abs(bundle.mainModule),
-    bundle.pthreadWorker ? abs(bundle.pthreadWorker) : undefined,
-  );
-  URL.revokeObjectURL(workerUrl);
+  try {
+    const logger = new duckdb.ConsoleLogger(duckdb.LogLevel.WARNING);
+    const db = new duckdb.AsyncDuckDB(logger, worker);
 
-  await db.open({
-    path: abs('/data.db'),
-    accessMode: duckdb.DuckDBAccessMode.READ_ONLY,
-  });
+    await db.instantiate(
+      abs(bundle.mainModule),
+      bundle.pthreadWorker ? abs(bundle.pthreadWorker) : undefined,
+    );
 
-  return db.connect();
+    await db.open({
+      path: abs(`${import.meta.env.BASE_URL}data.db`),
+      accessMode: duckdb.DuckDBAccessMode.READ_ONLY,
+    });
+
+    return await db.connect();
+  } catch (err) {
+    worker.terminate();
+    throw err;
+  } finally {
+    URL.revokeObjectURL(workerUrl);
+  }
 }

@@ -37,7 +37,9 @@ function renderBar(filters = defaultFilters, onChange = vi.fn()) {
 describe('FilterBar', () => {
   it('renders search input with label', () => {
     renderBar();
-    expect(screen.getByLabelText(/search/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole('searchbox', { name: 'Search' }),
+    ).toBeInTheDocument();
   });
 
   it('renders category select with label', () => {

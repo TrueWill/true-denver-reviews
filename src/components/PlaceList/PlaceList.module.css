@@ -64,6 +64,12 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .loadingSpinner {
+    animation-duration: 3s;
+  }
+}
+
 /* Empty state */
 .empty {
   display: flex;

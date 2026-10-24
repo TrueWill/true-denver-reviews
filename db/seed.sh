@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-echo "PWD: $(pwd)"
 echo "Removing old db..."
 rm -f public/data.db
 echo "Running duckdb with init file..."

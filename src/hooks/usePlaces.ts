@@ -77,6 +77,8 @@ export function usePlaces(): UsePlacesResult {
     [allPlaces, filters],
   );
 
+  const error = dbError ?? dataError;
+
   return {
     places,
     categories,
@@ -84,7 +86,7 @@ export function usePlaces(): UsePlacesResult {
     areas,
     filters,
     setFilters,
-    loading: dbLoading || dataLoading,
-    error: dbError ?? dataError,
+    loading: !error && (dbLoading || dataLoading),
+    error,
   };
 }

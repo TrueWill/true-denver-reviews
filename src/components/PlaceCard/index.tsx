@@ -12,14 +12,7 @@ export function PlaceCard({ place }: PlaceCardProps) {
     <li className={`${styles.card} ${place.closed ? styles.closed : ''}`}>
       <div className={styles.topRow}>
         <div className={styles.titleBlock}>
-          {place.closed && (
-            <span
-              className={styles.closedBadge}
-              aria-label="Permanently closed"
-            >
-              Closed
-            </span>
-          )}
+          {place.closed && <span className={styles.closedBadge}>Closed</span>}
           <h2 className={styles.name}>{place.name}</h2>
         </div>
         <RatingBadge rating={place.rating} />

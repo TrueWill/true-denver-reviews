@@ -21,7 +21,7 @@ export function filterAndSortPlaces(
     sortDirection,
   } = filters;
 
-  const searchLower = search.toLowerCase();
+  const searchLower = search.trim().toLowerCase();
 
   const filtered = places.filter((p) => {
     if (hideClosedPlaces && p.closed) return false;
@@ -61,7 +61,7 @@ export function filterAndSortPlaces(
 
 export function getActiveFilterCount(filters: FilterState): number {
   let count = 0;
-  if (filters.search) count++;
+  if (filters.search.trim()) count++;
   if (filters.category) count++;
   if (filters.area) count++;
   if (filters.cuisine) count++;
