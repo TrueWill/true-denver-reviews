@@ -160,7 +160,7 @@
   align-items: center;
   gap: 4px;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.02em;
   color: var(--ink-light);
@@ -176,11 +176,18 @@
 }
 
 .addressIcon {
-  font-size: 11px;
+  font-size: 13px;
   flex-shrink: 0;
   transition: transform 0.15s ease;
 }
 
 .address:hover .addressIcon {
   transform: translate(1px, -1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover,
+  .address:hover .addressIcon {
+    transform: none;
+  }
 }
