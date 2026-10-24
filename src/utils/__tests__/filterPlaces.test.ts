@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { filterAndSortPlaces } from '../filterPlaces';
+import { filterAndSortPlaces, getActiveFilterCount } from '../filterPlaces';
 import type { FilterState, Place } from '../../types';
 
 const base: FilterState = {
@@ -75,6 +75,20 @@ describe('filterAndSortPlaces', () => {
     const result = filterAndSortPlaces(places, { ...base, search: 'espresso' });
     expect(result).toHaveLength(1);
     expect(result[0].name).toBe('Zenith Coffee');
+  });
+
+  it('ignores leading and trailing whitespace in search', () => {
+    const result = filterAndSortPlaces(places, {
+      ...base,
+      search: '  zenith ',
+    });
+    expect(result.map((p) => p.name)).toEqual(['Zenith Coffee']);
+  });
+
+  it('treats a whitespace-only search as no search', () => {
+    expect(
+      filterAndSortPlaces(places, { ...base, search: '   ' }),
+    ).toHaveLength(4);
   });
 
   it('filters by category', () => {
@@ -253,5 +267,39 @@ describe('filterAndSortPlaces', () => {
       search: 'xyznotfound',
     });
     expect(result).toHaveLength(0);
+  });
+});
+
+describe('getActiveFilterCount', () => {
+  it('returns 0 for default filters', () => {
+    expect(getActiveFilterCount(base)).toBe(0);
+  });
+
+  it('counts each active filter', () => {
+    expect(
+      getActiveFilterCount({
+        ...base,
+        search: 'pizza',
+        category: 'Restaurant',
+        area: 'LoDo',
+        cuisine: 'Italian',
+        rating: 4,
+        hideClosedPlaces: true,
+      }),
+    ).toBe(6);
+  });
+
+  it('does not count a whitespace-only search', () => {
+    expect(getActiveFilterCount({ ...base, search: '   ' })).toBe(0);
+  });
+
+  it('does not count sort settings', () => {
+    expect(
+      getActiveFilterCount({
+        ...base,
+        sortField: 'rating',
+        sortDirection: 'desc',
+      }),
+    ).toBe(0);
   });
 });
