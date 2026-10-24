@@ -11,7 +11,11 @@
 --   area      is optional (leave blank if unknown)
 --   rating    is optional (leave blank if unrated); must be 1–5 when set
 
-SET storage_compatibility_version = 'v1.3.2';
+-- Pin the storage format so the older DuckDB WASM bundle can read the file.
+-- It must be set on ATTACH; DuckDB 2.x ignores SET storage_compatibility_version
+-- for a database file that is already open.
+ATTACH 'public/data.db' AS data (STORAGE_VERSION 'v1.3.2');
+USE data;
 
 DROP TABLE IF EXISTS places;
 DROP TABLE IF EXISTS categories;
