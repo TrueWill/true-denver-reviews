@@ -43,7 +43,7 @@ All components work with flat `Place` objects (string names, not IDs) — denorm
 
 ## Key Constraints
 
-- **COOP/COEP headers required** for DuckDB WASM (`SharedArrayBuffer`). Set in `vite.config.ts` for `server` and `preview`.
+- **No COOP/COEP headers needed** — the jsDelivr `mvp`/`eh` bundles are single-threaded and don't use `SharedArrayBuffer`.
 - `@duckdb/duckdb-wasm` excluded from `optimizeDeps` (esbuild can't handle WASM).
 - DuckDB WASM bundles load from jsDelivr CDN via `getJsDelivrBundles()`.
 

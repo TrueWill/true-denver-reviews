@@ -56,7 +56,7 @@ Browser
 
 ### Key constraints
 
-- **COOP/COEP headers are required** for DuckDB WASM (uses `SharedArrayBuffer`). They are set in `vite.config.ts` for both `server` and `preview`. Any deployment target must also set these headers.
+- **No COOP/COEP headers are needed.** `getJsDelivrBundles()` provides only the single-threaded `mvp`/`eh` bundles, which don't use `SharedArrayBuffer`. Only the threaded `coi` bundle would require cross-origin isolation.
 - `@duckdb/duckdb-wasm` is excluded from `optimizeDeps` — Vite's esbuild pre-bundler cannot handle WASM.
 - DuckDB WASM bundles load from jsDelivr CDN via `getJsDelivrBundles()` — no local WASM files are needed or deployed.
 - `public/data.db` **is committed** — it's a static asset deployed with the site.
