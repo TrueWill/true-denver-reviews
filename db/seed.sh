@@ -1,10 +1,8 @@
 #!/bin/bash
 set -e
-echo "Removing old db..."
-rm -f public/data.db
 echo "Running duckdb with init file..."
 duckdb -init db/build.sql :memory: "SELECT 'Seed complete' as status;"
 echo "Done. File size:"
-ls -lh public/data.db
+ls -lh public/places.json
 echo "Verifying data:"
-duckdb public/data.db "SELECT count(*) FROM places;"
+duckdb :memory: "SELECT count(*) AS places FROM 'public/places.json';"

@@ -1,12 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useDb } from './useDb';
-import {
-  fetchAllPlaces,
-  fetchCategories,
-  fetchCuisines,
-  fetchAreas,
-} from '../db/queries';
+import { fetchPlaces } from '../data/fetchPlaces';
 import { filterAndSortPlaces } from '../utils/filterPlaces';
+import { valuesInUse } from '../utils/valuesInUse';
 import type { FilterState, Place } from '../types';
 
 const DEFAULT_FILTERS: FilterState = {
@@ -32,52 +27,45 @@ interface UsePlacesResult {
 }
 
 export function usePlaces(): UsePlacesResult {
-  const { conn, loading: dbLoading, error: dbError } = useDb();
-
   const [allPlaces, setAllPlaces] = useState<Place[]>([]);
-  const [categories, setCategories] = useState<string[]>([]);
-  const [cuisines, setCuisines] = useState<string[]>([]);
-  const [areas, setAreas] = useState<string[]>([]);
-  const [dataLoading, setDataLoading] = useState(true);
-  const [dataError, setDataError] = useState<Error | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
 
   useEffect(() => {
-    if (!conn) return;
-
     let cancelled = false;
 
-    Promise.all([
-      fetchAllPlaces(conn),
-      fetchCategories(conn),
-      fetchCuisines(conn),
-      fetchAreas(conn),
-    ])
-      .then(([places, cats, cuis, areasData]) => {
+    fetchPlaces()
+      .then((places) => {
         if (cancelled) return;
         setAllPlaces(places);
-        setCategories(cats);
-        setCuisines(cuis);
-        setAreas(areasData.filter((a) => places.some((p) => p.area === a)));
-        setDataLoading(false);
+        setLoading(false);
       })
       .catch((err: unknown) => {
         if (cancelled) return;
-        setDataError(err instanceof Error ? err : new Error(String(err)));
-        setDataLoading(false);
+        setError(err instanceof Error ? err : new Error(String(err)));
+        setLoading(false);
       });
 
     return () => {
       cancelled = true;
     };
-  }, [conn]);
+  }, []);
 
   const places = useMemo(
     () => filterAndSortPlaces(allPlaces, filters),
     [allPlaces, filters],
   );
 
-  const error = dbError ?? dataError;
+  const categories = useMemo(
+    () => valuesInUse(allPlaces, 'category'),
+    [allPlaces],
+  );
+  const cuisines = useMemo(
+    () => valuesInUse(allPlaces, 'cuisine'),
+    [allPlaces],
+  );
+  const areas = useMemo(() => valuesInUse(allPlaces, 'area'), [allPlaces]);
 
   return {
     places,
@@ -86,7 +74,7 @@ export function usePlaces(): UsePlacesResult {
     areas,
     filters,
     setFilters,
-    loading: !error && (dbLoading || dataLoading),
+    loading,
     error,
   };
 }

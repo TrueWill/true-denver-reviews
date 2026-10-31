@@ -1,56 +1,41 @@
 ---
 name: Front-End Expert
-description: Expert on React, Vite, DuckDB WASM, and React Testing Library for the true-denver-reviews project.
+description: Expert on React, Vite, and React Testing Library for the true-denver-reviews project.
 ---
 
 # Front-End Expert Agent
 
-Expert on React, Vite, DuckDB WASM, and React Testing Library for the true-denver-reviews project.
+Expert on React, Vite, and React Testing Library for the true-denver-reviews project.
 
 See CLAUDE.md for project overview, commands, architecture, styling, and conventions.
 
 ## Architecture
 
-This is a **read-only SPA** — all data lives in a pre-built DuckDB binary (`public/data.db`). No backend, no write path, no Redux.
+This is a **read-only SPA** — all data lives in a generated static file (`public/places.json`). No backend, no write path, no Redux.
 
 ### Data Flow
 
 ```
 Browser
-  └─ DuckDB WASM worker (loaded from jsDelivr CDN at runtime)
-       └─ public/data.db  (read-only)
-            └─ places JOIN categories / cuisines / areas
+  └─ fetch places.json
+       └─ filter and sort in JS
 ```
+
+`public/places.json` is generated from `db/*.csv` by `npm run seed`, which uses the DuckDB CLI at build time only.
 
 ### Key Source Files
 
-- `src/db/client.ts` — singleton `initPromise` ensures DuckDB WASM initializes once; opens `data.db` read-only
-- `src/db/queries.ts` — four query functions returning plain objects; DuckDB INTEGER columns are cast with `Number()`
-- `src/hooks/useDb.ts` — thin hook wrapping `getConnection()`, exposes `{ conn, loading, error }`
-- `src/hooks/usePlaces.ts` — fetches all data once on `conn` ready (single JOIN + three lookup queries); filtering/sorting via `useMemo`
+- `src/data/fetchPlaces.ts` — fetches `places.json`; rejects on an HTTP error, malformed JSON, or a non-array body
+- `src/hooks/usePlaces.ts` — fetches once on mount; filtering/sorting via `useMemo`
+- `src/utils/valuesInUse.ts` — derives filter options from the loaded places
 - `src/utils/filterPlaces.ts` — pure `filterAndSortPlaces(places, filters)` function; sole filtering path
 
-### Database Schema
-
-```
-categories (id, name)
-cuisines   (id, name)
-areas      (id, name)
-places     (id, name, description, category_id, cuisine_id, address, area_id, closed, rating 1–5)
-```
-
-All components work with flat `Place` objects (string names, not IDs) — denormalized via JOIN in `queries.ts`.
-
-## Key Constraints
-
-- **No COOP/COEP headers needed** — the jsDelivr `mvp`/`eh` bundles are single-threaded and don't use `SharedArrayBuffer`.
-- `@duckdb/duckdb-wasm` excluded from `optimizeDeps` (esbuild can't handle WASM).
-- DuckDB WASM bundles load from jsDelivr CDN via `getJsDelivrBundles()`.
+All components work with flat `Place` objects (see `src/types/index.ts`).
 
 ## Testing
 
 - Tests use jsdom + React Testing Library
-- DuckDB layer is **never loaded** in tests — use plain mock objects as props
+- Components use plain mock objects as props; hooks mock `fetchPlaces`
 - `src/test/setup.ts` imports `@testing-library/jest-dom` for DOM matchers
 
 ## Common Tasks
@@ -59,11 +44,11 @@ All components work with flat `Place` objects (string names, not IDs) — denorm
 
 1. Update filter types and `filterAndSortPlaces` in `src/utils/filterPlaces.ts`
 2. Add corresponding UI in the filter component
-3. Update `usePlaces.ts` if new lookup data is needed
+3. Update `usePlaces.ts` if new filter options are needed (see `valuesInUse`)
 4. Add unit tests for the filter logic
 
-### Adding a New Query
+### Adding a New Field
 
-1. Add query function to `src/db/queries.ts` (cast `BigInt` with `Number()`)
-2. Call from `usePlaces.ts` when `conn` is ready
-3. Pass results down as props to components
+1. Add the column to `db/places.csv` and the `places` query in `db/build.sql`, then run `npm run seed`
+2. Add the field to the `Place` type in `src/types/index.ts`
+3. Pass it down as props to components
