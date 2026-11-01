@@ -18,7 +18,7 @@
 SELECT error(
   'db/places.csv has invalid rows:' || chr(10) ||
   string_agg('  ' || place || ': ' || problem, chr(10) ORDER BY place, problem)
-)
+) AS validation_errors
 FROM (
   WITH p AS (
     SELECT coalesce(name, '(missing name)') AS place, *
