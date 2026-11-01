@@ -46,7 +46,7 @@
 	{"id":45,"name":"Crab & Shell Cajun Seafood","description":"Crab boil","category":"Restaurant","cuisine":"Cajun","address":"2819 E Colfax Ave, Denver, CO 80206","area":"City Park","closed":false,"rating":3},
 	{"id":46,"name":"Crema Coffee House","description":"","category":"Coffee Shop","cuisine":null,"address":null,"area":"RiNo","closed":false,"rating":3},
 	{"id":47,"name":"Crown of India","description":"","category":"Restaurant","cuisine":"Indian","address":"3109 Federal Blvd, Denver, CO 80211","area":null,"closed":false,"rating":4},
-	{"id":48,"name":"Culinary Dropout","description":"","category":"Restaurant","cuisine":"American","address":"4141 E 9th Ave, Denver, CO 80220","area":null,"closed":false,"rating":2},
+	{"id":48,"name":"Culinary Dropout","description":"","category":"Restaurant","cuisine":"American","address":"4141 E 9th Ave, Denver, CO 80220","area":null,"closed":false,"rating":4},
 	{"id":49,"name":"Daughter Thai","description":"","category":"Restaurant","cuisine":"Thai","address":"1700 Platte St Suite 140, Denver, CO 80202","area":"LoHi","closed":false,"rating":4},
 	{"id":50,"name":"Death & Co","description":"Fancy drinks, food","category":"Cocktail Bar","cuisine":null,"address":"1280 25th St, Denver, CO 80205","area":"Five Points / Welton","closed":false,"rating":3},
 	{"id":51,"name":"Denver Biscuit Company","description":"Friendly and consistently good. Delicious cocktails.","category":"Diner","cuisine":"American","address":"3237 E. Colfax Ave, Denver, CO","area":"City Park","closed":false,"rating":5},
