@@ -1,4 +1,5 @@
 name,description,category,cuisine,address,area,closed,rating
+Culinary Dropout,,Restaurant,American,"4141 E 9th Ave, Denver, CO 80220",,FALSE,2
 Huckleberry Coffee,Locally-roasted coffee.,Coffee Shop,,,Congress Park,FALSE,3
 Crema Coffee House,,Coffee Shop,,,RiNo,FALSE,3
 Safta,Israeli cuisine. Incredible Sunday buffet - pace yourself. Reservations recommended.,Restaurant,Mediterranean,"3330 Brighton Blvd #201, Denver, CO 80216",RiNo,FALSE,5
@@ -153,14 +154,14 @@ Mezcal,"Excellent mezcal margaritas, fresh chips. Great value.",Restaurant,Mexic
 Zorba's,"Greek food, breakfast. Real Irish coffees. Dog-friendly patio. Baked goods. 41 years in business.",Restaurant,Mediterranean,"2626 E 12th Ave, Denver, CO 80206",Congress Park,FALSE,3
 Enzo's Pizza,GREAT thin crust pizza. Closed Mon/Tue. Recommend take-out.,Restaurant,Italian,"3424 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,4
 Tommy's Thai,"Nice menu, lunch specials, reasonable prices. Best Thai in Denver. Great service.",Restaurant,Thai,"3410 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,5
-Sweet Cooie's Ice Cream,,Restaurant,,"3506 12th Ave, Denver, CO 80206",Congress Park,FALSE,3
+Little Man Ice Cream Congress Park,"Formerly Sweet Cooie's.",Restaurant,,"3506 12th Ave, Denver, CO 80206",Congress Park,FALSE,3
 Smith & Canon,"Ice cream, coffee, affogatos",Coffee Shop,,,,FALSE,5
 Rustic Barcelona,Antiques,Shopping,,"4130 E Colfax Ave, Denver, CO 80220",,FALSE,2
 Blue Pan Pizza,Detroit-style pizza. Come hungry. Be prepared to wait during busy times.,Restaurant,Italian,,Capitol Hill,FALSE,5
 7 Leguas,Wide selection. Margaritas not epic.,Restaurant,Mexican,"4550 E Colfax Ave, Denver, CO 80220",,FALSE,3
 Q House,"Odd hours, a little pricey, good service, tasty food, good cocktails",Restaurant,Asian,"3421 E Colfax Ave, Denver, CO 80206",City Park,FALSE,3
 Bastien's,"Sugar steaks, sugar burgers. Good drinks and appetizers. Pricey but worth it. Reservations recommended.",Restaurant,American,"3503 E Colfax Ave, Denver, CO 80206",City Park,FALSE,4
-Under the Umbrella,Coffee,Coffee Shop,,,,FALSE,4
+Under the Umbrella,Coffee,Coffee Shop,,,,TRUE,4
 Goosetown Tavern,"Sandwiches, beer, mixed drinks. Sometimes live music. Limited food selection.",Bar,,"3242 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,3
 The Watering Bowl,"Off-leash dog area, bar, indoor miniature golf",Bar,,,,FALSE,3
 Sienna Wine Bar,"Champagne flights, great cheese plates",Bar,,"3434 E 12th Ave, Denver, CO 80206",Congress Park,FALSE,3
@@ -199,7 +200,7 @@ Nana's Dim Sum,Try the boba,Restaurant,Chinese,"3316 Tejon St #102, Denver, CO 8
 Park Hill Art Festival,,Event,,,Park Hill,FALSE,3
 Bon Ami,,Restaurant,French,"295 S Pennsylvania St, Denver, CO 80209",Speer,FALSE,3
 Bamboo Sushi,$$$,Restaurant,Japanese,"2715 17th St, Denver, CO 80211",LoHi,FALSE,3
-Briar Patch,"Food, drinks. Dog-friendly patio. Excellent breakfasts.",Restaurant,American,"1222 Madison St, Denver, CO 80206",Congress Park,FALSE,5
+Briar Patch,"Food, drinks. Dog-friendly patio. Excellent breakfasts.",Restaurant,American,"1222 Madison St, Denver, CO 80206",Congress Park,TRUE,5
 Yard House,"Wide variety, good, by Paramount. Reasonable.",Restaurant,,"1555 Court Pl, Denver, CO 80202",LoDo,FALSE,3
 Corner Office,"Decent. Good drinks, nice decor.",Bar,,"1401 Curtis Street, Denver, CO 80202",LoDo,FALSE,3
 Japon,"Sushi, ramen",Restaurant,Japanese,"3550 E Colfax Ave, Denver, CO 80206",Congress Park,FALSE,4
