@@ -20,13 +20,19 @@ Originally built with [Claude Code](https://claude.com/product/claude-code).
 
 Open `db/places.csv` in any spreadsheet app (Excel, Numbers, Google Sheets) to add or edit reviews. Use text names for category/cuisine/area — see `db/categories.csv`, `db/cuisines.csv`, and `db/areas.csv` for valid values.
 
-After saving changes, regenerate the database:
+After saving changes, regenerate the site data (requires the [DuckDB CLI](https://duckdb.org/docs/installation/)):
 
 ```bash
 npm run seed
 ```
 
-Then commit both `db/places.csv` and `public/data.db`.
+Then commit both `db/places.csv` and `public/places.json`.
+
+To run ad-hoc queries against the published data:
+
+```bash
+duckdb -c "SELECT * FROM 'public/places.json'"
+```
 
 ### Looking up addresses
 

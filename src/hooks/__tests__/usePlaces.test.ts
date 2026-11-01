@@ -1,24 +1,13 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { renderHook, waitFor } from '@testing-library/react';
 import { usePlaces } from '../usePlaces';
 import type { Place } from '../../types';
 
-vi.mock('../useDb', () => ({
-  useDb: vi.fn(),
+vi.mock('../../data/fetchPlaces', () => ({
+  fetchPlaces: vi.fn(),
 }));
 
-vi.mock('../../db/queries', () => ({
-  fetchAllPlaces: vi.fn(),
-  fetchCategories: vi.fn(),
-  fetchCuisines: vi.fn(),
-  fetchAreas: vi.fn(),
-}));
-
-import * as queries from '../../db/queries';
-import { useDb } from '../useDb';
-import type { AsyncDuckDBConnection } from '../../db/client';
-
-const fakeConn = {} as AsyncDuckDBConnection;
+import { fetchPlaces } from '../../data/fetchPlaces';
 
 const makePlaces = (overrides: Partial<Place>[] = []): Place[] =>
   overrides.map((o, i) => ({
@@ -34,48 +23,28 @@ const makePlaces = (overrides: Partial<Place>[] = []): Place[] =>
     ...o,
   }));
 
-beforeEach(() => {
-  vi.mocked(useDb).mockReturnValue({
-    conn: fakeConn,
-    loading: false,
-    error: null,
-  });
-  vi.mocked(queries.fetchCategories).mockResolvedValue(['Restaurant']);
-  vi.mocked(queries.fetchCuisines).mockResolvedValue([]);
-});
-
 describe('usePlaces loading and error state', () => {
-  it('stops loading and exposes the error when the database fails to open', () => {
-    const dbError = new Error('WASM failed to load');
-    vi.mocked(useDb).mockReturnValue({
-      conn: null,
-      loading: false,
-      error: dbError,
-    });
+  it('stops loading and exposes the error when the fetch fails', async () => {
+    const fetchError = new Error('fetch failed');
+    vi.mocked(fetchPlaces).mockRejectedValue(fetchError);
 
     const { result } = renderHook(() => usePlaces());
 
+    await waitFor(() => expect(result.current.error).toBe(fetchError));
     expect(result.current.loading).toBe(false);
-    expect(result.current.error).toBe(dbError);
   });
 
-  it('stops loading and exposes the error when a query fails', async () => {
-    const queryError = new Error('query failed');
-    vi.mocked(queries.fetchAllPlaces).mockRejectedValue(queryError);
-    vi.mocked(queries.fetchAreas).mockResolvedValue([]);
+  it('wraps non-Error rejections in an Error', async () => {
+    vi.mocked(fetchPlaces).mockRejectedValue('boom');
 
     const { result } = renderHook(() => usePlaces());
 
-    await waitFor(() => expect(result.current.error).toBe(queryError));
+    await waitFor(() => expect(result.current.error?.message).toBe('boom'));
     expect(result.current.loading).toBe(false);
   });
 
-  it('is loading while the database is opening', () => {
-    vi.mocked(useDb).mockReturnValue({
-      conn: null,
-      loading: true,
-      error: null,
-    });
+  it('is loading while the fetch is pending', () => {
+    vi.mocked(fetchPlaces).mockReturnValue(new Promise(() => {}));
 
     const { result } = renderHook(() => usePlaces());
 
@@ -84,40 +53,43 @@ describe('usePlaces loading and error state', () => {
   });
 });
 
-describe('usePlaces areas filtering', () => {
-  it('only returns areas that have at least one associated place', async () => {
-    vi.mocked(queries.fetchAllPlaces).mockResolvedValue(
-      makePlaces([{ area: 'LoDo' }, { area: 'RiNo' }]),
+describe('usePlaces data', () => {
+  it('returns the loaded places sorted by the default filters', async () => {
+    vi.mocked(fetchPlaces).mockResolvedValue(
+      makePlaces([{ name: 'Zenith' }, { name: 'Acme' }]),
     );
-    vi.mocked(queries.fetchAreas).mockResolvedValue(['Baker', 'LoDo', 'RiNo']);
 
     const { result } = renderHook(() => usePlaces());
 
     await waitFor(() => expect(result.current.loading).toBe(false));
 
-    expect(result.current.areas).toEqual(['LoDo', 'RiNo']);
-    expect(result.current.areas).not.toContain('Baker');
+    expect(result.current.places.map((p) => p.name)).toEqual([
+      'Acme',
+      'Zenith',
+    ]);
+    expect(result.current.error).toBeNull();
   });
 
-  it('includes areas that have only closed places', async () => {
-    vi.mocked(queries.fetchAllPlaces).mockResolvedValue(
-      makePlaces([{ area: 'LoDo', closed: true }]),
+  it('derives filter options from the places in use', async () => {
+    vi.mocked(fetchPlaces).mockResolvedValue(
+      makePlaces([
+        { category: 'Restaurant', cuisine: 'Thai', area: 'RiNo' },
+        { category: 'Bar', cuisine: null, area: 'LoDo', closed: true },
+        { category: 'Bar', cuisine: 'BBQ', area: null },
+      ]),
     );
-    vi.mocked(queries.fetchAreas).mockResolvedValue(['LoDo', 'Unused']);
 
     const { result } = renderHook(() => usePlaces());
 
     await waitFor(() => expect(result.current.loading).toBe(false));
 
-    expect(result.current.areas).toContain('LoDo');
-    expect(result.current.areas).not.toContain('Unused');
+    expect(result.current.categories).toEqual(['Bar', 'Restaurant']);
+    expect(result.current.cuisines).toEqual(['BBQ', 'Thai']);
+    expect(result.current.areas).toEqual(['LoDo', 'RiNo']);
   });
 
   it('returns empty areas when no places have an area', async () => {
-    vi.mocked(queries.fetchAllPlaces).mockResolvedValue(
-      makePlaces([{ area: null }]),
-    );
-    vi.mocked(queries.fetchAreas).mockResolvedValue(['Baker', 'LoDo']);
+    vi.mocked(fetchPlaces).mockResolvedValue(makePlaces([{ area: null }]));
 
     const { result } = renderHook(() => usePlaces());
 
