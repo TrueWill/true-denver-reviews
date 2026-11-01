@@ -28,6 +28,12 @@ npm run seed
 
 Then commit both `db/places.csv` and `public/places.json`.
 
+Each seed renumbers `id` alphabetically by name, so adding or renaming one place can change most lines in `public/places.json`. To see only the real changes since the last commit, compare the rows without `id` (requires bash or zsh, plus [jq](https://jqlang.org/)):
+
+```bash
+diff <(git show HEAD:public/places.json | jq -c '.[] | del(.id)' | sort) <(jq -c '.[] | del(.id)' public/places.json | sort)
+```
+
 To run ad-hoc queries against the published data:
 
 ```bash
